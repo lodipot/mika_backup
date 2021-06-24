@@ -616,6 +616,9 @@ kg
 <% } %>
 </section>
 <div class="area-btn-common _base-width">
+<% { %>
+<a href='<%- url_trade.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(!is_exist_archive) { %>m-Cnt<% } %>" style="font-size:12px">フリートレード検索</a>
+<% } %>
 <% if(is_exist_archive) { %>
 <a href='<%- url_album.replace("__hash_card_id__", data.hash_card_id) %>' class="btn_normal_line_2 <% if(trade_prohibition.is_trade_limit) { %>m-Cnt<% } %>">アルバム</a>
 <% } %>
