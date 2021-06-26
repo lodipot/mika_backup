@@ -4791,37 +4791,37 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/bg.jpg", id:"_404_3_bg"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/bg_blur.jpg", id:"_404_3_bg_blur"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_base.png", id:"_404_3_ch_base"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face10.png", id:"_404_3_ch_face10"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face11.png", id:"_404_3_ch_face11"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face12.png", id:"_404_3_ch_face12"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face13.png", id:"_404_3_ch_face13"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face14.png", id:"_404_3_ch_face14"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face15.png", id:"_404_3_ch_face15"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face16.png", id:"_404_3_ch_face16"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face17.png", id:"_404_3_ch_face17"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face2.png", id:"_404_3_ch_face2"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face3.png", id:"_404_3_ch_face3"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face4.png", id:"_404_3_ch_face4"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face5.png", id:"_404_3_ch_face5"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face6.png", id:"_404_3_ch_face6"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face7.png", id:"_404_3_ch_face7"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face8.png", id:"_404_3_ch_face8"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/ch_face9.png", id:"_404_3_ch_face9"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/finish.jpg", id:"_404_3_finish"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/finish_blur.jpg", id:"_404_3_finish_blur"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_1.png", id:"_404_3_sakura_1"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_2.png", id:"_404_3_sakura_2"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_3.png", id:"_404_3_sakura_3"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_4.png", id:"_404_3_sakura_4"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_5.png", id:"_404_3_sakura_5"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_6.png", id:"_404_3_sakura_6"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sakura_7.png", id:"_404_3_sakura_7"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/sun_light.png", id:"_404_3_sun_light"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/tie_fp.png", id:"_404_3_tie_fp"},
-		{src:"https://lodipot.github.io/mika_backup/episode/epi11_late/images/tie_sp.png", id:"_404_3_tie_sp"}
+		{src:"images/bg.jpg", id:"_404_3_bg"},
+		{src:"images/bg_blur.jpg", id:"_404_3_bg_blur"},
+		{src:"images/ch_base.png", id:"_404_3_ch_base"},
+		{src:"images/ch_face10.png", id:"_404_3_ch_face10"},
+		{src:"images/ch_face11.png", id:"_404_3_ch_face11"},
+		{src:"images/ch_face12.png", id:"_404_3_ch_face12"},
+		{src:"images/ch_face13.png", id:"_404_3_ch_face13"},
+		{src:"images/ch_face14.png", id:"_404_3_ch_face14"},
+		{src:"images/ch_face15.png", id:"_404_3_ch_face15"},
+		{src:"images/ch_face16.png", id:"_404_3_ch_face16"},
+		{src:"images/ch_face17.png", id:"_404_3_ch_face17"},
+		{src:"images/ch_face2.png", id:"_404_3_ch_face2"},
+		{src:"images/ch_face3.png", id:"_404_3_ch_face3"},
+		{src:"images/ch_face4.png", id:"_404_3_ch_face4"},
+		{src:"images/ch_face5.png", id:"_404_3_ch_face5"},
+		{src:"images/ch_face6.png", id:"_404_3_ch_face6"},
+		{src:"images/ch_face7.png", id:"_404_3_ch_face7"},
+		{src:"images/ch_face8.png", id:"_404_3_ch_face8"},
+		{src:"images/ch_face9.png", id:"_404_3_ch_face9"},
+		{src:"images/finish.jpg", id:"_404_3_finish"},
+		{src:"images/finish_blur.jpg", id:"_404_3_finish_blur"},
+		{src:"images/sakura_1.png", id:"_404_3_sakura_1"},
+		{src:"images/sakura_2.png", id:"_404_3_sakura_2"},
+		{src:"images/sakura_3.png", id:"_404_3_sakura_3"},
+		{src:"images/sakura_4.png", id:"_404_3_sakura_4"},
+		{src:"images/sakura_5.png", id:"_404_3_sakura_5"},
+		{src:"images/sakura_6.png", id:"_404_3_sakura_6"},
+		{src:"images/sakura_7.png", id:"_404_3_sakura_7"},
+		{src:"images/sun_light.png", id:"_404_3_sun_light"},
+		{src:"images/tie_fp.png", id:"_404_3_tie_fp"},
+		{src:"images/tie_sp.png", id:"_404_3_tie_sp"}
 	],
 	preloads: []
 };
@@ -4877,44 +4877,6 @@ an.getComposition = function(id) {
 	return an.compositions[id];
 }
 
-
-an.makeResponsive = function(isResp, respDim, isScale, scaleType, domContainers) {		
-	var lastW, lastH, lastS=1;		
-	window.addEventListener('resize', resizeCanvas);		
-	resizeCanvas();		
-	function resizeCanvas() {			
-		var w = lib.properties.width, h = lib.properties.height;			
-		var iw = window.innerWidth, ih=window.innerHeight;			
-		var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
-		if(isResp) {                
-			if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
-				sRatio = lastS;                
-			}				
-			else if(!isScale) {					
-				if(iw<w || ih<h)						
-					sRatio = Math.min(xRatio, yRatio);				
-			}				
-			else if(scaleType==1) {					
-				sRatio = Math.min(xRatio, yRatio);				
-			}				
-			else if(scaleType==2) {					
-				sRatio = Math.max(xRatio, yRatio);				
-			}			
-		}			
-		domContainers[0].width = w * pRatio * sRatio;			
-		domContainers[0].height = h * pRatio * sRatio;			
-		domContainers.forEach(function(container) {				
-			container.style.width = w * sRatio + 'px';				
-			container.style.height = h * sRatio + 'px';			
-		});			
-		stage.scaleX = pRatio*sRatio;			
-		stage.scaleY = pRatio*sRatio;			
-		lastW = iw; lastH = ih; lastS = sRatio;            
-		stage.tickOnUpdate = false;            
-		stage.update();            
-		stage.tickOnUpdate = true;		
-	}
-}
 
 
 })(createjs = createjs||{}, AdobeAn = AdobeAn||{});
