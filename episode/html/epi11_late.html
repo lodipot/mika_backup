@@ -81,7 +81,7 @@
                 for (var i = 0, len = lib.properties.manifest.length; i < len; i++) {
                     new_manifest[i] = {
                         'type': 'image',
-                        'src': window.image_server + '?url=' + encodeURIComponent(window.base_url + window.dir_name + lib.properties.manifest[i].src),
+                        'src': window.image_server + encodeURIComponent(window.base_url + window.dir_name + lib.properties.manifest[i].src),
                         'id': lib.properties.manifest[i].id
                     }
                 }
@@ -192,7 +192,7 @@
     <script>
         (function() {
             window.viewer_id = 000000001;
-            var _url = "https://lodipot.github.io/mika_backup/episode/report_js_error/l_frm/Idol_story_cjs_1";
+            var _url = "/episode/report_js_error/l_frm/Idol_story_cjs_1";
             var _path = location.href;
             var _spec_obj;
             var _spec = 'none';
