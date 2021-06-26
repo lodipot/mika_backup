@@ -219,7 +219,7 @@
             window.onerror = function(msg, file, line, col, error) {
                 $.ajax({
                     url: _url,
-                    type: 'post',
+                    type: 'get',
                     data: {
                         'ua': _ua,
                         'viewer_id': window.viewer_id,
