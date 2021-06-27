@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href='https://lodipot.github.io/mika_backup/gallery/css/pex.css' media="all">
-    <script src='https://lodipot.github.io/mika_backup/gallery/js/jquery-1.9.1.min.js'></script>
-    <script src='https://lodipot.github.io/mika_backup/gallery/js/pex-1.2.0.js'></script>
-    <script src='https://lodipot.github.io/mika_backup/gallery/js/pex_common.js'></script>
+    <link rel="stylesheet" href='../../gallery/css/pex.css' media="all">
+    <script src='../../gallery/js/jquery-1.9.1.min.js'></script>
+    <script src='../../gallery/js/pex-1.2.0.js'></script>
+    <script src='../../gallery/js/pex_common.js'></script>
     <script>
         $(document).ready(function() {
             if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
@@ -124,7 +124,7 @@
             container.style.marginTop = (marginTop) + "px";
             container.style.zoom = "50%";
             container.style.height = (window.outerHeight * 2 - marginTop) + "px";
-            var pex = new Pex('https://lodipot.github.io/mika_backup/episode/epi06_early.swf', "container", option);
+            var pex = new Pex('../epi06_early.swf', "container", option);
             pex.getAPI().ready(function() {
                 setScrollTop();
             });
@@ -294,8 +294,8 @@
             chrome_app_flg = 0,
             chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
     </script>
-    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
-    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
+    <script type='text/javascript' src='../../gallery/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="../../gallery/css/base.css" />
 </head>
 
 <body style="height:100%">
@@ -315,8 +315,8 @@
         white_flag = 0;
         vote_simple_swf_flg = 0;
     </script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/boombox.min.js"></script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/voice_2.js"></script>
+    <script src="../../gallery/js/boombox.min.js"></script>
+    <script src="../../gallery/js/GeneVoice.js"></script>
 </body>
 
 </html>
