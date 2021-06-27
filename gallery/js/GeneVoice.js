@@ -7,7 +7,7 @@ var clicked = false;
 var ua = navigator.userAgent;
 var htc = ua.indexOf('ISW13HT') > -1;
 var And = ua.indexOf('Android') >-1;
-var soundOn = typeof soundFlag != 'undefined';
+var soundOn = soundFlag != '0';
 if(soundOn){
 	var weba = { webaudio:{use:false} };
 	boombox.setup( And ? weba : null );
