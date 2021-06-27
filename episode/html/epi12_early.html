@@ -1835,7 +1835,7 @@
                     }
                     new_manifest[i] = {
                         'type': 'image',
-                        'src': _img_path,
+                        'src': window.image_server + encodeURIComponent(window.base_url + _img_path),
                         'id': lib.properties.manifest[i].id,
                         'crossOrigin': 'Anonymous'
                     }
