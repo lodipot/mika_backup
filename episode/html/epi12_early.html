@@ -64,6 +64,16 @@
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1.js' crossorigin="anonymous"></script>
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/eff_chord.js' crossorigin="anonymous"></script>
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/eff_question.js' crossorigin="anonymous"></script>
+		<script type="text/javascript"> // 파라미터 가져오기
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                  }
+
+                  var voiceOn = getParameterByName('voice');
+		</script>
     <script type='text/javascript'>
         var se_flg = 0,
             bgm_flg = 0,
@@ -1753,7 +1763,7 @@
         window.im_cjs.event_type = '3' || 0;
         window.im_cjs.jump_url = 'https://lodipot.github.io/mika_backup/mika_gallery.html'; // createjsの演出が全て終了した場合の飛び先urlの定義
         window.im_cjs.chara_num = 1;
-        window.im_cjs.voice_flag = 1; // 音声再生フラグを定義
+        window.im_cjs.voice_flag = 1== getParameterByName('voice'); // 音声再生フラグを定義
     </script>
     <script>
         (function() {
