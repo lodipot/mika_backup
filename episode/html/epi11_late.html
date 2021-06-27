@@ -47,7 +47,17 @@
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/episode/epi11_late/talk.js'></script>
     <script type='text/javascript' src='https://lodipot.github.io/mika_backup/episode/epi11_late/epi11_late.js'></script>
-    <script>
+		<script type="text/javascript"> // 파라미터 가져오기
+            function getParameterByName(name) {
+                name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                  }
+
+                  var voiceOn = getParameterByName('voice');
+		</script>
+	<script>
         var image_server = "";
         var base_url = "";
         // 音声ファイルのmanifestを定義
@@ -62,7 +72,7 @@
         };
         window.file_name = "_404_3"; // createjs の本体ファイルを定義
         window.dir_name = "https://lodipot.github.io/mika_backup/episode/epi11_late/";
-        window.im_cjs.voice_flag = true; // 音声再生フラグを定義
+        window.im_cjs.voice_flag = 1 == getParameterByName('voice'); // 音声再生フラグを定義
         window.im_cjs.jump_url = 'https://lodipot.github.io/mika_backup/mika_gallery.html'; // createjsの演出が全て終了した場合の飛び先urlの定義
     </script>
     <script>
