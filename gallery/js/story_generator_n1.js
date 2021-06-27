@@ -5571,101 +5571,101 @@
         color: "#000000",
         opacity: 1,
         manifest: [{
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg1.jpg",
+                src: "../gallery/js/story_generator_n1/bg1.jpg",
                 id: "story_generator_n1_bg1"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg10.jpg",
+                src: "../gallery/js/story_generator_n1/bg10.jpg",
                 id: "story_generator_n1_bg10"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg2.jpg",
+                src: "../gallery/js/story_generator_n1/bg2.jpg",
                 id: "story_generator_n1_bg2"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg3.jpg",
+                src: "../gallery/js/story_generator_n1/bg3.jpg",
                 id: "story_generator_n1_bg3"
             },
             {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg4.jpg",
+                src: "../gallery/js/story_generator_n1/bg4.jpg",
                 id: "story_generator_n1_bg4"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg5.jpg",
+                src: "../gallery/js/story_generator_n1/bg5.jpg",
                 id: "story_generator_n1_bg5"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg6.jpg",
+                src: "../gallery/js/story_generator_n1/bg6.jpg",
                 id: "story_generator_n1_bg6"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg7.jpg",
+                src: "../gallery/js/story_generator_n1/bg7.jpg",
                 id: "story_generator_n1_bg7"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg8.jpg",
+                src: "../gallery/js/story_generator_n1/bg8.jpg",
                 id: "story_generator_n1_bg8"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg9.jpg",
+                src: "../gallery/js/story_generator_n1/bg9.jpg",
                 id: "story_generator_n1_bg9"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/bg_op.jpg",
+                src: "../gallery/js/story_generator_n1/bg_op.jpg",
                 id: "story_generator_n1_bg_op"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_b.png",
+                src: "../gallery/js/story_generator_n1/c1_b.png",
                 id: "story_generator_n1_c1_b"
             },
             {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face1.png",
+                src: "../gallery/js/story_generator_n1/c1_face1.png",
                 id: "story_generator_n1_c1_face1"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face10.png",
+                src: "../gallery/js/story_generator_n1/c1_face10.png",
                 id: "story_generator_n1_c1_face10"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face11.png",
+                src: "../gallery/js/story_generator_n1/c1_face11.png",
                 id: "story_generator_n1_c1_face11"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face12.png",
+                src: "../gallery/js/story_generator_n1/c1_face12.png",
                 id: "story_generator_n1_c1_face12"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face2.png",
+                src: "../gallery/js/story_generator_n1/c1_face2.png",
                 id: "story_generator_n1_c1_face2"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face3.png",
+                src: "../gallery/js/story_generator_n1/c1_face3.png",
                 id: "story_generator_n1_c1_face3"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face4.png",
+                src: "../gallery/js/story_generator_n1/c1_face4.png",
                 id: "story_generator_n1_c1_face4"
             },
             {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face5.png",
+                src: "../gallery/js/story_generator_n1/c1_face5.png",
                 id: "story_generator_n1_c1_face5"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face6.png",
+                src: "../gallery/js/story_generator_n1/c1_face6.png",
                 id: "story_generator_n1_c1_face6"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face7.png",
+                src: "../gallery/js/story_generator_n1/c1_face7.png",
                 id: "story_generator_n1_c1_face7"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face8.png",
+                src: "../gallery/js/story_generator_n1/c1_face8.png",
                 id: "story_generator_n1_c1_face8"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/c1_face9.png",
+                src: "../gallery/js/story_generator_n1/c1_face9.png",
                 id: "story_generator_n1_c1_face9"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/event_logo.png",
+                src: "../gallery/js/story_generator_n1/event_logo.png",
                 id: "story_generator_n1_event_logo"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/event_push.png",
+                src: "../gallery/js/story_generator_n1/event_push.png",
                 id: "story_generator_n1_event_push"
             },
             {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/event_push_b.png",
+                src: "../gallery/js/story_generator_n1/event_push_b.png",
                 id: "story_generator_n1_event_push_b"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/event_push_w.png",
+                src: "../gallery/js/story_generator_n1/event_push_w.png",
                 id: "story_generator_n1_event_push_w"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/fp_kirakira.png",
+                src: "../gallery/js/story_generator_n1/fp_kirakira.png",
                 id: "story_generator_n1_fp_kirakira"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/fp_kirakira_40x40.png",
+                src: "../gallery/js/story_generator_n1/fp_kirakira_40x40.png",
                 id: "story_generator_n1_fp_kirakira_40x40"
             }, {
-                src: "https://lodipot.github.io/mika_backup/gallery/js/story_generator_n1/tie_sp.png",
+                src: "../gallery/js/story_generator_n1/tie_sp.png",
                 id: "story_generator_n1_tie_sp"
             }
         ],
