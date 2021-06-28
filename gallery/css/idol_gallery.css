@@ -167,7 +167,7 @@
     line - height: 140 %
 }
 
-body #idol_gallery {
+body#idol_gallery {
     background-image: url(https://lodipot.github.io/mika_backup/gallery/css/image/idol_gallery/bg_mypage.png);
     background-size: 7px 7px
 }
