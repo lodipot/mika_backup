@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<script>
+			function page_shifter() {
+				var base_address = 'https://lodipot.github.io/mika_backup/episode_list/html/list_p';
+				var page_now = 1;
+				
+				if ($_GET["next"] == "1"){
+					page_next = page_now + 1;
+				}
+				else if ($_GET["back"] == "1"){
+					page_back = page_now - 1;
+				}
+				else if ($_GET["first"] == "1"){
+					page_next = 1;
+				}
+				else if ($_GET["last"] == "1"){
+					page_next = 5;
+				}
+				else{
+					page_next = $_GET["target_page_num"];
+				}
+				
+				var new_url = base_address + page_next + ".html";
+				return new_url;
+			}
+			window.location.href = page_shifter();
+		</script>
+		
+	</body>
+</html>
