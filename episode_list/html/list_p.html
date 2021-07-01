@@ -2,32 +2,47 @@
 <html>
 	<head></head>
 	<body>
+		<form action="javascript:page_shifter()" method="GET" style="margin:0"></form>
+
 		<script>
+			function Request(){
+				var requestParam = "";
+				this.getParameter = function(param){
+					var url = unescape(location.href);
+					var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+					for(var i = 0; i < paramArr.length; i++){
+						var temp = paramArr[i].split("=");
+						if(temp[0].toUpperCase() == param.toUpperCase()){
+							requestParam = paramArr[i].split("=")[1];
+							break;
+						}
+					}
+					return requestParam;
+				};
+			}
+			var request = new Request();
 			function page_shifter() {
-				var base_address = 'https://lodipot.github.io/mika_backup/episode_list/html/list_p';
+				var base_address = 'https://lodipot.github.io/mika_backup/episode_list/html/list_normal_p';
 				var page_now = 1;
 				
-				if ($_GET["next"] == "1"){
+				if (request.getParameter("next") == "1"){
 					page_next = page_now + 1;
 				}
-				else if ($_GET["back"] == "1"){
+				else if (request.getParameter("back") == "1"){
 					page_back = page_now - 1;
 				}
-				else if ($_GET["first"] == "1"){
+				else if (request.getParameter("first") == "1"){
 					page_next = 1;
 				}
-				else if ($_GET["last"] == "1"){
+				else if (request.getParameter("last") == "1"){
 					page_next = 5;
 				}
 				else{
-					page_next = $_GET["target_page_num"];
+					page_next = request.getParameter("target_page_num");
 				}
 				
-				var new_url = base_address + page_next + ".html";
-				return new_url;
+				window.location.href = base_address + page_next + ".html";
 			}
-			window.location.href = page_shifter();
 		</script>
-		
 	</body>
 </html>
