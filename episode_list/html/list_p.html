@@ -22,7 +22,7 @@
 			var request = new Request();
 			function page_shifter() {
 				var base_address = 'https://lodipot.github.io/mika_backup/episode_list/html/list_p';
-				var page_now = request.getParameter("page_now");
+				var page_now = Number(request.getParameter("page_now"));
 				
 				if (request.getParameter("next") == "1"){
 					page_next = page_now + 1;
