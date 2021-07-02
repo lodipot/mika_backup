@@ -16,7 +16,7 @@
 							break;
 						}
 					}
-					return requestParam;
+					return Number(requestParam);
 				};
 			}
 			var request = new Request();
@@ -24,16 +24,16 @@
 				var base_address = 'https://lodipot.github.io/mika_backup/episode_list/html/list_p';
 				var page_now = Number(request.getParameter("page_now"));
 				
-				if (request.getParameter("next") == "1"){
+				if (request.getParameter("next") == 1){
 					page_next = page_now + 1;
 				}
-				else if (request.getParameter("prev") == "1"){
+				else if (request.getParameter("prev") == 1){
 					page_next = page_now - 1;
 				}
-				else if (request.getParameter("first") == "1"){
+				else if (request.getParameter("first") == 1){
 					page_next = 1;
 				}
-				else if (request.getParameter("last") == "1"){
+				else if (request.getParameter("last") == 1){
 					page_next = 5;
 				}
 				else{
