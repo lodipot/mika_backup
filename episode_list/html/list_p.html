@@ -25,10 +25,10 @@
 				var page_now = Number(request.getParameter("page_now"));
 				
 				if (request.getParameter("next") == 1){
-					page_next = page_now + 1;
+					page_next = page_now;
 				}
 				else if (request.getParameter("prev") == 1){
-					page_next = page_now - 1;
+					page_next = page_now - 2;
 				}
 				else if (request.getParameter("first") == 1){
 					page_next = 1;
