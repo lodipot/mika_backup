@@ -312,7 +312,7 @@
                 results = regex.exec(location.search);
                 return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
         }
-        var voiceOn = getParameterByName('voice');
+        var voiceOn = Number(getParameterByName('voice'));
     </script>
 	<a href="#" id="voiceTouch"></a>
     <div id="container"></div>

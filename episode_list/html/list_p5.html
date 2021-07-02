@@ -144,7 +144,11 @@
 			<section>
                 <div style='background:url(https://lodipot.github.io/mika_backup/gallery/image/episode/special_episode_bg.png) center top no-repeat; background-size:320px; height:225px;'>
                     <ul style="position:relative; padding-top:82px; left:24px; margin-bottom:8px; width:130px;">
-                        <li class="voice_9900010"><a href='https://lodipot.github.io/mika_backup/episode_list/html/special_episode.html?voice=0' width="130" alt="「大人になりたい編」エピソードを再生する"></a></li>
+                        <li class="voice_9900010">
+							<a href='https://lodipot.github.io/mika_backup/episode_list/html/special_episode.html?voice=0' class="jsOnDesignBtn">
+								<img src="../../gallery/image/episode/epi_special_play_btn.png" width="130" alt="「大人になりたい編」エピソードを再生する">
+							</a>
+						</li>
                         <li class="t-Cnt">
                             <form class="checkForm_9900010">
                                 <img src="https://lodipot.github.io/mika_backup/gallery/image/episode/epi_event_voice_off.png" width="100" alt="ボイス設定">
@@ -196,12 +200,12 @@
                     if ($flag.val() == 1) {
                         $flag.val('0');
                         $button.children().attr('src', 'https://lodipot.github.io/mika_backup/gallery/image/episode/epi_event_voice_off.png');
-                        $voice9900010.children().attr('href', 'https://lodipot.github.io/mika_backup/episode/html/special_episode.html?voice=0');
+                        $voice9900010.children().attr('href', 'https://lodipot.github.io/mika_backup/episode_list/html/special_episode.html?voice=0');
                     }
                     else {
                         $flag.val('1');
                         $button.children().attr('src', 'https://lodipot.github.io/mika_backup/gallery/image/episode/epi_event_voice_on.png');
-                        $voice9900010.children().attr('href', 'https://lodipot.github.io/mika_backup/episode/html/special_episode.html?voice=1');
+                        $voice9900010.children().attr('href', 'https://lodipot.github.io/mika_backup/episode_list/html/special_episode.html?voice=1');
                     }
                     return false;
                 });
