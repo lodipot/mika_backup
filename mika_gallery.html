@@ -10,11 +10,6 @@
     <title>アイドルマスター シンデレラガールズ</title>
     <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
     <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
-    <script>
-        (function() {
-            window.console.log = function() {};
-        })();
-    </script>
     <script type="text/javascript">
         if (window.localStorage) {
             var displaySet = localStorage.getItem('DisplayPositionSet');
@@ -99,19 +94,6 @@
                             <div></div>
                         </a></li>
                 </ul>
-            </div>
-            <div id="headerPopupMenu" class="headerPopupMenu">
-                <h3 class="icon_menu_header_03"></h3>
-                <div class="area_menu_header_4">
-                    <ul>
-						<li><a class="btn_menu_header_profile" href='https://lodipot.github.io/mika_backup/profile.html'>
-                                <div></div>
-                            </a></li>
-                        <li><a class="btn_menu_header_memory" href='https://lodipot.github.io/mika_backup/memorial.html'>
-                                <div></div>
-                            </a></li>
-                    </ul>
-                </div>
             </div>
         </nav>
         <input id="delay" type="hidden" value="0">
@@ -322,6 +304,24 @@
             }
             -->
         </style>
+		<script>
+			function Request(){
+				var requestParam = "";
+				this.getParameter = function(param){
+					var url = unescape(location.href);
+					var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+					for(var i = 0; i < paramArr.length; i++){
+						var temp = paramArr[i].split("=");
+						if(temp[0].toUpperCase() == param.toUpperCase()){
+							requestParam = paramArr[i].split("=")[1];
+							break;
+						}
+					}
+					return Number(requestParam);
+				};
+			}
+			var request = new Request();
+		</script>
         <script type="text/template" id="tab-4-template">
             <div id="contents_tab" class="tab_common-large m-Top4 m-Btm8" style="font-size:11px">
 <a name="tab_1" href="#" class="tab_line_4 tab_text selected" style="font-size:11px;">プロフィール</a>
@@ -338,6 +338,7 @@
 <a name="tab_4" class="tab_line_3 tab_text" href="#">アイドル情報</a>
 </div>
 </script>
+
 <script type="text/template" id="idol-base-template">
 <div style="position:relative;top:-20px;padding-top:24px;height:312px;margin-bottom:-143px;">
 <div style="background-image:url(<%- idol_image_bg_attribute[idol_detail.data.rarity][idol_detail.data.attribute.substr(0, 2)] %>);background-size:320px;position:absolute;top:0;width:100%;height:100%;"></div>
@@ -4683,7 +4684,14 @@ kg
                 window.idol = idol;
             })();
             var birthday_flag = false;
-            var select_card_index = "0";
+			if (typeof(request.getParameter("selected")) !== "undefined"){
+                var select_card_index = Number(request.getParameter("selected"));
+                var slider_pos = parseInt((select_card_index + 1) / 5);
+			}
+			else {
+				var select_card_index = "0"
+                var slider_pos = 0;
+			}
             var selected_num = null;
             var url_trade = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fauction%2Fsearch_top%2F0%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D329363844';
             var url_album = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Farchive%2Fview%2F__hash_card_id__%2F0%2F0%2F0%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D555287325';
@@ -4691,7 +4699,6 @@ kg
             var url_other_event = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_gallery%2Findex%2F0%2F0%2F2%2F0%3Fis_search%3D1%26event_category%3D__category_id__%26event_id%3D__event_id__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D169950012';
             var url_cartoon = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fcartoon%2Fsearch%3F__idol_search_param__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D755935409';
             var url_comment_5th_redirect = "idol_gallery/idol_detail/__hash_card_id__";
-            var slider_pos = 0;
             var select_tab = 0;
             var comments_info = {
                 "comment": {
