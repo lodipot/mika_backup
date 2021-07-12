@@ -4729,7 +4729,8 @@ kg
             })();
             var birthday_flag = false;
 			if (typeof(request.getParameter("selected")) !== "undefined"){
-                var select_card_index = Number(request.getParameter("selected")) - 1;
+                var select_number = Number(request.getParameter("selected");
+                var select_card_index = selected_num - 1;
                 var slider_pos = parseInt(select_card_index / 5);
 			}
 			else {
