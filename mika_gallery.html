@@ -317,7 +317,7 @@
 							break;
 						}
 					}
-					return Number(requestParam);
+					return requestParam;
 				};
 			}
 			var request = new Request();
@@ -618,7 +618,7 @@ kg
 </section>
 <div class="area-btn-common _base-width">
 <% if(is_exist_archive) { %>
-<a href='<%- url_album.replace("__card_number__", data.card_number) %>' class="btn_normal_line_2 m-Cnt <% if(trade_prohibition.is_trade_limit) { %>m-Cnt<% } %>">アルバム</a>
+<a href='<%- url_album.replace("__card_index__", data.card_index) %>' class="btn_normal_line_2 m-Cnt <% if(trade_prohibition.is_trade_limit) { %>m-Cnt<% } %>">アルバム</a>
 <% } %>
 </div>
 <% if (event) { %>
@@ -766,7 +766,7 @@ kg
                 var idol = {};
                 idol.detail_list = [{
                     "data": {
-					    "card_number": "01",
+					    "card_index": "01",
                         "card_name": "\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "10",
@@ -844,7 +844,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "02",
+					    "card_index": "02",
                         "card_name": "\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "10",
@@ -922,7 +922,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "03",
+					    "card_index": "03",
                         "card_name": "[\uff77\uff9e\uff6c\uff99\uff8c\uff9e\uff9b\uff6f\uff7b\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "13",
@@ -1000,7 +1000,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "04",
+					    "card_index": "04",
                         "card_name": "[\uff77\uff9e\uff6c\uff99\uff8c\uff9e\uff9b\uff6f\uff7b\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "13",
@@ -1084,7 +1084,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "05",
+					    "card_index": "05",
                         "card_name": "[\uff86\uff6d\uff70\uff73\uff9e\uff6b\uff70\uff78\uff9e]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "14",
@@ -1162,7 +1162,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "06",
+					    "card_index": "06",
                         "card_name": "[\uff86\uff6d\uff70\uff73\uff9e\uff6b\uff70\uff78\uff9e]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "14",
@@ -1240,7 +1240,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "07",
+					    "card_index": "07",
                         "card_name": "[\uff76\uff98\uff7d\uff8f\uff77\uff9e\uff6c\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "16",
@@ -1320,7 +1320,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "08",
+					    "card_index": "08",
                         "card_name": "[\uff76\uff98\uff7d\uff8f\uff77\uff9e\uff6c\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "16",
@@ -1400,7 +1400,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "09",
+					    "card_index": "09",
                         "card_name": "[CD\uff83\uff9e\uff8b\uff9e\uff6d\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "8",
@@ -1480,7 +1480,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "10",
+					    "card_index": "10",
                         "card_name": "[CD\uff83\uff9e\uff8b\uff9e\uff6d\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "8",
@@ -1560,7 +1560,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "11",
+					    "card_index": "11",
                         "card_name": "[\uff7c\uff70\uff78\uff9a\uff6f\uff84\u2605\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "17",
@@ -1640,7 +1640,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "12",
+					    "card_index": "12",
                         "card_name": "[\uff7c\uff70\uff78\uff9a\uff6f\uff84\u2605\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "17",
@@ -1720,7 +1720,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "13",
+					    "card_index": "13",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff78\uff98\uff7d\uff8f\uff7d]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "19",
@@ -1800,7 +1800,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "14",
+					    "card_index": "14",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff78\uff98\uff7d\uff8f\uff7d]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "19",
@@ -1880,7 +1880,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "15",
+					    "card_index": "15",
                         "card_name": "[\uff9c\uff9d\uff80\uff9e\uff8c\uff99\uff8f\uff7c\uff9e\uff6f\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "19",
@@ -1960,7 +1960,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "16",
+					    "card_index": "16",
                         "card_name": "[\uff9c\uff9d\uff80\uff9e\uff8c\uff99\uff8f\uff7c\uff9e\uff6f\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "19",
@@ -2040,7 +2040,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "17",
+					    "card_index": "17",
                         "card_name": "[\u590f\u306e\uff95\uff73\uff9c\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "20",
@@ -2120,7 +2120,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "18",
+					    "card_index": "18",
                         "card_name": "[\u590f\u306e\uff95\uff73\uff9c\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "20",
@@ -2200,7 +2200,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "19",
+					    "card_index": "19",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "14",
@@ -2285,7 +2285,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "20",
+					    "card_index": "20",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "14",
@@ -2376,7 +2376,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "21",
+					    "card_index": "21",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70\uff65S]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "18",
@@ -2461,7 +2461,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "22",
+					    "card_index": "22",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70\uff65S]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "18",
@@ -2546,7 +2546,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "23",
+					    "card_index": "23",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff7b\uff8f\uff70\uff85\uff72\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "21",
@@ -2626,7 +2626,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "24",
+					    "card_index": "24",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff7b\uff8f\uff70\uff85\uff72\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "21",
@@ -2706,7 +2706,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "25",
+					    "card_index": "25",
                         "card_name": "[G4U\uff01]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "17",
@@ -2786,7 +2786,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "26",
+					    "card_index": "26",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff84\uff9e\uff78\uff80\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "22",
@@ -2866,7 +2866,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "27",
+					    "card_index": "27",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff84\uff9e\uff78\uff80\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "22",
@@ -2946,7 +2946,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "28",
+					    "card_index": "28",
                         "card_name": "[\uff95\uff71\u2605\uff73\uff6b\uff70\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "23",
@@ -3026,7 +3026,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "29",
+					    "card_index": "29",
                         "card_name": "[\uff95\uff71\u2605\uff73\uff6b\uff70\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "23",
@@ -3106,7 +3106,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "30",
+					    "card_index": "30",
                         "card_name": "[\u305f\u305f\u3044\u3066\u3054\u8912\u7f8e]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "21",
@@ -3191,7 +3191,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "31",
+					    "card_index": "31",
                         "card_name": "[\uff86\uff71\uff90\uff70\u2605\uff71\uff9d\uff7e\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "24",
@@ -3271,7 +3271,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "32",
+					    "card_index": "32",
                         "card_name": "[\uff86\uff71\uff90\uff70\u2605\uff71\uff9d\uff7e\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "24",
@@ -3357,7 +3357,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "33",
+					    "card_index": "33",
                         "card_name": "[\u898b\u3064\u3081\u3066\u2605\uff86\uff6d\uff70\uff72\uff94\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "24",
@@ -3437,7 +3437,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "34",
+					    "card_index": "34",
                         "card_name": "[\u898b\u3064\u3081\u3066\u2605\uff86\uff6d\uff70\uff72\uff94\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "24",
@@ -3517,7 +3517,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "35",
+					    "card_index": "35",
                         "card_name": "[\uff7e\uff9d\uff7c\uff6d\uff71\uff99\u2605\uff7b\uff8f\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "25",
@@ -3597,7 +3597,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "36",
+					    "card_index": "36",
                         "card_name": "[\uff7e\uff9d\uff7c\uff6d\uff71\uff99\u2605\uff7b\uff8f\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "25",
@@ -3677,7 +3677,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "37",
+					    "card_index": "37",
                         "card_name": "[\uff75\uff9d\uff98\uff70\uff9c\uff9d\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "25",
@@ -3757,7 +3757,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "38",
+					    "card_index": "38",
                         "card_name": "[\uff75\uff9d\uff98\uff70\uff9c\uff9d\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "25",
@@ -3837,7 +3837,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "39",
+					    "card_index": "39",
                         "card_name": "[\uff7c\uff70\uff7b\uff72\uff84\uff9e\u2605\uff8d\uff8c\uff9e\uff9d]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -3917,7 +3917,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "40",
+					    "card_index": "40",
                         "card_name": "[\uff7c\uff70\uff7b\uff72\uff84\uff9e\u2605\uff8d\uff8c\uff9e\uff9d]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4004,7 +4004,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "41",
+					    "card_index": "41",
                         "card_name": "[\uff71\uff80\uff7c\u2605\uff7d\uff80\uff72\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -4084,7 +4084,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "42",
+					    "card_index": "42",
                         "card_name": "[\uff71\uff80\uff7c\u2605\uff7d\uff80\uff72\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4165,7 +4165,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "43",
+					    "card_index": "43",
                         "card_name": "[\uff89\uff9d\uff7d\uff84\uff6f\uff8c\uff9f\u2605\uff8f\uff72\uff73\uff6a\uff72]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -4245,7 +4245,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_number": "44",
+					    "card_index": "44",
                         "card_name": "[\uff89\uff9d\uff7d\uff84\uff6f\uff8c\uff9f\u2605\uff8f\uff72\uff73\uff6a\uff72]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4729,12 +4729,8 @@ kg
             })();
             var birthday_flag = false;
 			if (typeof(request.getParameter("selected")) !== "undefined"){
-                var select_card_index = request.getParameter("selected") - 1;
+                var select_card_index = Number(request.getParameter("selected")) - 1;
                 var slider_pos = parseInt(select_card_index / 5);
-			}
-			else if (request.getParameter("selected") == 0){
-				var select_card_index = 0;
-                var slider_pos = 0;
 			}
 			else {
 				var select_card_index = 0;
@@ -4742,7 +4738,7 @@ kg
 			}
             var selected_num = null;
             var url_trade = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fauction%2Fsearch_top%2F0%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D329363844';
-            var url_album = 'https://lodipot.github.io/mika_backup/album/mika_album/__card_number__.html';
+            var url_album = 'https://lodipot.github.io/mika_backup/album/mika_album/__card_index__.html';
             var url_event_memory = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fmemory%2Fdetail%2F__event_id__%2F__category_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D529709997';
             var url_other_event = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fidol_gallery%2Findex%2F0%2F0%2F2%2F0%3Fis_search%3D1%26event_category%3D__category_id__%26event_id%3D__event_id__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D169950012';
             var url_cartoon = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fcartoon%2Fsearch%3F__idol_search_param__%26l_frm%3DIdol_gallery_idol_detail_1%26rnd%3D755935409';
