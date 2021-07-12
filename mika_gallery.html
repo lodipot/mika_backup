@@ -4686,7 +4686,7 @@ kg
             var birthday_flag = false;
 			if (typeof(request.getParameter("selected")) !== "undefined"){
                 var select_card_index = Number(request.getParameter("selected"));
-                var slider_pos = parseInt((select_card_index + 1) / 5);
+                var slider_pos = parseInt(select_card_index / 5);
 			}
 			else {
 				var select_card_index = "0"
