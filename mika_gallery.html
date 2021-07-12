@@ -4732,6 +4732,10 @@ kg
                 var select_card_index = Number(request.getParameter("selected")) - 1;
                 var slider_pos = parseInt(select_card_index / 5);
 			}
+			else if (request.getParameter("selected") == 0){
+				var select_card_index = 0;
+                var slider_pos = 0;
+			}
 			else {
 				var select_card_index = 0;
                 var slider_pos = 0;
