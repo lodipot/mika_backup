@@ -317,7 +317,7 @@
 							break;
 						}
 					}
-					return Number(requestParam);
+					return requestParam;
 				};
 			}
 			var request = new Request();
@@ -4729,7 +4729,7 @@ kg
             })();
             var birthday_flag = false;
 			if (typeof(request.getParameter("selected")) !== "undefined"){
-                var select_card_index = request.getParameter("selected") - 1;
+                var select_card_index = Number(request.getParameter("selected")) - 1;
                 var slider_pos = parseInt(select_card_index / 5);
 			}
 			else {
