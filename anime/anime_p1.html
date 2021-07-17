@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="ja" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <title>アイドルマスター シンデレラガールズ</title>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
+    <script type="text/javascript">
+        if (window.localStorage) {
+            var displaySet = localStorage.getItem('DisplayPositionSet');
+            if (displaySet == 1) {
+                if (navigator.userAgent.indexOf('Android') > 0) {
+                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
+                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                } else {
+                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
+                }
+                window.addEventListener('resize', function() {
+                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                });
+            } else {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+        }
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery-2.2.2.min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/underscore-min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                easeljs: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.8.2.min.js",
+                easeljs_0_7_1: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.7.1.min.js", //スプライトを読むためのバージョン
+                tweenjs: "https://lodipot.github.io/mika_backup/gallery/js/tweenjs-0.6.2.min.js",
+                movieclipjs: "https://lodipot.github.io/mika_backup/gallery/js/movieclip-0.7.1.min.js",
+                createjs: "https://lodipot.github.io/mika_backup/gallery/js/createjs-2015.11.26.min.js",
+            }
+        })
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common_new.js"></script>
+    <script>
+        $(function() {
+            window.$ibox = $('.ibox').ibox();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/990d4c7b388f9a05cbb860b1a385a2cc');
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0,
+            bgm_flg = 0,
+            chrome_app_flg = 0,
+            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
+    </script>
+    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
+</head>
+
+<body id="anime" class="index">
+    <div id="top" class="page_container jsOnBtn">
+        <nav class="area_menu_header">
+            <div class="area_menu_header_6btn">
+                <h1 id="JtextLimit">フライデーナイトフィーバー</h1>
+                <ul>
+                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_02" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_03" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_04" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_05" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                            <div></div>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <input id="delay" type="hidden" value="0">
+        <style>
+            h1 {
+                font-size: 16px;
+            }
+
+            .cute {
+                color: #fe0074;
+            }
+
+            .cool {
+                color: #006afe;
+            }
+
+            .passion {
+                color: #ff8a01;
+            }
+
+            .other {
+                color: #5f3afe;
+            }
+
+            .chihiro {
+                color: #55d529;
+            }
+
+            .lr_layout {
+                overflow: hidden;
+            }
+
+            .lr_layout .left {
+                float: left;
+            }
+
+            .lr_layout .right {
+                float: left;
+            }
+
+            .text_defa {
+                line-height: 140%;
+                padding: 7px;
+            }
+
+            h4 {
+                margin-top: 0px;
+                font-size: 16px;
+                line-height: 180%;
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            #slider {
+                height: 210px;
+            }
+
+            .main_image_area {
+                width: 320px;
+                height: 210px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .main_image_area:after {
+                content: '';
+                width: 320px;
+                height: 210px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 10;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/title_top_re.png) no-repeat;
+                background-size: 320px;
+            }
+
+            .slide_banner01 {
+                width: 320px;
+                height: 265px;
+                padding-top: 10px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/bg_introduction_idol.jpg) no-repeat;
+                background-size: 320px;
+                color: #1d1d1d;
+            }
+
+            .side_back {
+                width: 320px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/bg_episode.jpg) no-repeat;
+                background-size: 320px;
+                -webkit-box-shadow: 0px 0px 20px 20px #fff inset;
+            }
+
+            .side_back .side_title {
+                width: 320px;
+                height: 50px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/line_top_episode.png) no-repeat;
+                background-size: 320px;
+                line-height: 54px;
+                text-align: center;
+                overflow: hidden;
+                font-size: 20px;
+                font-weight: bold;
+                color: #0e75e0;
+                text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 5px #fff;
+            }
+
+            .side_back .side_body {
+                width: 320px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/line_bg_episode.png) repeat-y;
+                background-size: 320px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .side_body .side_in {
+                width: 270px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .side_body .side_in .text_defa {
+                text-align: left;
+                padding-bottom: 12px;
+                color: #000;
+                text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+                font-weight: bold;
+            }
+
+            .play_btn {
+                position: absolute;
+                left: 95px;
+                bottom: 20px;
+            }
+
+            .side_idol_list {
+                width: 200px;
+                overflow: hidden;
+                padding-top: 5px;
+                text-align: left;
+                font-size: 15px;
+            }
+
+            .side_idol_list ul {
+                margin: 5px 0 0 5px;
+            }
+
+            .side_idol_list ul li {
+                float: left;
+                margin-right: 10px;
+                margin-bottom: 7px;
+                word-break: keep-all;
+                text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+            }
+
+            .movie_title {
+                width: 320px;
+                height: 70px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/line_movie_title.jpg) no-repeat;
+                background-size: 320px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 18px;
+            }
+
+            .back_number {
+                width: 282px;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+
+            .back_number ul {
+                width: 288px;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+
+            .back_number li {
+                width: 66px;
+                float: left;
+                margin: 5px 6px 0 0;
+            }
+
+            .exArea {
+                width: 260px;
+                margin: 10px auto 0;
+                padding: 0;
+                border: 2px solid #b4d5f4;
+                background: #1d1d1d;
+                z-index: 10;
+                color: #ffffff;
+                line-height: 140%;
+                -webkit-border-radius: 8px;
+            }
+
+            .exArea h3 {
+                background: #17285c;
+                -webkit-border-top-left-radius: 8px;
+                -webkit-border-top-right-radius: 8px;
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .reset_btn {
+                height: 45px;
+                line-height: 45px;
+                padding: 0 20px;
+                -webkit-border-radius: 5px;
+                color: #fff;
+                text-align: center;
+                vertical-align: middle;
+                border: 1px solid #666;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444), color-stop(50%, #1d1d1d), color-stop(100%, #444));
+                margin: 0 5px 0 10px;
+            }
+
+            .mejs-container .mejs-controls {
+                -webkit-border-radius: 15px;
+            }
+
+            .mejs-container {
+                -webkit-border-radius: 15px;
+                background: rgba(0, 0, 0, 0.2) !important;
+            }
+
+            .mejs-controls .mejs-time-rail .mejs-time-total {
+                margin: 5px 0 !important;
+            }
+
+            .mejs-time-rail {
+                width: 130px !important;
+                position: relative;
+                left: 25px;
+            }
+
+            .mejs-time-rail a {
+                width: 130px !important;
+                background-image: url(https://lodipot.github.io/mika_backup/gallery/image/anime/voice_gauge_black.png) !important;
+                background-size: 130px 10px !important;
+            }
+
+            .mejs-time {
+                position: relative;
+                left: 30px;
+            }
+
+            .mejs-button {
+                position: relative;
+                left: 10px;
+            }
+
+            .mejs-time-loaded {
+                background-image: url(https://lodipot.github.io/mika_backup/gallery/image/anime/voice_gauge_black.png) !important;
+                background-size: 130px 10px !important;
+            }
+
+            .mejs-time-current {
+                background-image: url(https://lodipot.github.io/mika_backup/gallery/image/anime/voice_gauge.png) !important;
+                background-size: 130px 10px !important;
+            }
+
+            .mejs-container .mejs-controls .mejs-playpause-button {
+                width: 34px !important;
+            }
+
+            .mejs-container .mejs-controls .mejs-playpause-button button {
+                width: 33px !important;
+                margin: 8px 5px;
+                background-size: 33px 16px !important;
+            }
+
+            .mejs-play button {
+                background: transparent;
+                background-image: url(https://lodipot.github.io/mika_backup/gallery/image/anime/voice_play.png) !important;
+            }
+
+            .mejs-pause button {
+                background: transparent;
+                background-image: url(https://lodipot.github.io/mika_backup/gallery/image/anime/voice_stop.png) !important;
+            }
+
+            .information {
+                text-align: left;
+                color: #dddddd;
+            }
+
+            .information p {
+                padding-left: 1em;
+                text-indent: -1em;
+                line-height: 130%;
+                margin-bottom: 0.6em;
+                font-size: 12px;
+            }
+
+            .movie_area {
+                width: 320px;
+                min-height: 180px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .js-thumbnail {
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background-repeat: no-repeat;
+                background-size: 320px;
+            }
+
+            .js-thumbnail:after {
+                content: '';
+                display: block;
+                width: 61px;
+                height: 61px;
+                background: url(https://lodipot.github.io/mika_backup/gallery/image/anime/btn_play.png) no-repeat;
+                background-size: 61px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: auto;
+                pointer-events: none;
+            }
+
+            video {
+                position: absolute;
+                top: -100px;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/mediaelementplayer.css" media="all">
+        <header><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/top_03.jpg' width="320" height="120" class="m-Head_img"><br>
+            <div class="main_image_area" id="slider">
+            <img src='https://lodipot.github.io/mika_backup/gallery/image/anime/top_image_001.jpg' width="320" class="fadeImage" style="display:none;opacity:0">
+            <img src='https://lodipot.github.io/mika_backup/gallery/image/anime/top_image_002.jpg' width="320" class="fadeImage" style="display:none;opacity:0">
+            <img src='https://lodipot.github.io/mika_backup/gallery/image/anime/top_image_003.jpg' width="320" class="fadeImage" style="display:none;opacity:0"></div>
+        </header>
+        <div class="tab_common-large m-Top10 m-Btm8">
+            <div class='tab_line_2 selected t-Cnt'>最新ストーリー</div><a class='tab_line_2 tab_text' href='https://lodipot.github.io/mika_backup/anime/anime_p2.html'>マジアワSP</a>
+        </div>
+        <section style="margin-bottom:5px">
+            <h3 class="title_hanyo">
+                <div>サイドストーリー</div>
+            </h3>
+            <div id="top_menu" class="tab_common-middle m-Top10"><a class='tab_line_2_1 tab_text selected' href='#'>NO MAKE</a><a class='tab_line_2_2 tab_text' href='#'>マジックアワー</a></div>
+        </section>
+        <section>
+            <div class="side_a_area area_tab">
+                <h2 class="title_tenhoshi" style="margin-bottom:5px">
+                    <div>#6<br> <span style="font-size:13px;">Finally, our day has come!</span></div>
+                </h2>
+                <div class="side_back">
+                    <div class="side_title">#6 NO MAKE</div>
+                    <div class="side_body">
+                        <div class="side_in"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/image_nomake6.jpg' width="270" height="152">
+                            <div class="lr_layout">
+                                <div class="left" style="width:70px;text-align:left;padding-top:6px"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/explain_episode_character.png' width="68" height="23"></div>
+                                <div class="right side_idol_list">
+                                    <ul>
+                                        <li class="passion">城ヶ崎美嘉</li>
+                                        <li class="cool">神崎蘭子</li>
+                                        <li class="passion">諸星きらり</li>
+                                        <li class="cute">緒方智絵里</li>
+                                        <li class="cute">三村かな子</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_episode.png' width="279" height="10">
+                        <div class="side_in">
+                            <div class="text_defa" style="padding-top:3px">『LOVE LAIKA』と『New Generations』のCD発売イベントを見学に来た城ヶ崎美嘉とプロジェクトメンバー達。<br />美嘉は先輩として、メンバー達にどんな姿を見せていたのか……。<br />本日のNO MAKEは、その時のお話です……</div>
+                            <div style="height: 55px;">
+                                <script>
+                                    document.write('<audio src="https://lodipot.github.io/mika_backup/anime/voice/06_anime_ep_sidea.mp4" controls>');
+                                </script>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_bottom_episode.png' width="320" height="28" style="position:absolute;left:0;bottom:0">
+                    </div>
+                </div>
+                <div class="movie_title" style="width:295px; margin:0 auto;">前回の予告</div>
+                <div class="movie_area" style="width:295px; margin:0 auto;"><a href='#' class="js-thumbnail" data-movie_url="https://lodipot.github.io/mika_backup/anime/video/05_anime_preview.mp4" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/anime/movie_thumbnail_2.jpg)'></a></div>
+                <br>
+                <h2 class="title_tenhoshi" style="margin-bottom:5px">
+                    <div>#10<br> <span style="font-size:13px;">Our world is full of joy!!</span></div>
+                </h2>
+                <div class="side_back">
+                    <div class="side_title">#10 NO MAKE</div>
+                    <div class="side_body">
+                        <div class="side_in"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/image_nomake10.jpg' width="270" height="152">
+                            <div class="lr_layout">
+                                <div class="left" style="width:70px;text-align:left;padding-top:6px"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/explain_episode_character.png' width="68" height="23"></div>
+                                <div class="right side_idol_list">
+                                    <ul>
+                                        <li class="passion">諸星きらり</li>
+                                        <li class="passion">城ヶ崎莉嘉</li>
+                                        <li class="passion">赤城みりあ</li>
+                                        <li class="passion">城ヶ崎美嘉</li>
+                                        <li class="passion">大槻唯</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_episode.png' width="279" height="10">
+                        <div class="side_in">
+                            <div class="text_defa" style="padding-top:3px">『凸レーション』というユニットでのCDデビューが決まった城ヶ崎莉嘉は、姉の城ヶ崎美嘉にどう知らせようか迷っていました。<br />本日のNO MAKEは、その時のお話です……</div>
+                            <div style="height: 55px;">
+                                <script>
+                                    document.write('<audio src="https://lodipot.github.io/mika_backup/anime/voice/10_anime_ep_sidea.mp4" controls>');
+                                </script>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_bottom_episode.png' width="320" height="28" style="position:absolute;left:0;bottom:0">
+                    </div>
+                </div>
+                <div class="movie_title" style="width:295px; margin:0 auto;">前回の予告</div>
+                <div class="movie_area" style="width:295px; margin:0 auto;"><a href='#' class="js-thumbnail" data-movie_url="https://lodipot.github.io/mika_backup/anime/video/09_anime_preview.mp4" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/anime/movie_thumbnail_2.jpg)'></a></div>
+                <br>
+                <h2 class="title_tenhoshi" style="margin-bottom:5px">
+                    <div>#17<br> <span style="font-size:13px;">Where does this road lead to?</span></div>
+                </h2>
+                <div class="side_back">
+                    <div class="side_title">#17 NO MAKE</div>
+                    <div class="side_body">
+                        <div class="side_in"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/image_nomake17.jpg' width="270" height="152">
+                            <div class="lr_layout">
+                                <div class="left" style="width:70px;text-align:left;padding-top:6px"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/explain_episode_character.png' width="68" height="23"></div>
+                                <div class="right side_idol_list">
+                                    <ul>
+                                        <li class="cute">島村卯月</li>
+                                        <li class="cool">渋谷凛</li>
+                                        <li class="passion">本田未央</li>
+                                        <li class="passion">城ヶ崎美嘉</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_episode.png' width="279" height="10">
+                        <div class="side_in">
+                            <div class="text_defa" style="padding-top:3px">美城常務による組織再編が進む中、高垣楓や城ヶ崎美嘉は自分らしさを貫いていく。<br />そんな彼女達の側にいる、ニュージェネレーションズの3人の気持ちは……。<br />本日のNO MAKEは、その時のお話です……</div>
+                            <div style="height: 55px;">
+                                <script>
+                                    document.write('<audio src="https://lodipot.github.io/mika_backup/anime/voice/17_anime_ep_sidea.mp4" controls>');
+                                </script>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_bottom_episode.png' width="320" height="28" style="position:absolute;left:0;bottom:0">
+                    </div>
+                </div>
+                <div class="movie_title" style="width:295px; margin:0 auto;">前回の予告</div>
+                <div class="movie_area" style="width:295px; margin:0 auto;"><a href='#' class="js-thumbnail" data-movie_url="https://lodipot.github.io/mika_backup/anime/video/16_anime_preview.mp4" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/anime/movie_thumbnail_2.jpg)'></a></div>
+                <h3 class="title_hanyo" style="width:295px; margin:0 auto;">
+                    <div>#17 あらすじ</div>
+                </h3>
+                <div class="lr_layout">
+                    <div class="left t-Cnt" style="width:50%"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/story_info_01.jpg' width="135" height="76"></div>
+                    <div class="left t-Cnt" style="width:50%"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/story_info_02.jpg' width="135" height="76"></div>
+                </div>
+            <div class="text_defa" style="width:299px; margin:0 auto;">Pはシンデレラプロジェクトの存続・舞踏会の企画成功のためにそれぞれの成長と知名度アップが必要だとアイドルたちと気持ちを一つにしていた。<br />他部署とも協力体制で企画された新番組「とときら学園」というTVバラエティ番組がスタートすることになり、凸レーションはレギュラーとして出演することに!<br />一方美城常務によりギャル路線から変更を求められていた美嘉は、自分の部署や後輩の立場を考え路線を変えられても頑張っていた。<br />そんな美嘉はとときら学園で自分の路線と違うことを求められたことに不満を口にする莉嘉とケンカになってしまう。<br />一方みりあももやもやした気持ちを抱えていて……二人を心配するきらりやアイドルたち。このままで番組を成功させることはできるのか……!?</div>
+            </div>
+            <div class="side_b_area area_tab">
+                <h2 class="title_tenhoshi">
+                    <div>#4<br> <span style="font-size:13px;">Everyday life, really full of joy!</span></div>
+                </h2>
+                <div class="side_back">
+                    <div class="side_title">#4 マジックアワー</div>
+                    <div class="side_body">
+                        <div class="side_in"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/image_magichour_4.jpg' width="270" height="152">
+                            <div class="lr_layout">
+                                <div class="left" style="width:70px;text-align:left;padding-top:6px"><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/explain_episode_character.png' width="68" height="23"></div>
+                                <div class="right side_idol_list">
+                                    <ul>
+                                        <li class="cool">高垣楓</li>
+                                        <li class="passion">城ヶ崎美嘉</li>
+                                        <li class="passion">日野茜</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text_defa"></div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_episode.png' width="279" height="10">
+                            <div style="height: 55px;" class="m-Top10">
+                                <script>
+                                    document.write('<audio src="https://lodipot.github.io/mika_backup/anime/voice/04_anime_ep_sideb.mp4" controls>');
+                                </script>
+                            </div>
+                        </div><img src='https://lodipot.github.io/mika_backup/gallery/image/anime/line_bottom_episode.png' width="320" height="28" style="position:absolute;left:0;bottom:0">
+                    </div>
+                </div>
+            </div>
+        </section>
+        </a><a href='https://lodipot.github.io/mika_backup/mypage.html'>
+            <div class="backLink">マイスタジオへ</div>
+        </a>
+        <img src='https://lodipot.github.io/mika_backup/gallery/image/anime/button_play_voice.png' style="display:none;" id="button_play_voice">
+        <img src='https://lodipot.github.io/mika_backup/gallery/image/anime/button_stop_voice.png' style="display:none;" id="button_stop_voice">
+        <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery.common-popup.js"></script>
+        <script src="https://lodipot.github.io/mika_backup/gallery/js/islider.js"></script>
+        <script src="https://lodipot.github.io/mika_backup/gallery/js/ilibrary.js"></script>
+        <script>
+            function SideStory(play_button, audio, stop_file, button_image) {
+                this.play_button = play_button;
+                this.audio = audio;
+                this.playing = false;
+                this.stop_file = stop_file;
+                var self = this;
+                self.audio.addEventListener('ended', function() {
+                    self.playing = false;
+                    $(self.play_button).children('img').attr('src', button_image.play);
+                }, false);
+                this.play = function() {
+                    if (!self.playing) {
+                        self.audio.play();
+                        self.playing = true;
+                        $(self.play_button).children('img').attr('src', button_image.stop);
+                    } else {
+                        self.audio.pause();
+                        self.playing = false;
+                        $(self.play_button).children('img').attr('src', button_image.play);
+                    }
+                };
+                this.stop = function() {
+                    if (self.playing) {
+                        self.audio.pause();
+                        self.playing = false;
+                        $(self.play_button).children('img').attr('src', button_image.play);
+                    }
+                };
+                play_button.click(function() {
+                    stories[self.stop_file].stop();
+                    self.play();
+                    return false;
+                });
+            }
+            var button_image = {
+                'play': $('#button_play_voice').attr('src'),
+                'stop': $('#button_stop_voice').attr('src')
+            };
+            var stories = {
+                'side_a': new SideStory($("#play_side_a"), getAudio("https://lodipot.github.io/mika_backup/anime/voice/06_anime_ep_sidea.mp4"), 'side_b', button_image),
+                'side_b': new SideStory($("#play_side_b"), getAudio("https://lodipot.github.io/mika_backup/anime/voice/04_anime_ep_sideb.mp4"), 'side_a', button_image)
+            };
+            $(function() {
+                Imascg.FadeImage = {
+                    init: function() {
+                        if ($('.fadeImage').length > 1) {
+                            var cnt = 0;
+                            this.onImage(cnt);
+                        } else if ($('.fadeImage').length == 1) {
+                            $('.fadeImage').show();
+                        }
+                    },
+                    onImage: function(cnt) {
+                        if ($('.fadeImage').length <= cnt) {
+                            var cnt = 0;
+                        }
+                        $('.fadeImage').eq(cnt).show().animate({
+                            opacity: "1"
+                        }, {
+                            duration: 1000,
+                            complete: function() {
+                                Imascg.FadeImage.offImage(cnt);
+                            }
+                        });
+                    },
+                    offImage: function(cnt) {
+                        setTimeout(function() {
+                            $('.fadeImage').eq(cnt).animate({
+                                opacity: "0"
+                            }, {
+                                duration: 1000,
+                                complete: function() {
+                                    $(this).hide();
+                                    cnt++;
+                                    Imascg.FadeImage.onImage(cnt);
+                                }
+                            });
+                        }, 5000);
+                    }
+                };
+                Imascg.FadeImage.init();
+                $('.slide_banner01').iSlider({
+                    width: "320px",
+                    height: "254px",
+                    slideshowSpeed: 3000,
+                    touch: true,
+                    start: 0,
+                    loop: true
+                });
+                $('.tab_link').tab_switch({
+                    contents: ".area_tab",
+                    storage: "assualt_top",
+                    start: 2
+                });
+                $('.tab_2').on('click', function() {
+                    se_play('se_005');
+                });
+                $('#exchange_window').ou();
+                $('.jsExchangeBt').on('click', function() {
+                    $('.clselm').hide();
+                    if ($(this).data('contents') == "present") {
+                        $('#exchange_text').val('交換する');
+                        $('.exchange_idol').show();
+                    } else {
+                        $('#exchange_text').val('解放する');
+                        $('.exchange_episode').show();
+                    }
+                    if ($(this).data('judge') == "enough") {
+                        $('#exchange_type').val($(this).data('type'));
+                        $('.submit_permit').show();
+                    } else {
+                        $('.submit_disallowed').show();
+                    }
+                    $('.exchange_window_btn').trigger('click');
+                    return false;
+                });
+            });
+        </script>
+        <script src="https://lodipot.github.io/mika_backup/gallery/js/mediaelement-and-player.min.js" type="text/javascript"></script>
+        <script>
+            $('audio').mediaelementplayer({
+                // width of audio player
+                audioWidth: 270,
+                // initial volume when the player starts
+                startVolume: 0.8,
+                // useful for <audio> player loops
+                loop: false,
+                // enables Flash and Silverlight to resize to content size
+                enableAutosize: true,
+                // the order of controls you want on the control bar (and other plugins below)
+                features: ['playpause', 'progress', 'current', 'duration', 'tracks', 'volume', 'fullscreen'],
+                // Hide controls when playing and mouse is not over the video
+                alwaysShowControls: false,
+                // force iPad's native controls
+                iPadUseNativeControls: false,
+                // force iPhone's native controls
+                iPhoneUseNativeControls: false,
+                // force Android's native controls
+                AndroidUseNativeControls: false,
+                // forces the hour marker (##:00:00)
+                alwaysShowHours: false,
+                // show framecount in timecode (##:00:00:00)
+                showTimecodeFrameCount: false,
+                // used when showTimecodeFrameCount is set to true
+                framesPerSecond: 25,
+                // turns keyboard support on and off for this instance
+                enableKeyboard: true,
+                // when this player starts, it will pause other players
+                pauseOtherPlayers: true,
+                // array of keyboard commands
+                keyActions: []
+            });
+            $('a[class="mejs-time-total mejs-time-slider"]').addClass('se_000');
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $('div.accoBody').hide();
+                $('#top_menu').tab_switch({
+                    contents: ".area_tab"
+                });
+                $(".js-thumbnail").each(function(i, elem) {
+                    $(elem).parent().prepend('<video controls width="100%" preload="none" style="display:none"></video>');
+                    var $movie_player = $(elem).prev();
+                    var movie_player = $movie_player.get(0);
+                    movie_player.type = "video/mpeg";
+                    movie_player.src = $(elem).data('movie_url');
+                    $(elem).on('click', function(e) {
+                        $(elem).hide();
+                        $movie_player.css('position', 'relative').css('top', '0');
+                        $movie_player.show();
+                        movie_player.play();
+                        $movie_player.on('play', function() {
+                            bgm_pause();
+                        });
+                        $movie_player.on('pause', function() {
+                            bgm_resume();
+                        });
+                        e.preventDefault();
+                    });
+                });
+            });
+        </script>
+        <footer>
+            <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
+                <div></div>
+            </a>
+            <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
+        </footer>
+    </div>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+    <script>
+        $(".mejs-mute").each(function(){
+            $(".mejs-mute").remove();
+        });
+        $(".mejs-unmute").each(function(){
+            $(".mejs-unmute").remove();
+        });
+    </script>
+</body>
+
+</html>
