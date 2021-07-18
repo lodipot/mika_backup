@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="ja" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <title>アイドルマスター シンデレラガールズ</title>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
+    <script type="text/javascript">
+        if (window.localStorage) {
+            var displaySet = localStorage.getItem('DisplayPositionSet');
+            if (displaySet == 1) {
+                if (navigator.userAgent.indexOf('Android') > 0) {
+                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
+                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                } else {
+                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
+                }
+                window.addEventListener('resize', function() {
+                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                });
+            } else {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+        }
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery-2.2.2.min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/underscore-min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                easeljs: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.8.2.min.js",
+                easeljs_0_7_1: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.7.1.min.js", //スプライトを読むためのバージョン
+                tweenjs: "https://lodipot.github.io/mika_backup/gallery/js/tweenjs-0.6.2.min.js",
+                movieclipjs: "https://lodipot.github.io/mika_backup/gallery/js/movieclip-0.7.1.min.js",
+                createjs: "https://lodipot.github.io/mika_backup/gallery/js/createjs-2015.11.26.min.js",
+            }
+        })
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common_new.js"></script>
+    <script>
+        $(function() {
+            window.$ibox = $('.ibox').ibox();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/990d4c7b388f9a05cbb860b1a385a2cc');
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0,
+            bgm_flg = 0,
+            chrome_app_flg = 0,
+            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
+    </script>
+    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
+</head>
+
+<body id="results" class="loading_idol_edit">
+    <div id="top" class="page_container jsOnBtn">
+        <nav class="area_menu_header">
+            <div class="area_menu_header_6btn">
+                <h1 id="JtextLimit">ローディングキャラ一覧</h1>
+                <ul>
+                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_02" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_03" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_04" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_05" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                            <div></div>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <input id="delay" type="hidden" value="0">
+        <style>
+            .attribute_list ul {
+                overflow: hidden;
+            }
+
+            .attribute_list li {
+                float: left;
+            }
+        </style>
+        <style type="text/css">
+            label {
+                cursor: pointer;
+            }
+
+            #colorbox {
+                width: 320px;
+            }
+
+            #cboxWrapper {
+                width: 315px;
+            }
+
+            #cboxMiddleLeft,
+            #cboxMiddleRight {
+                display: none;
+            }
+
+            div.show {
+                display: block;
+            }
+
+            .view1,
+            .view2,
+            .view3 {
+                display: none;
+            }
+
+            .view1 div,
+            .view2 div,
+            .view3 div {
+                height: 40px;
+                width: 100px;
+                display: table-cell;
+                vertical-align: middle;
+                line-height: 120%;
+            }
+
+            .hidden {
+                visibility: hidden;
+            }
+
+            img.visible {
+                visibility: visible;
+            }
+
+            .select_box select {
+                font-size: 100%;
+                width: 170px;
+            }
+
+            .opa_on {
+                opacity: 0.5;
+            }
+
+            input::-webkit-input-placeholder {
+                font-size: 10px;
+                text-indent: -1px;
+            }
+        </style>
+        <h3 class="title_img_gray m-Btm10">所持ローディングキャラ一覧</h3>
+        <form name="sell_form" class="type_01">
+            <div id="idolChk" class="m-Btm12">
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100271.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100344.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100442.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100742.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100919.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101114.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101224.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101335.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101464.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101579.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100320.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100402.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/100774.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101057.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+                <div class="displayBox">
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                    <div style="width:100px; height:130px; position: relative; margin:0 3px 8px 3px;" class="chk_area se_008">
+                        <div class="opa" style="padding:12px 0px 0px;">
+                            <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/101474.gif" width="102" height="102">
+                        </div>
+                        <img src="https://lodipot.github.io/mika_backup/gallery/image/loading/check_off.png" style="width:100px; height:130px;position: absolute; top:0px; left:0px; z-index:-1;" class="check_off">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <a href='https://lodipot.github.io/mika_backup/mypage.html'>
+            <div class="backLink">マイスタジオ</div>
+        </a>
+        <script type="text/javascript">
+            $(function() {
+                var other_num = Math.max(10 - $('.chkbox:checked').length, 0);
+                var $chkbox = $('.chkbox');
+
+                function updateCheckBoxView() {
+                    $chkbox.each(function() {
+                        if ($(this).prop('checked')) $(this).nextAll('.check_on').addClass('visible');
+                    });
+                }
+
+                function isFullChecked() {
+                    return other_num + $('.chkbox:checked').length >= 10;
+                }
+
+                function updateCheckBoxOpacity() {
+                    if (!isFullChecked()) return;
+                    $chkbox.each(function() {
+                        if (!$(this).prop('checked')) $(this).prevAll('.opa').addClass('opa_on');;
+                    })
+                }
+
+                function setSelectNum() {
+                    $('#select_num').text(other_num + $('.chkbox:checked').length);
+                }
+                updateCheckBoxView();
+                updateCheckBoxOpacity();
+                setSelectNum();
+                var is_move, scroll, $chk_area = $('.chk_area');
+                $chk_area.on(start, function() {
+                    is_move = false;
+                    scroll = $(window).scrollTop();
+                }).on('touchmove', function() {
+                    var now_scroll = $(window).scrollTop();
+                    if (Math.abs(scroll - now_scroll) > 20) is_move = true;
+                }).on(end, function() {
+                    if (is_move) return;
+                    var n_id = $('.chk_area').index(this);
+                    var $target = $('#on_' + n_id);
+                    var $cBox = $(this).children('.chkbox');
+                    if ($cBox.prop('checked')) {
+                        $target.removeClass('visible');
+                        $cBox.prop("checked", false);
+                        if (isFullChecked()) {
+                            $(this).children('.opa').addClass('opa_on')
+                        } else {
+                            $('.opa').removeClass('opa_on');
+                        }
+                    } else if (isFullChecked()) {
+                        return false;
+                    } else {
+                        $target.addClass('visible');
+                        $cBox.prop("checked", true);
+                        updateCheckBoxOpacity();
+                    }
+                    setSelectNum();
+                });
+            });
+        </script>
+        <footer>
+            <div class="line_idolmaster">
+                        </div><a href="#top" id="toPageTop" class="mypage_under">
+                <div>
+                        </div>
+            </a>
+            <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
+        </footer>
+    </div>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+</body>
+
+</html>
