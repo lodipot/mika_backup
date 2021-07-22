@@ -70,6 +70,28 @@
 </head>
 
 <body id="results">
+    <script>
+        function Request(){
+            var requestParam = "";
+            this.getParameter = function(param){
+                var url = unescape(location.href);
+                var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+                for(var i = 0; i < paramArr.length; i++){
+                    var temp = paramArr[i].split("=");
+                    if(temp[0].toUpperCase() == param.toUpperCase()){
+                        requestParam = paramArr[i].split("=")[1];
+                        break;
+                    }
+                }
+                return requestParam;
+            };
+        }
+        var request = new Request();
+        
+        if (request.getParameter("title") == null){
+        location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
+        };
+    </script>
     <div id="pageArea" onUnload="unloadBye()">
         <div id="top" class="page_container jsOnBtn">
             <nav class="area_menu_header">
@@ -329,23 +351,6 @@
         </div>
     </div>
     <script>
-        function Request(){
-            var requestParam = "";
-            this.getParameter = function(param){
-                var url = unescape(location.href);
-                var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
-                for(var i = 0; i < paramArr.length; i++){
-                    var temp = paramArr[i].split("=");
-                    if(temp[0].toUpperCase() == param.toUpperCase()){
-                        requestParam = paramArr[i].split("=")[1];
-                        break;
-                    }
-                }
-                return requestParam;
-            };
-        }
-        var request = new Request();
-        
         $('div.title').each(function(index, item){
             var div_class_arr = $(item).attr("class").split(' ');
             if (div_class_arr[4] !== request.getParameter("title")){
@@ -364,7 +369,6 @@
         var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + request.getParameter("title");
         document.getElementById("sel_title_img").src = img_url;
         document.getElementById("mypage_url").href = sel_title_url;
-        
     </script>
 </body>
 
