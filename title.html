@@ -88,8 +88,10 @@
         }
         var request = new Request();
         
-        if (request.getParameter("title") == null){
-        location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
+        const title_num_arr = ["5035","1000195","100200","100271","100344","100442","100534","100535","100742","100913","100919","101114","101149","101224","101335","101464","101579","101658","101846","101995"]
+        var title_num = request.getParameter("title")
+        if (!title_num_arr.includes(title_num)){
+            window.location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
         };
     </script>
     <div id="pageArea" onUnload="unloadBye()">
@@ -353,20 +355,20 @@
     <script>
         $('div.title').each(function(index, item){
             var div_class_arr = $(item).attr("class").split(' ');
-            if (div_class_arr[4] !== request.getParameter("title")){
+            if (div_class_arr[4] !== title_num){
                 $(item).remove();
             }
         });
         
         $('label.title').each(function(index, item){
             var lab_class_arr = $(item).attr("class").split(' ');
-            if (lab_class_arr[5] == request.getParameter("title")){
+            if (lab_class_arr[5] == title_num){
                 $(item).remove();
             }
         });
         
-        var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + request.getParameter("title") + ".jpg";
-        var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + request.getParameter("title");
+        var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + title_num + ".jpg";
+        var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + title_num;
         document.getElementById("sel_title_img").src = img_url;
         document.getElementById("mypage_url").href = sel_title_url;
     </script>
