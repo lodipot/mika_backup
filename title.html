@@ -70,57 +70,33 @@
 </head>
 
 <body id="results">
-    <script>
-        function Request(){
-            var requestParam = "";
-            this.getParameter = function(param){
-                var url = unescape(location.href);
-                var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
-                for(var i = 0; i < paramArr.length; i++){
-                    var temp = paramArr[i].split("=");
-                    if(temp[0].toUpperCase() == param.toUpperCase()){
-                        requestParam = paramArr[i].split("=")[1];
-                        break;
-                    }
-                }
-                return requestParam;
-            };
-        }
-        var request = new Request();
-        
-        const title_num_arr = ["5035","1000195","100200","100271","100344","100442","100534","100535","100742","100913","100919","101114","101149","101224","101335","101464","101579","101658","101846","101995"]
-        var title_num = request.getParameter("title")
-        if (!title_num_arr.includes(title_num)){
-            window.location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
-        };
-    </script>
     <div id="pageArea" onUnload="unloadBye()">
         <div id="top" class="page_container jsOnBtn">
             <nav class="area_menu_header">
                 <div class="area_menu_header_6btn">
                     <h1 id="JtextLimit">肩書一覧</h1>
-                <ul>
-                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_02" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_03" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_04" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_05" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
-                            <div></div>
-                        </a></li>
-                </ul>
-            </div>
-        </nav>
+                    <ul>
+                        <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                                <div></div>
+                            </a></li>
+                        <li><a class="head_menu_02" href="javascript:location.reload();">
+                                <div></div>
+                            </a></li>
+                        <li><a class="head_menu_03" href="javascript:location.reload();">
+                                <div></div>
+                            </a></li>
+                        <li><a class="head_menu_04" href="javascript:location.reload();">
+                                <div></div>
+                            </a></li>
+                        <li><a class="head_menu_05" href="javascript:location.reload();">
+                                <div></div>
+                            </a></li>
+                        <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                                <div></div>
+                            </a></li>
+                    </ul>
+                </div>
+            </nav>
             <style>
                 .attribute_list ul {
                     overflow: hidden;
@@ -129,8 +105,9 @@
                 .attribute_list li {
                     float: left;
                 }
+
                 .concealed {
-                    display:none;
+                    display: none;
                 }
             </style>
             <section class="m-Top8">
@@ -146,203 +123,241 @@
                 </h3>
             </section>
             <section class="t-Cnt">
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101995.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101995">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101995">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101995">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101846.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101846">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101846">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101846">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101658.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101658">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101658">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101658">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101579.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101579">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101579">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101579">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101464.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101464">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101464">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101464">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101335.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101335">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101335">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101335">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101224.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101224">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101224">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101224">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101149.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101149">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101149">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101149">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101114.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 101114">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101114">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101114">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100919.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100919">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100919">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100919">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100913.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100913">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100913">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100913">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100742.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100742">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100742">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100742">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100535.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100535">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100535">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100535">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100534.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100534">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100534">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100534">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100442.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100442">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100442">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100442">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100344.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100344">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100344">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100344">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100271.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100271">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100271">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100271">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100200.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100200">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100200">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100200">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100195.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 100195">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100195">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100195">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
-
-                <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_5035.jpg" width="100%"><br>
-                <div class="m-Top8 m-Btm8 gray title concealed 5035">- 現在の肩書です -</div>
-                <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="5035">
-                    <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 5035">
-                        <input type="submit" value="この肩書に変更する" style="font-size:12px">
-                    </label>
-                </form>
+                <div id="top_menu" class="tab_common-middle m-Top10"><a class='tab_line_2_1 tab_text' href='#' style="font-size:14px;">城ヶ崎美嘉</a><a class='tab_line_2_2 tab_text' href='#' style="font-size:14px;">的場梨沙</a></div><br>
+                <div class="side_a_area area_tab">
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101995.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101995">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101995">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101995">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101846.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101846">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101846">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101846">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101658.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101658">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101658">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101658">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101579.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101579">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101579">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101579">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101464.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101464">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101464">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101464">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101335.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101335">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101335">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101335">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101224.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101224">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101224">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101224">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101149.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101149">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101149">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101149">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101114.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101114">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101114">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101114">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100919.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100919">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100919">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100919">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100913.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100913">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100913">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100913">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100742.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100742">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100742">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100742">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100535.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100535">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100535">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100535">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100534.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100534">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100534">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100534">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100442.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100442">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100442">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100442">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100344.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100344">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100344">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100344">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100271.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100271">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100271">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100271">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100200.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100200">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100200">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100200">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100195.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100195">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100195">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100195">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_5035.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 5035">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="5035">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 5035">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                </div>
+                <div class="side_b_area area_tab">
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101914.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101914">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101914">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101914">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101718.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101718">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101718">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101718">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101474.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101474">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101474">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101474">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101171.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101171">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101171">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101171">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101057.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 101057">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101057">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 101057">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100866.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100866">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100866">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100866">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100774.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100774">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100774">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100774">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100402.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100402">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100402">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100402">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_100320.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 100320">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="100320">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 100320">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                </div>
             </section>
             <a id="mypage_url" href="https://lodipot.github.io/mika_backup/mypage.html">
                 <div class="backLink">マイスタジオ</div>
@@ -355,21 +370,62 @@
             </footer>
         </div>
     </div>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/ilibrary.js"></script>
     <script>
-        $('div.title').each(function(index, item){
+        function Request() {
+            var requestParam = "";
+            this.getParameter = function(param) {
+                var url = unescape(location.href);
+                var paramArr = (url.substring(url.indexOf("?") + 1, url.length)).split("&");
+                for (var i = 0; i < paramArr.length; i++) {
+                    var temp = paramArr[i].split("=");
+                    if (temp[0].toUpperCase() == param.toUpperCase()) {
+                        requestParam = paramArr[i].split("=")[1];
+                        break;
+                    }
+                }
+                return requestParam;
+            };
+        }
+        var request = new Request();
+
+        const title_num_arr_mika = ["5035", "1000195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995"];
+        const title_num_arr_risa = ["100320", "100402", "100774", "100866", "101057", "101171", "101474", "101718", "101914"];
+        var title_num = request.getParameter("title");
+        if (title_num_arr_mika.includes(title_num)) {
+            tab_selected = 0;
+        }
+        else {
+            if (title_num_arr_risa.includes(title_num)) {
+                tab_selected = 1;
+            }
+            else {
+                window.location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
+            }
+        };
+        
+        $(function() {
+            $('div.accoBody').hide();
+            $('#top_menu').tab_switch({
+                contents: ".area_tab",
+                start: tab_selected
+            });
+        });
+        
+        $('div.title').each(function(index, item) {
             var div_class_arr = $(item).attr("class").split(' ');
-            if (div_class_arr[5] == title_num){
+            if (div_class_arr[5] == title_num) {
                 $(item).removeClass('concealed');
             }
         });
-        
-        $('label.title').each(function(index, item){
+
+        $('label.title').each(function(index, item) {
             var lab_class_arr = $(item).attr("class").split(' ');
-            if (lab_class_arr[6] !== title_num){
+            if (lab_class_arr[6] !== title_num) {
                 $(item).removeClass('concealed');
             }
         });
-        
+
         var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + title_num + ".jpg";
         var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + title_num;
         document.getElementById("sel_title_img").src = img_url;
