@@ -76,7 +76,7 @@
                 <div class="area_menu_header_6btn">
                     <h1 id="JtextLimit">肩書一覧</h1>
                     <ul>
-                        <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                        <li><a id="mypage_url_top" class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
                                 <div></div>
                             </a></li>
                         <li><a class="head_menu_02" href="javascript:location.reload();">
@@ -430,6 +430,7 @@
         var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + title_num;
         document.getElementById("sel_title_img").src = img_url;
         document.getElementById("mypage_url").href = sel_title_url;
+        document.getElementById("mypage_url_top").href = sel_title_url;
     </script>
 </body>
 
