@@ -317,7 +317,7 @@
                     </label>
                 </form>
             </section>
-            <a href="javascript:studio_url()">
+            <a id="mypage_url" href="https://lodipot.github.io/mika_backup/mypage.html">
                 <div class="backLink">マイスタジオ</div>
             </a>
             <footer>
@@ -360,13 +360,10 @@
             }
         });
         
-        function studio_url(){
-            sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + request.getParameter("title");
-            return sel_title_url;
-        }
-
         var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + request.getParameter("title") + ".jpg";
+        var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + request.getParameter("title");
         document.getElementById("sel_title_img").src = img_url;
+        document.getElementById("mypage_url").href = sel_title_url;
         
     </script>
 </body>
