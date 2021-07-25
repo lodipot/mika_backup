@@ -391,17 +391,19 @@
 
         const title_num_arr_mika = ["5035", "1000195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995"];
         const title_num_arr_risa = ["100320", "100402", "100774", "100866", "101057", "101171", "101474", "101718", "101914"];
-        var title_num = request.getParameter("title");
+        if (request.getParameter('title') !== ""){
+            localStorage.setItem('title_number', request.getParameter('title'));
+        }
+        else if (localStorage.getItem('title_number') === ""){
+            localStorage.setItem('title_number', '101995');
+        };
+        var title_num = localStorage.getItem('title_number');
+        
         if (title_num_arr_mika.includes(title_num)) {
             tab_selected = 0;
         }
         else {
-            if (title_num_arr_risa.includes(title_num)) {
-                tab_selected = 1;
-            }
-            else {
-                window.location.href = "https://lodipot.github.io/mika_backup/title.html?title=101995";
-            }
+            tab_selected = 1;
         };
         
         $(function() {
@@ -427,10 +429,7 @@
         });
 
         var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + title_num + ".jpg";
-        var sel_title_url = "https://lodipot.github.io/mika_backup/mypage.html?title=" + title_num;
         document.getElementById("sel_title_img").src = img_url;
-        document.getElementById("mypage_url").href = sel_title_url;
-        document.getElementById("mypage_url_top").href = sel_title_url;
     </script>
 </body>
 
