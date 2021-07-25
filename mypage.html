@@ -526,7 +526,7 @@
         </footer>
     </div>
     <script>
-        if (localStorage.getItem('title_number') === ""){
+        if (localStorage.getItem('title_number') === "" || localStorage.getItem('title_number') === null || localStorage.getItem('title_number') === undefined){
             localStorage.setItem('title_number', '101995');
         };
         var title_num = localStorage.getItem('title_number');
