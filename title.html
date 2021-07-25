@@ -389,7 +389,7 @@
         }
         var request = new Request();
 
-        const title_num_arr_mika = ["5035", "1000195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995"];
+        const title_num_arr_mika = ["5035", "100195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995"];
         const title_num_arr_risa = ["100320", "100402", "100774", "100866", "101057", "101171", "101474", "101718", "101914"];
         if (request.getParameter('title') !== "" && request.getParameter('title') !== null && request.getParameter('title') !== undefined){
             localStorage.setItem('title_number', request.getParameter('title'));
@@ -399,7 +399,7 @@
         };
         var title_num = localStorage.getItem('title_number');
         
-        if (title_num_arr_mika.includes(String(title_num))) {
+        if (title_num_arr_mika.includes(title_num)) {
             tab_selected = 0;
         }
         else {
