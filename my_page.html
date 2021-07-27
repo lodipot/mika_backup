@@ -199,8 +199,18 @@
                 <a href='https://lodipot.github.io/mika_backup/event/event_415.html' class="banner_type_text" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_415.jpg)'></a>
             </div>
         </div>
+        <div class="btn_menu_type_2 m-Btm4" style="width:288px;padding:8px 0 0 8px;margin:-4px auto 4px">
+            <ul class="jsOnBanner">
+                <li>
+                    <a href='https://lodipot.github.io/mika_backup/theater/theater_p1.html' class="banner_type_gekijo banner_cartoon_bg" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/mika_theater.png) 0px 0px no-repeat; background-size: 280px 40px; width:280px; height:40px;"></a>
+                </li>
+            </ul>
+        </div>
         <section>
-            <div class="t-Lft area_tab" style="width:300px; margin:auto;">
+            <h2 class="title_tenhoshi" style="width:296px; margin-top:4px; margin:0 auto;">
+                <div><span style="font-size:14px;">アイドルギャラリー</span></div>
+            </h2>
+            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
                 <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
                     <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=44" style="display:block;" class="jsOnDesignBtn">
                         <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
@@ -352,7 +362,7 @@
                     </a>
                 </div>
             </div>
-            <div class="t-Lft area_tab" style="width:300px; margin:auto;">
+            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
                 <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
                     <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=29" style="display:block;" class="jsOnDesignBtn">
                         <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
@@ -504,7 +514,7 @@
                     </a>
                 </div>
             </div>
-            <div class="t-Lft area_tab" style="width:300px; margin:auto;">
+            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
                 <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
                     <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=14" style="display:block;" class="jsOnDesignBtn">
                         <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
@@ -646,10 +656,26 @@
                     </a>
                 </div>
             </div>
-            <div id="top_menu" class="tab_common-middle m-Top10">
-                <a class='tab_line_3_1 tab_text' href='#'>1</a>
-                <a class='tab_line_3_2 tab_text' href='#'>2</a>
-                <a class='tab_line_3_3 tab_text' href='#'>3</a>
+            <style>
+                .concealed {
+                    display: none;
+                }
+                .btn_pos_left {
+                    float: left;
+                    width: 80px;
+                    margin-left: 10px;
+                }
+                .btn_pos_right {
+                    float: right;
+                    width: 80px;
+                    margin-right: 10px;
+                }
+            </style>
+            <div id="top_menu" style="margin-bottom:2px; margin:0 auto;">
+                <a class="tab_text" id="tab_switcher_0" href='#'><img class="btn_pos_left" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_back_on.jpg"></a>
+                <a class="tab_text" id="tab_switcher_1" href="#" onclick="click_img(0)"><img class="btn_pos_right" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg"></a>
+                <a class="tab_text concealed" id="tab_switcher_2" href="#"><img class="btn_pos_right" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg"></a>
+                <br><br>
             </div>
         </section>
         <script src="https://lodipot.github.io/mika_backup/gallery/js/ilibrary.js"></script>
@@ -660,6 +686,24 @@
                     start: 0
                 });
             });
+            function click_img(option) {
+                if (option == 0) {
+                    $('#tab_switcher_0').addClass('concealed');
+                    $('#tab_switcher_1').removeAttr('onclick');
+                    $('#tab_switcher_1').attr('onclick', 'click_img(1)');
+                    $('#tab_switcher_1').children('.btn_pos_right').attr('src', 'https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_back_on.jpg');
+                    $('#tab_switcher_1').children('.btn_pos_right').attr('class', 'btn_pos_left');
+                    $('#tab_switcher_2').removeClass('concealed');
+                }
+                else if (option == 1) {
+                    $('#tab_switcher_2').addClass('concealed');
+                    $('#tab_switcher_1').removeAttr('onclick');
+                    $('#tab_switcher_1').attr('onclick', 'click_img(0)');
+                    $('#tab_switcher_1').children('.btn_pos_left').attr('src', 'https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg');
+                    $('#tab_switcher_1').children('.btn_pos_left').attr('class', 'btn_pos_right');
+                    $('#tab_switcher_0').removeClass('concealed');
+                }
+            };
             var loading_images = ["https://lodipot.github.io/mika_backup/gallery/image/loading/100271.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100344.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100442.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100742.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100919.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101114.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101224.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101335.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101464.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101579.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100320.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100402.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100774.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101057.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101474.gif"];
             var native_app_flg = false;
             var is_debug = false;
