@@ -1,1053 +1,247 @@
-<!doctype html>
-<html lang="ja" xml:lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="-1">
-    <meta name="format-detection" content="telephone=no">
-    <title>アイドルマスター シンデレラガールズ</title>
-    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
-    <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
-    <script type="text/javascript">
-        if (window.localStorage) {
-            var displaySet = localStorage.getItem('DisplayPositionSet');
-            if (displaySet == 1) {
-                if (navigator.userAgent.indexOf('Android') > 0) {
-                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
-                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
-                } else {
-                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
-                }
-                window.addEventListener('resize', function() {
-                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
-                });
-            } else {
-                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
-            }
-        } else {
-            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+"use strict";
+var icount = window.icount,
+    getAudio = window.getAudio;
+if ($(function() {
+        function o() {
+            var o = Math.floor(Math.random() * w);
+            return w < 5 && o == w - 1 && (o = 4), o
         }
-    </script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery-2.2.2.min.js"></script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/underscore-min.js"></script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
-    <script>
-        requirejs.config({
-            paths: {
-                easeljs: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.8.2.min.js",
-                easeljs_0_7_1: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.7.1.min.js", //スプライトを読むためのバージョン
-                tweenjs: "https://lodipot.github.io/mika_backup/gallery/js/tweenjs-0.6.2.min.js",
-                movieclipjs: "https://lodipot.github.io/mika_backup/gallery/js/movieclip-0.7.1.min.js",
-                createjs: "https://lodipot.github.io/mika_backup/gallery/js/createjs-2015.11.26.min.js",
-            }
-        })
-    </script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/common.js"></script>
-    <script src="https://lodipot.github.io/mika_backup/gallery/js/common_new.js"></script>
-    <script>
-        $(function() {
-            window.$ibox = $('.ibox').ibox();
-        });
-    </script>
-    <script>
-        $(document).ready(function() {
-            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
-                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/990d4c7b388f9a05cbb860b1a385a2cc');
-            }
-        });
-    </script>
-    <script type='text/javascript'>
-        var se_flg = 0,
-            bgm_flg = 0,
-            chrome_app_flg = 0,
-            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
-    </script>
-    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
-    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
-</head>
 
-<body id="mypage" class="index">
-    <div id="top" class="page_container jsOnBtn">
-        <nav class="area_menu_header">
-            <div class="area_menu_header_6btn">
-                <h1 id="JtextLimit">★星求める旅路★</h1>
-                <ul>
-                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_02" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_03" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_04" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_05" href="javascript:location.reload();">
-                            <div></div>
-                        </a></li>
-                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
-                            <div></div>
-                        </a></li>
-                </ul>
-            </div>
-        </nav>
-        <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/idol_gallery.css" media="all">
-        <input id="delay" type="hidden" value="0">
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100271.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100344.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100442.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100742.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100919.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101114.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101224.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101335.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101464.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101579.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100320.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100402.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/100774.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101057.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif' style="display:none;" />
-        <img src='https://lodipot.github.io/mika_backup/gallery/image/loading/101474.gif' style="display:none;" />
-        <section class="main_wrap"><a href='#' class="btn_main_petit-view_switch btn_change_petit se_000" id="jsPetitViewSwitch">
-                <div></div>
-            </a>
-            <div class="area_main_idol" id="jsAreaMainIdol" style='display:none;background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/bg_idol5.jpg)'>
-                <div id="commentLoading">
-                    <div id="loadingNormal" style="margin-top: 60px;"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/working_1.gif' width="195" height="139" /></div>
-                </div>
-                <div id="jsAreaDialogue" class="area_dialogue">
-                    <div id="jsAreaDialogue_idol1"></div>
-                    <div id="jsAreaDialogue_idol2"></div>
-                </div><a href='#' id="jsAreaMainIdolLarge" class="se_000" style="display:none;">
-                    <div></div>
-                </a>
-                <div class="area_main_idol_top"><a href='#' class="btn_change_base" id="jsBtn_a-d_Switch">
-                        <div></div>
-                    </a><a href='#' class="btn_change_comment_base btn_change_pattern_1" id="jsBtn_layout_change">
-                        <div></div>
-                    </a><a href='#' class="btn_change_comment" id="jsBtn_comment_change">
-                        <div></div>
-                    </a>
-                    <div id="jsTipsSwitch" class="reload_announce img_switch_comment"></div>
-                    <div class="comment_main_idol_top" id="jsCommentTop"></div><a href='#' class="btn_idol_voice se_000" id="jsBtnIdolVoice" rel='none' title="none">
-                        <div></div>
-                    </a>
-                </div>
-                <div class="area_main_idol_5continuous">
-                    <ul id="jsBtnIdolCtrl">
-                        <li class="idol_1"><a href='#' id="jsBtn5Idol_po2" data-po="2" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/blank_ls.jpg)' class="se_000">
-                                <div></div>
-                            </a></li>
-                        <li class="idol_2"><a href='#' id="jsBtn5Idol_po0" data-po="0" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/blank_ls.jpg)' class="se_000">
-                                <div></div>
-                            </a></li>
-                        <li class="idol_3"><a href='#' id="jsBtn5Idol_po4" data-po="4" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/blank_ls.jpg)' class="se_000">
-                                <div></div>
-                            </a></li>
-                        <li class="idol_4"><a href='#' id="jsBtn5Idol_po1" data-po="1" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/blank_ls.jpg)' class="se_000">
-                                <div></div>
-                            </a></li>
-                        <li class="idol_5"><a href='#' id="jsBtn5Idol_po3" data-po="3" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/blank_ls.jpg)' class="se_000">
-                                <div></div>
-                            </a></li>
-                    </ul>
-                </div>
-                <div class="area_main_idol_bottom">
-                    <div class="comment_main_idol_bottom" id="jsCommentBottom"></div>
-                </div>
-            </div>
-            <div class="area_main_petit" id="jsAreaPetit">
-                <div class="petit_idol_list" id="petit_idol_01"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/mika_petit.png' width="110" height="149" class="idol_img" style="position:relative; left:-65px;"></div>
-                <div class="petit_idol_list" id="petit_idol_02"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/risa_petit.png' width="110" height="149" class="idol_img" style="position:relative; right:35px;"></div>
-            </div>
-            <div class="area_main_btn bg_main_menu"></div>
-        </section><a href="#" class="lesson_menu_btn" style="display:none"></a><a href="#" class="lesson_menu_close" style="display:none"></a>
-        <div id="jsLessonConfirm" class="jsPopUp" style="display:none"></div><a href="#" class="jsLessonConfirm_btn" style="display:none"></a><a href="#" class="jsLessonConfirm_close" style="display:none"></a>
-        <div id="jsLessonComplete" class="jsPopUp" style="display:none">
-            <div class="jsPopWindow"></div>
-        </div>
-        <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery.common-popup.js"></script>
-        <div class="m-Btm5">
-            <img id="sel_title_img" src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101995.jpg" width="100%">
-        </div>
-        <div class="area-btn-common _base-width m-Btm8 m-Top8">
-            <a href="https://lodipot.github.io/mika_backup/episode_list/html/list_p1.html" class="btn_normal_line_4 _line_2" style="font-size:11px">思い出<br>エピソード</a>
-            <a href="https://lodipot.github.io/mika_backup/title.html" class="btn_normal_line_4" id="title_url">肩書</a>
-            <a href="https://lodipot.github.io/mika_backup/loading.html" class="btn_normal_line_4 _free_line">
-                <div class="text-elem" style="font-size:10px">ローディングキャラ</div>
-            </a>
-            <a href="https://lodipot.github.io/mika_backup/memorial.html" class="btn_normal_line_4">資料室</a>
-        </div>
-        <div class="t-Cnt m-Btm8">
-            <div class="area_banner_type_text jsOnBanner t-Cnt">
-                <a href='https://lodipot.github.io/mika_backup/event/event_1636.html' class="banner_type_text" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_1636.png)'></a>
-            </div>
-            <div class="area_banner_type_text jsOnBanner t-Cnt">
-                <a href='https://lodipot.github.io/mika_backup/event/event_746.html' class="banner_type_text" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_746.png)'></a>
-            </div>
-            <div class="area_banner_type_text jsOnBanner t-Cnt">
-                <a href='https://lodipot.github.io/mika_backup/event/event_712.html' class="banner_type_text" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_712.jpg)'></a>
-            </div>
-            <div class="area_banner_type_text jsOnBanner t-Cnt">
-                <a href='https://lodipot.github.io/mika_backup/event/event_415.html' class="banner_type_text" style='background-image:url(https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_415.jpg)'></a>
-            </div>
-        </div>
-        <div class="btn_menu_type_2 m-Btm4" style="width:288px;padding:8px 0 0 8px;margin:-4px auto 4px">
-            <ul class="jsOnBanner">
-                <li>
-                    <a href='https://lodipot.github.io/mika_backup/theater/theater_p1.html' class="banner_type_gekijo banner_cartoon_bg" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/mypage/mika_theater.png) 0px 0px no-repeat; background-size: 280px 40px; width:280px; height:40px;"></a>
-                </li>
-            </ul>
-        </div>
-        <section>
-            <h2 class="title_tenhoshi" style="width:296px; margin-top:4px; margin:0 auto;">
-                <div><span style="font-size:14px;">アイドルギャラリー</span></div>
-            </h2>
-            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=44" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/990d4c7b388f9a05cbb860b1a385a2cc.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=43" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/f99aa70007b3d201a586252a246488f3.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=42" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/4e39cf133c36d00b2255ee0fb9358211.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=41" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/6cb558d20f14ddb700065515c862a66e.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=40" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/ba08a714f973a21c37367f32085ef8d7.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=39" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/ca52aa2e1917478c4642deeba2ea7643.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=38" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/e00c68555765850d1ca786cd3f8a48c4.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=37" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/25aeb7e9618f9f27c140030cc9b0805b.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=36" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/9159993bdcb5c6e4eb6914dde0cf1955.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=35" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/e4ed9b9f97f6058a7e16620faa7d750f.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=34" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/7873c0801760a4290db920b5e1b19db4.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=33" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/bdabbcb884eb70243537ab82b60c6af3.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=32" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/fb4cc781aad74552c60bf5c8d1d8adb4.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=31" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/d503c404573adf2e40c77e0d4e06c058.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=30" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/062f663090a8424fca1a20133b774120.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=29" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/cd1aaa15207932e56aaa449c14daa578.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=28" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/4de072a494475aa83d7ee9eca92de2bb.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=27" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/61497838f9a33ff6592fa0e11c4c2c1a.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=26" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/7523568f90f1dabbcacf633f6f178729.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=25" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/8d9c26ea00d4d16b952f129ce7c80034.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=24" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/f84e6d3c1d11b46d7efe8e53e1013eb4.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=23" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/3ea30b1c14dafc422ae4b4eb46aaa54e.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=22" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/e6bafa973570753123cd686c18c2b975.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=21" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/942ee9cb2a6140de3f7f35122ebe7e00.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=20" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/5f0ff7b6385298516aedd9b4e334a018.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=19" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/21886e4c2903ab6da97230b772c6804f.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=18" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/eb38818dc3fd59a5cae7f69a4f743f6c.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=17" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/76c2eb6eac6f3d975264dfaac44157c7.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=16" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/e204975f21b0e3374a0633d0522f1b19.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=15" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/4a3abe4cfb93b694333cddf0c8521f64.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="t-Lft area_tab" style="width:296px; margin:0 auto;">
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=14" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/70ca98bb88391ddbaf3841e5912c7367.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=13" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/c34d79efd9030ebf948a18cbf9df7bf3.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=12" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/f9385a42acabcfae3013c79d5466edf4.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=11" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/f6e5a4e341770463ef088e55921596fa.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=10" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/53a89429c64132c4d0058aea4b233fca.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=09" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/7af6cc3d2ca1f5d15230f2366280a444.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=08" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/6ccf37a6cfdd206dc34434a1be3d56b8.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=07" style="display:block;" class="jsOnDesignBtn">
-                        <div class="srare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/l/noframe/30fe4887cbc082bf375169d6f83a1ffa.jpg) 0px 0px no-repeat; background-size:91px; width:107px; height:112px; margin:3px 3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=06" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/7fe0b25036ad4318f240e85827e4ba96.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=05" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/d6fdc4c2a992ea8b249d6015d1186e6c.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=04" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/4f4bc793b515a5c802b9ab7e0a9198e8.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=03" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/c407e2e483b9ff36689e486dfbd847e4.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=02" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/61a1dfc4c713b5d5a094a19923bacc08.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="gallery" style="display:inline-block; width:96px;height:117px;margin:4px 0;">
-                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=01" style="display:block;" class="jsOnDesignBtn">
-                        <div class="rare_passion" style="overflow:hidden; width:96px; height:117px; background-size:96px 117px;">
-                            <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/quest/73eea87bdec62f29de318e50e84f021d.png) -16px -16px no-repeat; background-size:126px; width:91px; height:111px; margin:0; margin-left:3px; margin-top:3px;"></div>
-                            <div class="name_plate_passion" style="-webkit-transform:skew(7deg,-7deg);position: absolute;left: 4px;bottom: 11px;width: 85px;background-size: 85px;height: 17px;">
-                                <div class="name_passion text_shadow_passion" style="font-size:10px;top:-4px;left:-8px;-webkit-backface-visibility: hidden;">城ヶ崎美嘉</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <style>
-                .concealed {
-                    display: none;
-                }
-                .btn_pos_left {
-                    float: left;
-                    width: 80px;
-                    margin-left: 10px;
-                }
-                .btn_pos_right {
-                    float: right;
-                    width: 80px;
-                    margin-right: 10px;
-                }
-            </style>
-            <div id="top_menu" style="margin-bottom:2px; margin:0 auto;">
-                <a class="tab_text" id="tab_switcher_0" href='#'><img class="btn_pos_left" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_back_on.jpg"></a>
-                <a class="tab_text" id="tab_switcher_1" href="#" onclick="click_img(0)"><img class="btn_pos_right" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg"></a>
-                <a class="tab_text concealed" id="tab_switcher_2" href="#"><img class="btn_pos_right" src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg"></a>
-                <br><br>
-            </div>
-        </section>
-        <script src="https://lodipot.github.io/mika_backup/gallery/js/ilibrary.js"></script>
-        <script>
-            $(function() {
-                $('#top_menu').tab_switch({
-                    contents: ".area_tab",
-                    start: 0
-                });
-            });
-            function click_img(option) {
-                if (option == 0) {
-                    $('#tab_switcher_0').addClass('concealed');
-                    $('#tab_switcher_1').removeAttr('onclick');
-                    $('#tab_switcher_1').attr('onclick', 'click_img(1)');
-                    $('#tab_switcher_1').children('.btn_pos_right').attr('src', 'https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_back_on.jpg');
-                    $('#tab_switcher_1').children('.btn_pos_right').attr('class', 'btn_pos_left');
-                    $('#tab_switcher_2').removeClass('concealed');
-                }
-                else if (option == 1) {
-                    $('#tab_switcher_2').addClass('concealed');
-                    $('#tab_switcher_1').removeAttr('onclick');
-                    $('#tab_switcher_1').attr('onclick', 'click_img(0)');
-                    $('#tab_switcher_1').children('.btn_pos_left').attr('src', 'https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/icon_next_on.jpg');
-                    $('#tab_switcher_1').children('.btn_pos_left').attr('class', 'btn_pos_right');
-                    $('#tab_switcher_0').removeClass('concealed');
-                }
-            };
-            var loading_images = ["https://lodipot.github.io/mika_backup/gallery/image/loading/100271.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100344.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100442.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100742.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100919.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101114.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101224.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101335.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101464.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101579.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100320.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100402.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100774.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101057.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101474.gif"];
-            var native_app_flg = false;
-            var is_debug = false;
-            var now_time = 1626121244;
-            var idolArr = [];
-            var user_name = "ｱｼﾀｶ★";
-            var url_bg_idol5 = 'https://lodipot.github.io/mika_backup/gallery/image/mypage/bg_idol5.jpg';
-            idolArr['atk'] = [];
-            idolArr['def'] = [];
-            var icount = new ICount(now_time);
-            icount.addCount('#petit_1', 1626156230);
-            icount.setCallback('#petit_1', function() {
-                chara = 1;
-                getLessonList(1);
-            });
-            icount.addCount('#petit_2', 1626156231);
-            icount.setCallback('#petit_2', function() {
-                chara = 2;
-                getLessonList(1);
-            });
-            icount.addCount('#petit_3', 1626156232);
-            icount.setCallback('#petit_3', function() {
-                chara = 3;
-                getLessonList(1);
-            });
-            function rand(min, max){
-                return Math.floor(Math.random()*(max-min+1))+min;
-            }
-            idolArr['atk'][0] = [];
-            idolArr['atk'][0]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/4e39cf133c36d00b2255ee0fb9358211.jpg';
-            idolArr['atk'][0]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/4e39cf133c36d00b2255ee0fb9358211.jpg';
-            idolArr['atk'][0]['cost'] = '26';
-            idolArr['atk'][0]['attribute'] = '3';
-            idolArr['atk'][0]['attribute'] = '3';
-            idolArr['atk'][0]['attribute_str'] = 'passion';
-            idolArr['atk'][0]['rarity'] = '6';
-            idolArr['atk'][0]['comment_column_num'] = rand(1,5);
-            if (idolArr['atk'][0]['comment_column_num'] == 1){
-                idolArr['atk'][0]['card_comment'] = "やっぱｵｰﾗ､出ちゃってる★";
-                idolArr['atk'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/a8200e47dbf8b5cb081a54f55123c549.mp4';
-            }
-            else if (idolArr['atk'][0]['comment_column_num'] == 2){
-                idolArr['atk'][0]['card_comment'] = "ｲﾒｰｼﾞ以上に振る舞わないとね!";
-                idolArr['atk'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/54a734409be32db0e7edbe038167fd46.mp4';
-            }
-            else if (idolArr['atk'][0]['comment_column_num'] == 3){
-                idolArr['atk'][0]['card_comment'] = "ｱﾀｼが表紙なら､重版確定だし★";
-                idolArr['atk'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/8263da8e6767c8166ee2737f9a887f75.mp4';
-            }
-            else if (idolArr['atk'][0]['comment_column_num'] == 4){
-                idolArr['atk'][0]['card_comment'] = "ﾒｲｸもｵｼｬﾚも肌見せも､誰かのためじゃない｡自分のためだよ!";
-                idolArr['atk'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/1391daf732f82dfdc5aea4a16565abfa.mp4';
-            }
-            else {
-                idolArr['atk'][0]['card_comment'] = "ｱﾀｼらしくﾄｯﾌﾟに立つ! ｱﾀｼの覚悟､受け止めてくれてｱﾘｶﾞﾄ★";
-                idolArr['atk'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/9548259704f0cceaea49a706ced0b998.mp4';
-            }
-            idolArr['atk'][1] = [];
-            idolArr['atk'][1]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/ba08a714f973a21c37367f32085ef8d7.jpg';
-            idolArr['atk'][1]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/ba08a714f973a21c37367f32085ef8d7.jpg';
-            idolArr['atk'][1]['cost'] = '26';
-            idolArr['atk'][1]['attribute'] = '3';
-            idolArr['atk'][1]['attribute'] = '3';
-            idolArr['atk'][1]['attribute_str'] = 'passion';
-            idolArr['atk'][1]['rarity'] = '6';
-            idolArr['atk'][1]['comment_column_num'] = rand(1,5);
-            if (idolArr['atk'][1]['comment_column_num'] == 1){
-                idolArr['atk'][1]['card_comment'] = "海にはｷﾞｬﾙ! 絵になるでしょ♪";
-                idolArr['atk'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/48b83695fd0cf48687831c0dd5ca1e71.mp4';
-            }
-            else if (idolArr['atk'][1]['comment_column_num'] == 2){
-                idolArr['atk'][1]['card_comment'] = "走り出したら止まんないし!";
-                idolArr['atk'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/da37e536dbf15650900b1e80b6b9bcc3.mp4';
-            }
-            else if (idolArr['atk'][1]['comment_column_num'] == 3){
-                idolArr['atk'][1]['card_comment'] = "暑さはｱﾀｼが吹き飛ばすっ!";
-                idolArr['atk'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/efc557d0960dbce7bc6b9077fc0b8f5e.mp4';
-            }
-            else if (idolArr['atk'][1]['comment_column_num'] == 4){
-                idolArr['atk'][1]['card_comment'] = "夏は待ってくれない! なら全力でﾉｯてくのがｱﾀｼたちでしょ♪";
-                idolArr['atk'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/24500fa0151274cbc3b8372c46683877.mp4';
-            }
-            else {
-                idolArr['atk'][1]['card_comment'] = "旅のﾄﾞｷﾄﾞｷ､忘れられない思い出…ﾌﾟﾛﾃﾞｭｰｻｰにもﾌﾟﾚｾﾞﾝﾄっ★";
-                idolArr['atk'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/f1a2dbac1629e37ff1c32f81d4bfdd41.mp4';
-            }
-            idolArr['atk'][2] = [];
-            idolArr['atk'][2]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/e00c68555765850d1ca786cd3f8a48c4.jpg';
-            idolArr['atk'][2]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/e00c68555765850d1ca786cd3f8a48c4.jpg';
-            idolArr['atk'][2]['cost'] = '25';
-            idolArr['atk'][2]['attribute'] = '3';
-            idolArr['atk'][2]['attribute'] = '3';
-            idolArr['atk'][2]['attribute_str'] = 'passion';
-            idolArr['atk'][2]['rarity'] = '6';
-            idolArr['atk'][2]['comment_column_num'] = rand(1,5);
-            if (idolArr['atk'][2]['comment_column_num'] == 1){
-                idolArr['atk'][2]['card_comment'] = "伝えたいｺﾄはﾁｮｺに込めたから!";
-                idolArr['atk'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/405db4fc61c25db2dc8b4fd9d8492b53.mp4';
-            }
-            else if (idolArr['atk'][2]['comment_column_num'] == 2){
-                idolArr['atk'][2]['card_comment'] = "あはっ､ｱﾂくなってきたかも!";
-                idolArr['atk'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/c765f179505aea44c922065230da8f14.mp4';
-            }
-            else if (idolArr['atk'][2]['comment_column_num'] == 3){
-                idolArr['atk'][2]['card_comment'] = "ﾊﾞﾚﾝﾀｲﾝだよ? 欲張っちゃえ★";
-                idolArr['atk'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/82d792facc4e1db0af015b5dc5535ec5.mp4';
-            }
-            else if (idolArr['atk'][2]['comment_column_num'] == 4){
-                idolArr['atk'][2]['card_comment'] = "自分の気持ちを伝える日…ﾄﾞｷﾄﾞｷしても､ｶｯｺよくｷﾒたいんだ!";
-                idolArr['atk'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/737e02520196a0968eb2d94a3f66551d.mp4';
-            }
-            else {
-                idolArr['atk'][2]['card_comment'] = "ﾌﾟﾛﾃﾞｭｰｻｰの欲張りな視線は…ﾁｮｺとｱﾀｼ､両方にちょうだい★";
-                idolArr['atk'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/90af622398c97e62c169f370c9e545d6.mp4';
-            }
-            idolArr['atk'][3] = [];
-            idolArr['atk'][3]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/9159993bdcb5c6e4eb6914dde0cf1955.jpg';
-            idolArr['atk'][3]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/9159993bdcb5c6e4eb6914dde0cf1955.jpg';
-            idolArr['atk'][3]['cost'] = '25';
-            idolArr['atk'][3]['attribute'] = '3';
-            idolArr['atk'][3]['attribute'] = '3';
-            idolArr['atk'][3]['attribute_str'] = 'passion';
-            idolArr['atk'][3]['rarity'] = '6';
-            idolArr['atk'][3]['comment_column_num'] = rand(1,5);
-            if (idolArr['atk'][3]['comment_column_num'] == 1){
-                idolArr['atk'][3]['card_comment'] = "ｽﾀｲﾙには自信ｱﾘだし★";
-                idolArr['atk'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/45132761f4e000ddbf30e69e43eec305.mp4';
-            }
-            else if (idolArr['atk'][3]['comment_column_num'] == 2){
-                idolArr['atk'][3]['card_comment'] = "もしかして､ﾔｹちゃう?";
-                idolArr['atk'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/5501449b77478d63b9983d31502cad8a.mp4';
-            }
-            else if (idolArr['atk'][3]['comment_column_num'] == 3){
-                idolArr['atk'][3]['card_comment'] = "どっちが先に､気づくかな…?";
-                idolArr['atk'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/50039cb03e33d1905c7bdb9b3cdcb9b5.mp4';
-            }
-            else if (idolArr['atk'][3]['comment_column_num'] == 4){
-                idolArr['atk'][3]['card_comment'] = "時間がゆっくり流れてるね｡水辺のﾏｰﾒｲﾄﾞってｶﾝｼﾞ♪";
-                idolArr['atk'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/9cea1ed0e30176651b08c202ac4f7f23.mp4';
-            }
-            else {
-                idolArr['atk'][3]['card_comment'] = "もしﾌﾟﾛﾃﾞｭｰｻｰがそこにいなかったら…寂しいに決まってるよ";
-                idolArr['atk'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/35ca33a7df5c878b245d131451e54bd0.mp4';
-            }
-            idolArr['atk'][4] = [];
-            idolArr['atk'][4]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
-            idolArr['atk'][4]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
-            idolArr['atk'][4]['cost'] = '26';
-            idolArr['atk'][4]['attribute'] = '3';
-            idolArr['atk'][4]['attribute'] = '3';
-            idolArr['atk'][4]['attribute_str'] = 'passion';
-            idolArr['atk'][4]['rarity'] = '6';
-            idolArr['atk'][4]['comment_column_num'] = rand(1,5);
-            if (idolArr['atk'][4]['comment_column_num'] == 1){
-                idolArr['atk'][4]['card_comment'] = "ｻﾎﾟｰﾄしてあげるから､頑張れ★";
-                idolArr['atk'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/01aa714e84e176c8fbe05d938ca6cc70.mp4';
-            }
-            else if (idolArr['atk'][4]['comment_column_num'] == 2){
-                idolArr['atk'][4]['card_comment'] = "あは★心臓､ﾊﾞｸﾊﾞｸいってるよ";
-                idolArr['atk'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/0819a4206e62006d46b8b01b9cf1a287.mp4';
-            }
-            else if (idolArr['atk'][4]['comment_column_num'] == 3){
-                idolArr['atk'][4]['card_comment'] = "んｰ､ﾌﾄﾓﾓがﾁｸﾁｸするなｰ…";
-                idolArr['atk'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/4f239f1f58d59d89b9f3493a06826361.mp4';
-            }
-            else if (idolArr['atk'][4]['comment_column_num'] == 4){
-                idolArr['atk'][4]['card_comment'] = "ｷﾞｬﾙの青春は､ｵｰﾙﾀｲﾑ本気なんだから｡行事も遊びも…恋もね♪";
-                idolArr['atk'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/c9944c1be79e59d4fd3b4b7a0d4fc1e6.mp4';
-            }
-            else {
-                idolArr['atk'][4]['card_comment'] = "いつも隣を走ってるくせに…触れられない人って､いるよね";
-                idolArr['atk'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/2637f524e02a8be31ed9e4e479ddab9e.mp4';
-            }
-            idolArr['def'][0] = [];
-            idolArr['def'][0]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/6cb558d20f14ddb700065515c862a66e.jpg';
-            idolArr['def'][0]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/6cb558d20f14ddb700065515c862a66e.jpg';
-            idolArr['def'][0]['cost'] = '26';
-            idolArr['def'][0]['attribute'] = '3';
-            idolArr['def'][0]['attribute'] = '3';
-            idolArr['def'][0]['attribute_str'] = 'passion';
-            idolArr['def'][0]['rarity'] = '6';
-            idolArr['def'][0]['comment_column_num'] = rand(1,5);
-            if (idolArr['def'][0]['comment_column_num'] == 1){
-                idolArr['def'][0]['card_comment'] = "やっぱｵｰﾗ､出ちゃってる★";
-                idolArr['def'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/a8200e47dbf8b5cb081a54f55123c549.mp4';
-            }
-            else if (idolArr['def'][0]['comment_column_num'] == 2){
-                idolArr['def'][0]['card_comment'] = "ｲﾒｰｼﾞ以上に振る舞わないとね!";
-                idolArr['def'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/54a734409be32db0e7edbe038167fd46.mp4';
-            }
-            else if (idolArr['def'][0]['comment_column_num'] == 3){
-                idolArr['def'][0]['card_comment'] = "声はどんどんかけてほしい派♪";
-                idolArr['def'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/f6b83ee53d0d352ce95ec9cf16c41bc5.mp4';
-            }
-            else if (idolArr['def'][0]['comment_column_num'] == 4){
-                idolArr['def'][0]['card_comment'] = "大好きなﾌｧﾝの子と一緒に撮った写真は…｢ﾀｲｾﾂ｣ﾌｫﾙﾀﾞに､IN★";
-                idolArr['def'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/f6b83ee53d0d352ce95ec9cf16c41bc5.mp4';
-            }
-            else {
-                idolArr['def'][0]['card_comment'] = "ｱｼﾀｶ★ﾌﾟﾛﾃﾞｭｰｻｰのは､別ﾌｫﾙﾀﾞなんだ★中身はﾋﾐﾂ!";
-                idolArr['def'][0]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/a01909f6c23239e7dbc1e70ce27575b7.mp4';
-            }
-            idolArr['def'][1] = [];
-            idolArr['def'][1]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/ca52aa2e1917478c4642deeba2ea7643.jpg';
-            idolArr['def'][1]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/ca52aa2e1917478c4642deeba2ea7643.jpg';
-            idolArr['def'][1]['cost'] = '26';
-            idolArr['def'][1]['attribute'] = '3';
-            idolArr['def'][1]['attribute'] = '3';
-            idolArr['def'][1]['attribute_str'] = 'passion';
-            idolArr['def'][1]['rarity'] = '6';
-            idolArr['def'][1]['comment_column_num'] = rand(1,5);
-            if (idolArr['def'][1]['comment_column_num'] == 1){
-                idolArr['def'][1]['card_comment'] = "海にはｷﾞｬﾙ! 絵になるでしょ♪";
-                idolArr['def'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/48b83695fd0cf48687831c0dd5ca1e71.mp4';
-            }
-            else if (idolArr['def'][1]['comment_column_num'] == 2){
-                idolArr['def'][1]['card_comment'] = "走り出したら止まんないし!";
-                idolArr['def'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/da37e536dbf15650900b1e80b6b9bcc3.mp4';
-            }
-            else if (idolArr['def'][1]['comment_column_num'] == 3){
-                idolArr['def'][1]['card_comment'] = "この青! 見たかったんだ～♪";
-                idolArr['def'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/e9dcc834f0471f759458609d7dc2313d.mp4';
-            }
-            else if (idolArr['def'][1]['comment_column_num'] == 4){
-                idolArr['def'][1]['card_comment'] = "ﾄﾞﾗｲﾌﾞﾃﾞｰﾄのお供は､ｷﾗｷﾗの曲で決まりっ★つまりｱﾀｼの歌っ♪";
-                idolArr['def'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/253dba9ad96b4996739fb57777676c07.mp4';
-            }
-            else {
-                idolArr['def'][1]['card_comment'] = "砂浜に落書きも楽しいよね★…で､ﾌﾟﾛﾃﾞｭｰｻｰなら何書くの?";
-                idolArr['def'][1]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/ed8fa61a24a6596f828fcbcd13b772a8.mp4';
-            }
-            idolArr['def'][2] = [];
-            idolArr['def'][2]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/25aeb7e9618f9f27c140030cc9b0805b.jpg';
-            idolArr['def'][2]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/25aeb7e9618f9f27c140030cc9b0805b.jpg';
-            idolArr['def'][2]['cost'] = '25';
-            idolArr['def'][2]['attribute'] = '3';
-            idolArr['def'][2]['attribute'] = '3';
-            idolArr['def'][2]['attribute_str'] = 'passion';
-            idolArr['def'][2]['rarity'] = '6';
-            idolArr['def'][2]['comment_column_num'] = rand(1,5);
-            if (idolArr['def'][2]['comment_column_num'] == 1){
-                idolArr['def'][2]['card_comment'] = "伝えたいｺﾄはﾁｮｺに込めたから!";
-                idolArr['def'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/405db4fc61c25db2dc8b4fd9d8492b53.mp4';
-            }
-            else if (idolArr['def'][2]['comment_column_num'] == 2){
-                idolArr['def'][2]['card_comment'] = "あはっ､ｱﾂくなってきたかも!";
-                idolArr['def'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/c765f179505aea44c922065230da8f14.mp4';
-            }
-            else if (idolArr['def'][2]['comment_column_num'] == 3){
-                idolArr['def'][2]['card_comment'] = "やっぱ､ｽﾄﾚｰﾄに手渡しかなって";
-                idolArr['def'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/60256a96cf8f5cfe72b0f99374e647a9.mp4';
-            }
-            else if (idolArr['def'][2]['comment_column_num'] == 4){
-                idolArr['def'][2]['card_comment'] = "門限まで､まだ時間あるんだよね…｡どｰしよっかな…｡ねっ?";
-                idolArr['def'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/eac71840170eead8d44a33ebd8b8092d.mp4';
-            }
-            else {
-                idolArr['def'][2]['card_comment'] = "ｱｼﾀｶ★ﾌﾟﾛﾃﾞｭｰｻｰの好きなｶﾝｼﾞ､ﾊﾞｯﾁﾘ把握してるから★";
-                idolArr['def'][2]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/43d9db336b7a9f300c3307ad5f652ec7.mp4';
-            }
-            idolArr['def'][3] = [];
-            idolArr['def'][3]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/e4ed9b9f97f6058a7e16620faa7d750f.jpg';
-            idolArr['def'][3]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/e4ed9b9f97f6058a7e16620faa7d750f.jpg';
-            idolArr['def'][3]['cost'] = '25';
-            idolArr['def'][3]['attribute'] = '3';
-            idolArr['def'][3]['attribute'] = '3';
-            idolArr['def'][3]['attribute_str'] = 'passion';
-            idolArr['def'][3]['rarity'] = '6';
-            idolArr['def'][3]['comment_column_num'] = rand(1,5);
-            if (idolArr['def'][3]['comment_column_num'] == 1){
-                idolArr['def'][3]['card_comment'] = "ｽﾀｲﾙには自信ｱﾘだし★";
-                idolArr['def'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/45132761f4e000ddbf30e69e43eec305.mp4';
-            }
-            else if (idolArr['def'][3]['comment_column_num'] == 2){
-                idolArr['def'][3]['card_comment'] = "もしかして､ﾔｹちゃう?";
-                idolArr['def'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/5501449b77478d63b9983d31502cad8a.mp4';
-            }
-            else if (idolArr['def'][3]['comment_column_num'] == 3){
-                idolArr['def'][3]['card_comment'] = "太陽との勝負でも負けないし♪";
-                idolArr['def'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/dae8fdd75a0b070c83a2f412bc368ca6.mp4';
-            }
-            else if (idolArr['def'][3]['comment_column_num'] == 4){
-                idolArr['def'][3]['card_comment'] = "いつもよりﾜﾝﾗﾝｸ上､極上の夏にご招待! ほｰら､遠慮しない♪";
-                idolArr['def'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/fe223f14bcc41064a7bb57cd144a7451.mp4';
-            }
-            else {
-                idolArr['def'][3]['card_comment'] = "背中は…ｱｼﾀｶ★ﾌﾟﾛﾃﾞｭｰｻｰ､塗ってくれるでしょ★";
-                idolArr['def'][3]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/3c75f78fbd06e53abd0223ed38cd764b.mp4';
-            }
-            idolArr['def'][4] = [];
-            idolArr['def'][4]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/f99aa70007b3d201a586252a246488f3.jpg';
-            idolArr['def'][4]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/f99aa70007b3d201a586252a246488f3.jpg';
-            idolArr['def'][4]['cost'] = '26';
-            idolArr['def'][4]['attribute'] = '3';
-            idolArr['def'][4]['attribute'] = '3';
-            idolArr['def'][4]['attribute_str'] = 'passion';
-            idolArr['def'][4]['rarity'] = '6';
-            idolArr['def'][4]['comment_column_num'] = rand(1,5);
-            if (idolArr['def'][4]['comment_column_num'] == 1){
-                idolArr['def'][4]['card_comment'] = "ｻﾎﾟｰﾄしてあげるから､頑張れ★";
-                idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/01aa714e84e176c8fbe05d938ca6cc70.mp4';
-            }
-            else if (idolArr['def'][4]['comment_column_num'] == 2){
-                idolArr['def'][4]['card_comment'] = "あは★心臓､ﾊﾞｸﾊﾞｸいってるよ";
-                idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/0819a4206e62006d46b8b01b9cf1a287.mp4';
-            }
-            else if (idolArr['def'][4]['comment_column_num'] == 3){
-                idolArr['def'][4]['card_comment'] = "ふふっ､潮の香り､ｲｹてるよねっ";
-                idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/358294bbd330883ef054a4167ed9d178.mp4';
-            }
-            else if (idolArr['def'][4]['comment_column_num'] == 4){
-                idolArr['def'][4]['card_comment'] = "まだまだ崩れるｱﾀｼじゃないしっ｡呼吸もﾌｫｰﾑも､ﾒｲｸもね★";
-                idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/d37864e4c7dc54e68b9b3bcdc0a70d5f.mp4';
-            }
-            else {
-                idolArr['def'][4]['card_comment'] = "ｱｼﾀｶ★ﾌﾟﾛﾃﾞｭｰｻｰとなら､もっと先まで走れるね! 絶対★";
-                idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/8295a8e59942fd8c8024ea05454b4c83.mp4';
-            }
-            idolArr['dialogue_info'] = [];
-        </script>
-        <script src="https://lodipot.github.io/mika_backup/gallery/js/mypage.min.js"></script>
-        <footer>
-            <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
-                <div></div>
-            </a>
-            <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
-        </footer>
-    </div>
-    <script>
-        if (localStorage.getItem('title_number') === "" || localStorage.getItem('title_number') === null || localStorage.getItem('title_number') === undefined){
-            localStorage.setItem('title_number', '101995');
-        };
-        var title_num = localStorage.getItem('title_number');
-        var img_url = "https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_" + title_num + ".jpg";
-        document.getElementById("sel_title_img").src = img_url;
-    </script>
-    <script>
-        window._tarminal = {
-            'native_app_flg': false,
-            'android_app_flg': false,
-            'ios_app_flg': false,
-            'shell_app_flg': false
-        };
-    </script>
-</body>
+        function e(o, e, i) {
+            var a = o.card_comment;
+            p.removeClass().addClass("comment_main_idol_top comment_attribute_" + o.attribute_str).html(a).show(), void 0 == i ? p.addClass("position0" + e) : p.addClass(i)
+        }
 
-</html>
+        function i(o, e, i) {
+            var a, t;
+            void 0 !== i ? (a = "position_left", t = "position_right") : (a = "position" + o.position, t = "position" + e.position), p.removeClass().addClass("comment_main_idol_top comment_attribute_" + o.attribute + " " + a).html(o.card_comment), v.parent().show(), v.removeClass().addClass(" comment_main_idol_bottom comment_attribute_" + e.attribute + " " + t).html(e.card_comment)
+        }
+
+        function a(o, e) {
+            var i = o.voice_path;
+            i ? idolVoice.check.isVoicePlay() ? ($(" #jsBtnIdolVoice").removeClass().addClass("se_000 btn_idol_voice attribute_" + f[o.attribute] + "_voice_mark_02").attr("rel", e).attr("title", f[o.attribute]).show(), idolVoice.load(i, l, e)) : $("#jsBtnIdolVoice").removeClass().addClass("se_000 btn_idol_voice attribute_" + f[o.attribute] + "_voice_mark_03").show() : $("#jsBtnIdolVoice").hide()
+        }
+
+        function t() {
+            d = !1, setTimeout(function() {
+                d = !0
+            }, 500)
+        }
+
+        function s(o) {
+            var e = B[l][o];
+            e.rarity <= 4 && (999 == e.cost ? $("#jsAreaMainIdol").addClass("notSrare rare_" + e.rarity + "_tr") : $("#jsAreaMainIdol").addClass("notSrare rare_" + e.rarity + "_" + f[e.attribute])), $("#jsAreaMainIdol").css("background-image", "url(" + e.img_path_large + ")"), g[0] = o, C = !1
+        }
+
+        function n() {
+            var o = B.dialogue_info[l];
+            $("#jsAreaDialogue").show(), o.idol_1.rarity <= 4 && $("#jsAreaDialogue_idol1").addClass("notSrare rare_" + o.idol_1.rarity + "_" + j[o.idol_1.attribute]), $("#jsAreaDialogue_idol1").css("background-image", "url(" + B[l][o.idol_1.position.replace("0", "")].img_path_large + ")"), o.idol_2.rarity <= 4 && $("#jsAreaDialogue_idol2").addClass("notSrare rare_" + o.idol_2.rarity + "_" + j[o.idol_2.attribute]), $("#jsAreaDialogue_idol2").css("background-image", "url(" + B[l][o.idol_2.position.replace("0", "")].img_path_large + ")"), o.idol_1.dialogue_position > 0 ? $("#jsAreaDialogue_idol1").addClass("idol_talk_pos" + o.idol_1.dialogue_position) : $("#jsAreaDialogue_idol1").addClass("idol_talk_pos000"), o.idol_2.dialogue_position > 0 ? $("#jsAreaDialogue_idol2").addClass("idol_talk_pos" + o.idol_2.dialogue_position) : $("#jsAreaDialogue_idol2").addClass("idol_talk_pos000"), i(o.idol_1, o.idol_2, 1), g[0] = o.idol_1.position.replace("0", ""), g[1] = o.idol_2.position.replace("0", "")
+        }
+        var l, d = !0,
+            r = ["atk", "def"];
+        l = Commonjs.loadLocalStorage("myStudioIdolDeckType") ? Commonjs.loadLocalStorage("myStudioIdolDeckType") : r[Math.floor(2 * Math.random())];
+        var c = {
+                atk: "atk_def",
+                def: "def_atk"
+            },
+            _ = $("#jsBtn_a-d_Switch"),
+            m = $("#jsBtn_layout_change"),
+            u = $("#jsBtn_comment_change"),
+            g = [0, 0],
+            h = $("#jsAreaMainIdolLarge"),
+            p = $("#jsCommentTop"),
+            v = $("#jsCommentBottom"),
+            f = {
+                1: "cu",
+                2: "co",
+                3: "pa",
+                99: "tr"
+            },
+            j = {
+                cute: "cu",
+                cool: "co",
+                passion: "pa"
+            },
+            w = 0,
+            C = !1,
+            I = window.user_name,
+            S = 0,
+            b = !1,
+            y = {
+                ONLY_COMMENT: 1,
+                NO_UI: 2,
+                FULL_UI: 3
+            },
+            A = y.ONLY_COMMENT,
+            M = window.loading_images,
+            L = window.loading_image_ami,
+            k = window.native_app_flg,
+            B = window.idolArr,
+            V = window.is_debug,
+            D = window.se_play,
+            P = window.url_ajax_get_card_comment,
+            T = window.url_bg_idol_5;
+        if (2, k) var O = !0;
+        if (V && console.log(B), $(".lesson_comp, .lesson_comp_lvup").size() > 0 && $("#jsPetitViewSwitch").find("div").addClass("img_lesson_complete lesson_complete"), 2 == Commonjs.loadLocalStorage("PetitMypagePosition") ? ($("#jsPetitViewSwitch").find("div").hide(), $("#jsPetitViewSwitch").removeClass("btn_change_petit").addClass("btn_change_normal"), $("#jsAreaMainIdol").addClass("_slideOut"), $("#jsAreaPetit").addClass("_slideIn").show(), Commonjs.saveLocalStorage("PetitMypagePosition", 2)) : ($("#jsPetitViewSwitch").find("div").show(), $("#jsAreaMainIdol").show()), _.removeClass().addClass("btn_change_base btn_change_" + c[l]), 1 == Commonjs.loadLocalStorage("myStudioIdolViewIsSingle") && void 0 !== B[l][Commonjs.loadLocalStorage("myStudioIdolPosition")]) S = Commonjs.loadLocalStorage("myStudioIdolPosition"), $("#jsBtnIdolCtrl").css("visibility", "hidden"), _.hide(), m.show(), void 0 === B.dialogue_info[l] || 1 != B.dialogue_info[l].is_dialogue || B[l][S].img_path_large != B.dialogue_info[l].idol_1.img_path_large && B[l][S].img_path_large != B.dialogue_info[l].idol_2.img_path_large ? (u.show(), s(S), e(B[l][S], S, "position04"), a(B[l][S], S)) : (C = !0, n()),
+            function() {
+                for (var o = [], e = 0; e < B[l].length; e++) void 0 !== B[l][e] && (o[e] = new Image, o[e].onload = function(o, e) {
+                    return function() {
+                        $("#jsBtn5Idol_po" + o).css("background-image", "url(" + e + ")").addClass("jsIdolReady"), B[l].length == o + 1 && (setTimeout(function() {
+                            $("#jsBtn5Idol_po" + S).trigger("click")
+                        }, 100), setTimeout(function() {
+                            $("#jsBtnIdolCtrl").css("visibility", "visible")
+                        }, 500))
+                    }
+                }(e, B[l][e].img_path), o[e].src = B[l][e].img_path, w++)
+            }();
+        else {
+            for (var x = 0; x < B[l].length; x++)
+                if (void 0 !== B[l][x]) {
+                    $("#jsBtn5Idol_po" + x).css("background-image", "url(" + B[l][x].img_path + ")").addClass("jsIdolReady");
+                    var N = B[l][x].strength_level;
+                    if (N > 0) {
+                        $("#jsBtn5Idol_po" + x).addClass("strength_card_effe_wrap");
+                        var U = $('<img class="strength_level_img" />');
+                        U.attr("src", B[l][x].strength_level_img_path).css("width", "64px"), U.appendTo("#jsBtn5Idol_po" + x)
+                    }
+                    w++
+                } S = o(), void 0 !== B.dialogue_info[l] && 1 == B.dialogue_info[l].is_dialogue ? (C = !0, i(B.dialogue_info[l].idol_1, B.dialogue_info[l].idol_2)) : (C = !1, e(B[l][S], S), a(B[l][S], S))
+        }
+        _.on("click", function(i) {
+            var s = $(i.currentTarget);
+            if (!b) {
+                l = "atk" == l ? "def" : "atk", $(s).removeClass().addClass("btn_change_base btn_change_" + c[l]);
+                for (var n = 0; n < B[l].length; n++)
+                    if ($("#jsBtn5Idol_po" + n).removeClass("strength_card_effe_wrap"), $("#jsBtn5Idol_po" + n).find(".strength_level_img").remove(), void 0 !== B[l][n]) {
+                        $("#jsBtn5Idol_po" + n).css("background-image", "url(" + B[l][n].img_path + ")");
+                        var d = B[l][n].strength_level;
+                        if (d > 0) {
+                            $("#jsBtn5Idol_po" + n).addClass("strength_card_effe_wrap");
+                            var r = $('<img class="strength_level_img" />');
+                            r.attr("src", B[l][n].strength_level_img_path).css("width", "64px"), r.appendTo("#jsBtn5Idol_po" + n)
+                        }
+                    } C && (v.parent().hide(), C = !1), S = o(), e(B[l][S], S), a(B[l][S], S), Commonjs.saveLocalStorage("myStudioIdolDeckType", l), t()
+            }
+            i.preventDefault()
+        }), m.on("click", function(o) {
+            var e = $(o.currentTarget),
+                i = $(e);
+            if (!b) {
+                switch (A) {
+                    case y.ONLY_COMMENT:
+                        $("#jsPetitViewSwitch").hide(), u.show(), $(".js_comment_off_target").hide(), p.show(), B[l][Commonjs.loadLocalStorage("myStudioIdolPosition")].voice_path && $("#jsBtnIdolVoice").show();
+                        break;
+                    case y.NO_UI:
+                        $("#jsPetitViewSwitch").hide(), u.hide(), $(".js_comment_off_target").hide(), p.hide(), $("#jsBtnIdolVoice").hide();
+                        break;
+                    case y.FULL_UI:
+                    default:
+                        $("#jsPetitViewSwitch").show(), u.show(), $(".js_comment_off_target").show(), p.show(), B[l][Commonjs.loadLocalStorage("myStudioIdolPosition")].voice_path && $("#jsBtnIdolVoice").show()
+                }++A >= 4 && (A = 1), i.removeClass("btn_change_pattern_1 btn_change_pattern_2 btn_change_pattern_3").addClass("btn_change_pattern_" + A), C && (u.hide(), $("#jsBtnIdolVoice").hide(), v.parent().toggle(p.is(":visible"))), o.preventDefault()
+            }
+        });
+        var E = $("#jsBtnIdolCtrl li");
+        $("#jsBtnIdolCtrl a").each(function(o, i) {
+            var r = $(i);
+            r.on("click", function(o) {
+                if (S = r.data("po"), d) {
+                    if (r.hasClass("jsIdolReady")) {
+                        _.hide(), m.show(), h.show(), !C || S != B.dialogue_info[l].idol_1.position.replace("0", "") && S != B.dialogue_info[l].idol_2.position.replace("0", "") ? ($("#jsTipsSwitch").show().css("opacity", "1"), setTimeout(function() {
+                            $("#jsTipsSwitch").css("opacity", "0")
+                        }, 500), $("#jsBtnIdolVoice").hide(), p.hide(), v.parent().hide(), s(S), e(B[l][S], S, "position04"), a(B[l][S], S), setTimeout(function() {
+                            u.show()
+                        }, 300)) : n(), Commonjs.saveLocalStorage("myStudioIdolViewIsSingle", 1), Commonjs.saveLocalStorage("myStudioIdolPosition", S), Commonjs.saveLocalStorage("myStudioIdolDeckType", l);
+                        for (var i = 0; i < E.length; i++) E.index(r.parent()) <= i ? E.eq(i).css("left", 64 * (5 - i) + "px") : E.eq(i).css("left", -1 * (i + 1) * 64 + "px");
+                        k && O ? O = !1 : D("se_004")
+                    }
+                    t()
+                }
+                o.preventDefault()
+            })
+        }), h.on("click", function(o) {
+            $(o.currentTarget);
+            d && ($("#jsTipsSwitch").hide().css("opacity", "1"), A != y.ONLY_COMMENT && (A = y.FULL_UI, m.trigger("click")), h.hide(), E.css("left", "0"), u.hide(), C ? setTimeout(function() {
+                "none" == p.css("display") && (p.show(), v.parent().show()), m.hide(), _.show(), p.removeClass("position_left").addClass("position0" + g[0]), v.removeClass("position_right").addClass("position0" + g[1]), $("#jsAreaDialogue_idol1").removeClass(), $("#jsAreaDialogue_idol2").removeClass(), $("#jsAreaDialogue").hide()
+            }, 300) : setTimeout(function() {
+                "none" == p.css("display") && (p.show(), B[l][Commonjs.loadLocalStorage("myStudioIdolPosition")].voice_path && $("#jsBtnIdolVoice").show()), m.hide(), _.show(), p.removeClass("position04").addClass("position0" + g[0]), $("#jsAreaMainIdol").removeClass().addClass("area_main_idol").css("background-image", "url(" + T + ")")
+            }, 300), D("se_022"), Commonjs.saveLocalStorage("myStudioIdolViewIsSingle", 0), t()), o.preventDefault()
+        }), $("#jsBtn_comment_change").on("click", function() {
+            var o = Math.floor(1e3 * Math.random()) + 1;
+            b || (b = !0, $("#commentLoading").show(), 500 === o || 501 === o ? ($("#loadingImage").attr("src", L), $("#loadingAmi").show(), $("#loadingNormal").hide()) : ($("#loadingImage").attr("src", M[Math.floor(Math.random() * M.length)]), $("#loadingAmi").hide(), $("#loadingNormal").show()), $.ajax({
+                type: "post",
+                url: P,
+                data: {
+                    user_name: I,
+                    is_leader_flag: +("4" == S),
+                    position: S,
+                    comment_column_num: B[l][S].comment_column_num,
+                    atk_flag: +("atk" == l)
+                },
+                success: function(o) {
+                    B[l][S].card_comment = Commonjs.unescapeHTML(Commonjs.unescapeHTML(o.card_comment)), B[l][S].voice_path = o.voice_path, B[l][S].comment_column_num = o.comment_column_num
+                },
+                error: function() {
+                    alert("通信に失敗しました。")
+                },
+                complete: function() {
+                    $("#commentLoading").hide(), b = !1, e(B[l][S], S, "position04"), a(B[l][S], S)
+                }
+            }))
+        }), $("#jsBtnIdolVoice").on("click", function(o) {
+            idolVoice.play(l, $("#jsBtnIdolVoice").attr("rel")), o.preventDefault()
+        }), $("#jsPetitViewSwitch").on("click", function(o) {
+            var e = $(o.currentTarget);
+            d && ($("#jsAreaMainIdol, #jsAreaPetit").addClass("_animation").show(), $(e).hasClass("btn_change_petit") ? ($("#jsAreaMainIdol").addClass("_slideOut"), $("#jsAreaPetit").addClass("_slideIn"), Commonjs.saveLocalStorage("PetitMypagePosition", 2)) : ($("#jsAreaMainIdol").removeClass("_slideOut"), $("#jsAreaPetit").removeClass("_slideIn"), Commonjs.saveLocalStorage("PetitMypagePosition", 1)), D("se_007"), t()), o.preventDefault()
+        }), $("#jsAreaMainIdol").on("webkitTransitionEnd", function(o) {
+            var e = $(o.currentTarget);
+            $(e).hasClass("_slideOut") ? ($("#jsPetitViewSwitch").find("div").hide(), $("#jsPetitViewSwitch").removeClass("btn_change_petit").addClass("btn_change_normal")) : ($("#jsPetitViewSwitch").find("div").show(), $("#jsPetitViewSwitch").removeClass("btn_change_normal").addClass("btn_change_petit"))
+        }), $(".jsOnBanner a, .jsOnBanner img").each(function(o, e) {
+            var i = $(e);
+            i.on("touchstart mousedown", function() {
+                i.removeClass("offBanner").addClass("onBanner")
+            }), i.on("touchend mouseup mouseleave", function() {
+                i.removeClass("onBanner").addClass("offBanner")
+            })
+        });
+        var F = $("#user_name_txt");
+        F.text().length > 11 && $(F).css("font-size", "10px");
+        var Y = $(".newInfoBody li");
+        Y.on("touchstart mousedown", function(o) {
+            var e = $(o.currentTarget);
+            $(e).addClass("jsOnLightbox")
+        }), Y.on("touchend mouseup mouseleave", function(o) {
+            var e = $(o.currentTarget);
+            $(e).removeClass("jsOnLightbox")
+        }), $("#jsBtnAreaMessageMore").on("click", function(o) {
+            var e = $(o.currentTarget),
+                i = $("#areaMessageMore");
+            "none" == i.css("display") ? (i.slideDown(350), $(e).addClass("_close"), Commonjs.saveLocalStorage("myStudioAreaMessageMore", 1)) : (i.slideUp(350), $(e).removeClass("_close"), Commonjs.saveLocalStorage("myStudioAreaMessageMore", 0)), o.preventDefault()
+        }), $("#jsBtnAreaMessageMore").size() > 0 && 1 == Commonjs.loadLocalStorage("myStudioAreaMessageMore") && ($("#areaMessageMore").show(), $("#jsBtnAreaMessageMore").addClass("_close"))
+    }), void 0 !== window.countIdList)
+    for (var index in window.countIdList) icount.addCount(window.countIdList[index], $(window.countIdList[index]).data("end"));
+var idolVoice = idolVoice || {
+    init: {
+        voiceDataArr: {
+            atk: [],
+            def: []
+        }
+    },
+    check: {
+        hasLocalStorage: function() {
+            return !!window.localStorage
+        },
+        isVoicePlay: function() {
+            return !(!this.hasLocalStorage() || "OFF" == Commonjs.loadLocalStorage("IdolVoiceAdmitSwitch"))
+        }
+    },
+    load: function(o, e, i) {
+        idolVoice.check.isVoicePlay() && (this.init.voiceDataArr[e][i] = getAudio(""), this.init.voiceDataArr[e][i].autoplay = !1, this.init.voiceDataArr[e][i].src = o, this.init.voiceDataArr[e][i].addEventListener("pause", function() {
+            $("#jsBtnIdolVoice").removeClass().addClass("se_000 btn_idol_voice attribute_" + $("#jsBtnIdolVoice").attr("title") + "_voice_mark_02")
+        }), this.init.voiceDataArr[e][i].addEventListener("play", function() {
+            $("#jsBtnIdolVoice").removeClass().addClass("se_000 btn_idol_voice attribute_" + $("#jsBtnIdolVoice").attr("title") + "_voice_mark_04")
+        }))
+    },
+    play: function(o, e) {
+        idolVoice.check.isVoicePlay() && (this.init.voiceDataArr[o][e].ended ? this.init.voiceDataArr[o][e].play() : this.init.voiceDataArr[o][e].paused ? this.init.voiceDataArr[o][e].play() : (this.init.voiceDataArr[o][e].paused, this.init.voiceDataArr[o][e].pause()))
+    }
+};
