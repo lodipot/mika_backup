@@ -135,7 +135,7 @@
                     <div></div>
                 </a>
                 <div class="area_main_idol_top">
-                    <a href='#' class="btn_change_base" id="jsBtn_a-d_Switch">
+                    <a href='#' class="btn_change_base" id="jsBtn_a-d_Switch" onclick="#">
                         <div></div>
                     </a>
                     <a href='#' class="btn_change_comment_base btn_change_pattern_1" id="jsBtn_layout_change">
@@ -178,7 +178,7 @@
                 <div class="petit_idol_list" id="petit_idol_02"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/risa_petit.png' width="110" height="149" class="idol_img" style="position:relative; right:35px;"></div>
             </div>
             <div class="area_main_btn bg_main_menu">
-                <button id="comment_changer" onclick="click_comment(0)">
+                <button id="idol_talk_btn" onclick="idol_talk(1)" style="width:320px; height:60px; opacity:0">
             </div>
         </section>
         <a href="#" class="lesson_menu_btn" style="display:none"></a>
@@ -720,10 +720,36 @@
                     $('#tab_switcher_0').removeClass('concealed');
                 }
             };
+            function Request(){
+                var requestParam = "";
+                this.getParameter = function(param){
+                    var url = unescape(location.href);
+                    var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+                    for(var i = 0; i < paramArr.length; i++){
+                        var temp = paramArr[i].split("=");
+                        if(temp[0].toUpperCase() == param.toUpperCase()){
+                            requestParam = paramArr[i].split("=")[1];
+                            break;
+                        }
+                    }
+                    return requestParam;
+                };
+            }
+            var request = new Request();
+            function idol_talk(num) {
+                var base_url = "https://lodipot.github.io/mika_backup/my_page.html"
+                if (num == 1){
+                    location.href = base_url + "?idol_talk=1";
+                }
+                else {
+                    location.href = base_url;
+                }
+            }
             var loading_images = ["https://lodipot.github.io/mika_backup/gallery/image/loading/100271.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100344.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100442.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100742.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100919.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101114.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101224.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101335.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101464.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101579.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100320.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100402.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/100774.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101057.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101171.gif", "https://lodipot.github.io/mika_backup/gallery/image/loading/101474.gif"];
             var native_app_flg = false;
             var is_debug = false;
             var now_time = 1626121244;
+            start:
             var idolArr = [];
             var user_name = "ｱｼﾀｶ★";
             var url_bg_idol5 = 'https://lodipot.github.io/mika_backup/gallery/image/mypage/bg_idol5.jpg';
@@ -748,6 +774,97 @@
             function rand(min, max){
                 return Math.floor(Math.random()*(max-min+1))+min;
             }
+            if (request.getParameter("idol_talk") == "1") {
+                $('#idol_talk_btn').attr('onclick', 'idol_talk(0)');
+                $('#jsBtn_a-d_Switch').attr('onclick', 'location.reload()');
+                idolArr['atk'][0] = [];
+                idolArr['atk'][0]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/6f21fc12e42465cbda44034110b58791.jpg';
+                idolArr['atk'][0]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/6f21fc12e42465cbda44034110b58791.jpg';
+                idolArr['atk'][0]['cost'] = '26';
+                idolArr['atk'][0]['attribute'] = '2';
+                idolArr['atk'][0]['attribute'] = '2';
+                idolArr['atk'][0]['attribute_str'] = 'cool';
+                idolArr['atk'][0]['rarity'] = '6';
+                idolArr['atk'][1] = [];
+                idolArr['atk'][1]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/641271d965e65b716fc9c235318f40bf.jpg';
+                idolArr['atk'][1]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/641271d965e65b716fc9c235318f40bf.jpg';
+                idolArr['atk'][1]['cost'] = '26';
+                idolArr['atk'][1]['attribute'] = '3';
+                idolArr['atk'][1]['attribute'] = '3';
+                idolArr['atk'][1]['attribute_str'] = 'passion';
+                idolArr['atk'][1]['rarity'] = '6';
+                idolArr['atk'][1]['comment_column_num'] = rand(1,5);
+                idolArr['atk'][4] = [];
+                idolArr['atk'][4]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['atk'][4]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['atk'][4]['cost'] = '26';
+                idolArr['atk'][4]['attribute'] = '3';
+                idolArr['atk'][4]['attribute'] = '3';
+                idolArr['atk'][4]['attribute_str'] = 'passion';
+                idolArr['atk'][4]['rarity'] = '6';
+                idolArr['atk'][4]['comment_column_num'] = rand(1,5);
+                idolArr['def'][0] = [];
+                idolArr['def'][0]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/6f21fc12e42465cbda44034110b58791.jpg';
+                idolArr['def'][0]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/6f21fc12e42465cbda44034110b58791.jpg';
+                idolArr['def'][0]['cost'] = '26';
+                idolArr['def'][0]['attribute'] = '3';
+                idolArr['def'][0]['attribute'] = '3';
+                idolArr['def'][0]['attribute_str'] = 'cool';
+                idolArr['def'][0]['rarity'] = '6';
+                idolArr['def'][0]['comment_column_num'] = rand(1,5);
+                idolArr['def'][1] = [];
+                idolArr['def'][1]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/641271d965e65b716fc9c235318f40bf.jpg';
+                idolArr['def'][1]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/641271d965e65b716fc9c235318f40bf.jpg';
+                idolArr['def'][1]['cost'] = '26';
+                idolArr['def'][1]['attribute'] = '3';
+                idolArr['def'][1]['attribute'] = '3';
+                idolArr['def'][1]['attribute_str'] = 'passion';
+                idolArr['def'][1]['rarity'] = '6';
+                idolArr['def'][1]['comment_column_num'] = rand(1,5);
+                idolArr['def'][4] = [];
+                idolArr['def'][4]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['def'][4]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['def'][4]['cost'] = '26';
+                idolArr['def'][4]['attribute'] = '3';
+                idolArr['def'][4]['attribute'] = '3';
+                idolArr['def'][4]['attribute_str'] = 'passion';
+                idolArr['def'][4]['rarity'] = '6';
+                idolArr['def'][4]['comment_column_num'] = rand(1,5);
+                idolArr['dialogue_info'] = [];
+                idolArr['dialogue_info']['atk'] = [];
+                idolArr['dialogue_info']['atk']['is_dialogue'] = 1;
+                idolArr['dialogue_info']['atk']['idol_1'] = [];
+                idolArr['dialogue_info']['atk']['idol_1']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['dialogue_info']['atk']['idol_1']['attribute'] = 'passion';
+                idolArr['dialogue_info']['atk']['idol_1']['card_comment'] = "ねぇ加蓮､ﾏｽｶﾗ切れちゃったんだけど貸してくれる～?";
+                idolArr['dialogue_info']['atk']['idol_1']['rarity'] = '6';
+                idolArr['dialogue_info']['atk']['idol_1']['position'] = '04';
+                idolArr['dialogue_info']['atk']['idol_1']['dialogue_position'] = '0';
+                idolArr['dialogue_info']['atk']['idol_2'] = [];
+                idolArr['dialogue_info']['atk']['idol_2']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/6f21fc12e42465cbda44034110b58791.jpg';
+                idolArr['dialogue_info']['atk']['idol_2']['attribute'] = 'cool';
+                idolArr['dialogue_info']['atk']['idol_2']['card_comment'] = "はいどｰぞ｡美嘉のﾌﾞﾗﾝﾄﾞと違うと思うけど､いいかな";
+                idolArr['dialogue_info']['atk']['idol_2']['rarity'] = '6';
+                idolArr['dialogue_info']['atk']['idol_2']['position'] = '00';
+                idolArr['dialogue_info']['atk']['idol_2']['dialogue_position'] = '0';
+                idolArr['dialogue_info']['def'] = [];
+                idolArr['dialogue_info']['def']['is_dialogue'] = 1;
+                idolArr['dialogue_info']['def']['idol_1'] = [];
+                idolArr['dialogue_info']['def']['idol_1']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/990d4c7b388f9a05cbb860b1a385a2cc.jpg';
+                idolArr['dialogue_info']['def']['idol_1']['attribute'] = 'passion';
+                idolArr['dialogue_info']['def']['idol_1']['card_comment'] = "ふたりだけのｼｰﾙ撮っちゃおっか! よｰし莉嘉､いくよｰ★";
+                idolArr['dialogue_info']['def']['idol_1']['rarity'] = '6';
+                idolArr['dialogue_info']['def']['idol_1']['position'] = '04';
+                idolArr['dialogue_info']['def']['idol_1']['dialogue_position'] = '0';
+                idolArr['dialogue_info']['def']['idol_2'] = [];
+                idolArr['dialogue_info']['def']['idol_2']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/641271d965e65b716fc9c235318f40bf.jpg';
+                idolArr['dialogue_info']['def']['idol_2']['attribute'] = 'passion';
+                idolArr['dialogue_info']['def']['idol_2']['card_comment'] = "ねぇねぇ､おねｰちゃんと一緒のｼｰﾙ撮りたいな☆";
+                idolArr['dialogue_info']['def']['idol_2']['rarity'] = '6';
+                idolArr['dialogue_info']['def']['idol_2']['position'] = '01';
+                idolArr['dialogue_info']['def']['idol_2']['dialogue_position'] = '0';
+            }
+            else {
             idolArr['atk'][0] = [];
             idolArr['atk'][0]['img_path'] = 'https://lodipot.github.io/mika_backup/gallery/image/ls/4e39cf133c36d00b2255ee0fb9358211.jpg';
             idolArr['atk'][0]['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/4e39cf133c36d00b2255ee0fb9358211.jpg';
@@ -1039,32 +1156,6 @@
                 idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/8295a8e59942fd8c8024ea05454b4c83.mp4';
             }
             idolArr['dialogue_info'] = [];
-            function click_comment(select){
-                if (select == 0) {
-                    idolArr['dialogue_info']['atk'] = [];
-                    idolArr['dialogue_info']['atk']['is_dialogue'] = 1;
-                    idolArr['dialogue_info']['atk']['idol_1'] = [];
-                    idolArr['dialogue_info']['atk']['idol_1']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/f99aa70007b3d201a586252a246488f3.jpg';
-                    idolArr['dialogue_info']['atk']['idol_1']['attribute'] = 'passion';
-                    idolArr['dialogue_info']['atk']['idol_1']['card_comment'] = "ねぇ加蓮､ﾏｽｶﾗ切れちゃったんだけど貸してくれる～?";
-                    idolArr['dialogue_info']['atk']['idol_1']['rarity'] = '6';
-                    idolArr['dialogue_info']['atk']['idol_1']['position'] = '04';
-                    idolArr['dialogue_info']['atk']['idol_1']['dialogue_position'] = '0';
-                    idolArr['dialogue_info']['atk']['idol_2'] = [];
-                    idolArr['dialogue_info']['atk']['idol_2']['img_path_large'] = 'http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fbef9093335fbcbe9e92a41d2d68a206d.png%3Fv%3D20190524145609';
-                    idolArr['dialogue_info']['atk']['idol_2']['attribute'] = 'cool';
-                    idolArr['dialogue_info']['atk']['idol_2']['card_comment'] = "はいどｰぞ｡美嘉のﾌﾞﾗﾝﾄﾞと違うと思うけど､いいかな";
-                    idolArr['dialogue_info']['atk']['idol_2']['rarity'] = '1';
-                    idolArr['dialogue_info']['atk']['idol_2']['position'] = '00';
-                    idolArr['dialogue_info']['atk']['idol_2']['dialogue_position'] = '0';
-                    $('#comment_changer').attr('onclick', 'click_comment(1)');
-                    $('#jsAreaMainIdol').load(location.href + " #jsAreaMainIdol");
-                }
-                else if (select == 1) {
-                    idolArr['dialogue_info'] = [];
-                    $('#comment_changer').attr('onclick', 'click_comment(0)');
-                    $('#jsAreaMainIdol').load(location.href + " #jsAreaMainIdol");
-                }
             }
         </script>
         <script src="https://lodipot.github.io/mika_backup/gallery/js/mypage.min.js"></script>
