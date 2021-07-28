@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		
+		<script>
+			function Request(){
+				var requestParam = "";
+				this.getParameter = function(param){
+					var url = unescape(location.href);
+					var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+					for(var i = 0; i < paramArr.length; i++){
+						var temp = paramArr[i].split("=");
+						if(temp[0].toUpperCase() == param.toUpperCase()){
+							requestParam = paramArr[i].split("=")[1];
+							break;
+						}
+					}
+					return Number(requestParam);
+				};
+			}
+			var request = new Request();
+			function page_shifter() {
+				var base_address = 'https://lodipot.github.io/mika_backup/event/event_';
+				var page_now = Number(request.getParameter("page_now"));
+				
+				if (request.getParameter("next") == 1){
+					page_next = page_now;
+				}
+				else if (request.getParameter("prev") == 1){
+					page_next = page_now - 2;
+				}
+				else if (request.getParameter("first") == 1){
+					page_next = 1;
+				}
+				else if (request.getParameter("last") == 1){
+					page_next = 4;
+				}
+				else{
+					page_next = request.getParameter("target_page_num");
+				}
+                
+                if (page_next == 1) {
+                    event_num = 415;
+                }
+                else if (page_next == 2) {
+                    event_num = 712;
+                }
+                else if (page_next == 3) {
+                    event_num = 1636;
+                }
+                else if (page_next == 4) {
+                    event_num = 746;
+                }
+				n_page = base_address + event_num + ".html";
+				
+				return n_page
+			}
+			location.href = page_shifter();
+		</script>
+	</body>
+</html>

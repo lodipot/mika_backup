@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ja" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <title>アイドルマスター シンデレラガールズ</title>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
+    <script type="text/javascript">
+        if (window.localStorage) {
+            var displaySet = localStorage.getItem('DisplayPositionSet');
+            if (displaySet == 1) {
+                if (navigator.userAgent.indexOf('Android') > 0) {
+                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
+                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                } else {
+                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
+                }
+                window.addEventListener('resize', function() {
+                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                });
+            } else {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+        }
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery-2.2.2.min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/underscore-min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                easeljs: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.8.2.min.js",
+                easeljs_0_7_1: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.7.1.min.js", //スプライトを読むためのバージョン
+                tweenjs: "https://lodipot.github.io/mika_backup/gallery/js/tweenjs-0.6.2.min.js",
+                movieclipjs: "https://lodipot.github.io/mika_backup/gallery/js/movieclip-0.7.1.min.js",
+                createjs: "https://lodipot.github.io/mika_backup/gallery/js/createjs-2015.11.26.min.js",
+            }
+        })
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common_new.js"></script>
+    <script>
+        $(function() {
+            window.$ibox = $('.ibox').ibox();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/990d4c7b388f9a05cbb860b1a385a2cc');
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0,
+            bgm_flg = 0,
+            chrome_app_flg = 0,
+            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
+    </script>
+    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
+</head>
+
+<body id="memory" class="detail">
+    <div id="top" class="page_container jsOnBtn">
+        <nav class="area_menu_header">
+            <div class="area_menu_header_6btn">
+                <h1 id="JtextLimit">イベントメモリー</h1>
+                <ul>
+                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_02" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_03" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_04" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_05" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                            <div></div>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <input id="delay" type="hidden" value="0">
+        <style type="text/css">
+            .comments {
+                min-height: 115px;
+                text-align: left;
+                color: #1d1d1d;
+                padding: 25px 20px 10px;
+                position: relative;
+                top: -50px;
+            }
+
+            .comments.cute {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/cute_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .comments.cool {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/cool_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .comments.passion {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/passion_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .icon_navi {
+                width: auto;
+                margin: 0 13px;
+                padding: 8px 0;
+                background: -webkit-gradient(radial, 50% 50%, 50, 50% 50%, 130, from(#222), to(#333));
+                -webkit-border-radius: 6px;
+            }
+
+            .cover {
+                height: 370px;
+            }
+
+            .exBox {
+                width: 320px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            a.inline {
+                width: 300px;
+                height: 70px;
+                color: #1d1d1d;
+                display: block;
+                margin: 0 auto 10px;
+            }
+
+            .exArea {
+                width: 260px;
+                margin: 10px auto 0;
+                padding: 0;
+                border: 2px solid #b4d5f4;
+                background: #1d1d1d;
+                z-index: 10;
+                color: #ffffff;
+                line-height: 140%;
+                -webkit-border-radius: 8px;
+            }
+
+            .exArea h3 {
+                background: #17285c;
+                -webkit-border-top-left-radius: 8px;
+                -webkit-border-top-right-radius: 8px;
+                padding: 10px 0;
+            }
+
+            .check_close_btn {
+                top: -10px;
+                width: 37px;
+                height: 37px;
+                right: 20px;
+                display: block;
+            }
+
+            .appear_idol_area .appear_idol_bg {
+                position: relative;
+                width: 320px;
+            }
+
+            .appear_idol_area .appear_idol_chara {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                z-index: 1;
+                width: 320px;
+            }
+
+            .appear_idol_area .appear_idol_title_area {
+                position: absolute;
+                top: 4px;
+                left: 0px;
+                z-index: 2;
+                width: 320px;
+                height: 36px;
+            }
+
+            .appear_idol_area .appear_idol_title_bg {
+                position: relative;
+                background-image: url('https://lodipot.github.io/mika_backup/gallery/image/event/appear_idol_title_bg.png');
+                background-size: 320px;
+                background-repeat: no-repeat;
+                display: table-cell;
+                height: inherit;
+                vertical-align: middle;
+                color: transparent;
+                padding-left: 34px;
+                -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            .appear_idol_area .appear_idol_title_text {
+                position: relative;
+                top: 2px;
+                display: table-cell;
+                height: inherit;
+                vertical-align: middle;
+                color: #1d1d1d;
+                padding-left: 34px;
+                text-shadow: 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff;
+            }
+
+            .appear_idol_area .appear_idol_title_text._line_2 {
+                top: -1px;
+                font-size: 12px;
+            }
+        </style>
+        <header style="margin:0 0 5px;">
+            <h1 style="margin:0 0 10px;"><img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_top_event.jpg' width="100%" alt="花見DEドリームLIVEフェスティバル" class="m-12px"></h1>
+            <div class="titleH2" style="margin:0 auto; padding:5px; line-height:110%;"><span class="blue">開催期間</span><br>2015/3/31 ～ 2015/4/8</div>
+        </header>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%"><br>
+        <section class="naviArea">
+            <img src="https://lodipot.github.io/mika_backup/gallery/image/event/tujo_m2.png" width="90">
+            <div class="Wrap">
+                <div class="fukiRight">繚乱の桜の中開催された花見DEドリームLIVEフェスティバル! 悠貴ちゃんたちの元気なステージに、会場のみんなも満開の笑顔でした!<br></div>
+            </div>
+        </section>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm10"><br>
+        <h2 class="title_img_blue" style="margin:0;">
+            <div>登場アイドル</div>
+        </h2>
+        <section class="iSlider">
+            <div class="underline"></div>
+            <div class="medal_idol">
+                <div class="medal_slide" style="min-height:370px;">
+                    <ul class="slides" style="display:none;">
+                        <li style="width:320px;margin:0; position:relative;">
+                            <h3 class="slideTitle">
+                                <div class="name">[ｷﾞｬﾙﾌﾞﾛｯｻﾑ]城ヶ崎美嘉+</div>
+                                <div class="icon">
+                                    <div class="type att_3"></div>
+                                    <div class="rarity r_4"></div>
+                                </div>
+                            </h3>
+                            <div><img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_1.jpg' width="320" height="300" alt="ファンの子みーんなの美嘉ねぇになってあげるんだ★"></div>
+                            <div class="comments passion">
+                                <div>
+                                    <p class="l-Hgt120">ファンの子みーんなの美嘉ねぇになってあげるんだ★</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="width:320px;margin:0; position:relative;">
+                            <h3 class="slideTitle">
+                                <div class="name">[桜風ﾘﾌﾚｲﾝ]二宮飛鳥+</div>
+                                <div class="icon">
+                                    <div class="type att_2"></div>
+                                    <div class="rarity r_6"></div>
+                                </div>
+                            </h3>
+                            <div><img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_2.jpg' width="320" height="300" alt="夜の桜は､昼よりもずっと美しく…哀しいね｡不思議だよ…"></div>
+                            <div class="comments cool">
+                                <div>
+                                    <p class="l-Hgt120">夜の桜は､昼よりもずっと美しく…哀しいね｡不思議だよ…</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="width:320px;margin:0; position:relative;">
+                            <h3 class="slideTitle">
+                                <div class="name">[緋桜宵一刻]村上巴+</div>
+                                <div class="icon">
+                                    <div class="type att_3"></div>
+                                    <div class="rarity r_6"></div>
+                                </div>
+                            </h3>
+                            <div><img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_3.jpg' width="320" height="300" alt="うちの歌う和の心を､ﾌｧﾝの胸へ届かせたるんじゃあ!"></div>
+                            <div class="comments passion">
+                                <div>
+                                    <p class="l-Hgt120">うちの歌う和の心を､ﾌｧﾝの胸へ届かせたるんじゃあ!</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="width:320px;margin:0; position:relative;">
+                            <h3 class="slideTitle">
+                                <div class="name">[春らんまん]乙倉悠貴+</div>
+                                <div class="icon">
+                                    <div class="type att_1"></div>
+                                    <div class="rarity r_6"></div>
+                                </div>
+                            </h3>
+                            <div><img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_4.jpg' width="320" height="300" alt="楽しくて華やかなステージを、みんなで一緒に楽しみましょうっ!"></div>
+                            <div class="comments cute">
+                                <div>
+                                    <p class="l-Hgt120">楽しくて華やかなステージを、みんなで一緒に楽しみましょうっ!</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ol class="icon_navi">
+                <li><a>0</a></li>
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+            </ol>
+        </section>
+        <script src="https://lodipot.github.io/mika_backup/gallery/js/islider.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $('.medal_slide').iSlider({
+                slideshowSpeed: 5000,
+                navi: ".icon_navi",
+                selected: "icon_selected",
+                touch: true,
+                loop: true
+            });
+        </script>
+        <section class="t-Cnt m-Btm0"><img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+            <p class="m-Btm10">
+                <a href='https://lodipot.github.io/mika_backup/gallery/theater/thaeter_489.html' class="jsOnDesignBtn">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_712_theater_489.jpg' style="width:150px; height:40px;">
+                </a>
+            </p>
+            <div class="m-Btm8" style="display:inline-block;">
+                <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event/event_712_1.html'>
+                    <span style="font-size: 12px;">イベントOP演出を見る</span>
+                </a>
+            </div>
+
+            <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_top.jpg) center top no-repeat;background-size:326px;width:304px;height:44px; line-height:47px; margin:0 auto;">
+                登場アイドル一覧<br>
+            </div>
+            <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_line.jpg) center top repeat-y;background-size:326px;width:304px;text-align:center;margin:0 auto;">
+                <ul style="width:220px; margin:0 auto; padding: 10px 0 0; overflow:hidden; text-align:left;" class="displayBox">
+                    <li style="padding:5px 3px; margin:0 auto;">
+                        <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=04" class="jsOnDesignBtn">
+                            <img src='https://lodipot.github.io/mika_backup/gallery/image/xs/xs_4f4bc793b515a5c802b9ab7e0a9198e8.jpg' style='width:50px; height:50px;'>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_bottom.jpg) center top no-repeat;background-size:326px; width:304px; height:19px; margin:0 auto 10px;"></div>
+        </section>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm8"><br>
+        <form method="GET" action='https://lodipot.github.io/mika_backup/gallery/event/event.html' style="margin:0">
+            <div class="pager_area" style="height:74px;">
+                <div class="pager_submit_area">
+                    <input type="number" name="target_page_num" id="jsPageNumber" pattern="\d*" value="">
+                    ページに
+                    <label class="btn_normal_line_4 _disabled m-Cnt m-Btm8" id="jsMovePagerLabel" for="jsMovePagerBtn" style="display:inline-block;vertical-align:middle;margin-left:5px;margin-bottom:3px;">
+                        <input id="jsMovePagerBtn" type="submit" value="移動" style="width:inherit;height:inherit;line-height:inherit;margin:0;">
+                    </label>
+                </div>
+                <div class="pager_panel_area">
+                    <input type="submit" name="first" class="btn_pager_first jsNotDisabled jsOnDesignBtn" value="1">
+                    <input type="submit" name="prev" class="btn_pager_back jsNotDisabled jsOnDesignBtn" value="1">
+                    <input type="submit" name="next" class="btn_pager_next jsNotDisabled jsOnDesignBtn" value="1">
+                    <input type="submit" name="last" class="btn_pager_last jsNotDisabled jsOnDesignBtn" value="1">
+                    2 / 4
+                </div>
+            </div>
+            <input type="hidden" name="page_now" value="3">
+            <script>
+                $('#jsPageNumber').focus(function() {
+                    $('#jsMovePagerLabel').removeClass("_disabled");
+                });
+            </script>
+        </form>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm8"><br>
+        <a href='https://lodipot.github.io/mika_backup/my_page.html'>
+            <div class="backLink">マイスタジオ</div>
+        </a>
+        <script type="text/javascript">
+            $(function() {
+                $('form').bind('submit', function() {
+                    var $submit = $("input[type=submit], input[type=reset]");
+                    for (var i = 0; i < $submit.length; i++) {
+                        if ($submit.eq(i).val() != '' && !$submit.eq(i).hasClass('jsNotDisabled')) {
+                            $submit.eq(i).val('送信中');
+                            $submit.eq(i).prop('disabled', true);
+                            var prev = $submit.eq(i).prev();
+                            if (prev.hasClass('btn_text')) {
+                                prev.text('送信中');
+                                if ($submit.eq(i).parent()[0].tagName == 'LABEL') {
+                                    $submit.eq(i).parent().removeClass('_line_2');
+                                }
+                            }
+                        } else if (!$submit.eq(i).hasClass('jsNotDisabled')) {
+                            $submit.eq(i).prop('disabled', true);
+                        }
+                        if ($submit.eq(i).parent()[0].tagName == 'LABEL') {
+                            $submit.eq(i).parent().css({
+                                "opacity": "0.5"
+                            });
+                        }
+                    }
+                    $(".livebutton input[type='submit']").val('').css({
+                        "opacity": "0.5"
+                    }).prop('disabled', true);
+                    var $imagesub = $("input[type='image']");
+                    $imagesub.prop('disabled', true);
+                    for (var i = 0; i < $imagesub.length; i++) {
+                        if (!$imagesub.eq(i).attr('class')) {
+                            $imagesub.eq(i).css({
+                                "opacity": "0.5"
+                            });
+                            continue;
+                        }
+                        if ($imagesub.eq(i).attr('class').indexOf('noop') == -1) {
+                            $imagesub.eq(i).css({
+                                "opacity": "0.5"
+                            });
+                        } else {
+                            $imagesub.eq(i).css({
+                                "opacity": "1"
+                            });
+                        }
+                    }
+                    setTimeout(function() {
+                        $submit.prop('disabled', false).parent().css({
+                            "opacity": "1"
+                        });
+                        $imagesub.prop('disabled', false).css({
+                            "opacity": "1"
+                        });
+                        $(".livebutton input[type='submit']").css({
+                            "opacity": "1"
+                        });
+                    }, 2500);
+                });
+                $(".submit a").click(function() {
+                    $(this).click(function() {
+                        return false;
+                    })
+                    $(".submit").find("img").css({
+                        "opacity": "0.5"
+                    });
+                    setTimeout(function() {
+                        $(this).click(function() {
+                            return true;
+                        })
+                        $(".submit").find("img").css({
+                            "opacity": "1"
+                        });
+                    }, 2500);
+                });
+                $('body').on("click", '.stop-repeat-link', function(e) {
+                    var self = $('.stop-repeat-link');
+                    self.css({
+                        'pointer-events': 'none',
+                        'opacity': 0.6
+                    });
+                    setTimeout(function() {
+                        self.css({
+                            'pointer-events': 'auto',
+                            'opacity': 1
+                        });
+                    }, 2500);
+                });
+            });
+        </script>
+        <footer>
+            <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
+                <div></div>
+            </a>
+            <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
+        </footer>
+    </div>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+</body>
+
+</html>
