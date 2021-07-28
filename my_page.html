@@ -141,7 +141,7 @@
                     <a href='#' class="btn_change_comment_base btn_change_pattern_1" id="jsBtn_layout_change">
                         <div></div>
                     </a>
-                    <a href='#' class="btn_change_comment" id="jsBtn_comment_change">
+                    <a href='#' class="btn_change_comment" onclick="comment_change()">
                         <div></div>
                     </a>
                     <div id="jsTipsSwitch" class="reload_announce img_switch_comment"></div>
@@ -177,12 +177,15 @@
                 <div class="petit_idol_list" id="petit_idol_01"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/mika_petit.png' width="110" height="149" class="idol_img" style="position:relative; left:-65px;"></div>
                 <div class="petit_idol_list" id="petit_idol_02"><img src='https://lodipot.github.io/mika_backup/gallery/image/mypage/risa_petit.png' width="110" height="149" class="idol_img" style="position:relative; right:35px;"></div>
             </div>
-            <div class="area_main_btn bg_main_menu"></div>
+            <div class="area_main_btn bg_main_menu">
+                <button id="comment_changer" onclick="click_comment(0)">
+            </div>
         </section>
         <a href="#" class="lesson_menu_btn" style="display:none"></a>
         <a href="#" class="lesson_menu_close" style="display:none"></a>
         <div id="jsLessonConfirm" class="jsPopUp" style="display:none"></div>
-        <a href="#" class="jsLessonConfirm_btn" style="display:none"></a><a href="#" class="jsLessonConfirm_close" style="display:none"></a>
+        <a href="#" class="jsLessonConfirm_btn" style="display:none"></a>
+        <a href="#" class="jsLessonConfirm_close" style="display:none"></a>
         <div id="jsLessonComplete" class="jsPopUp" style="display:none">
             <div class="jsPopWindow"></div>
         </div>
@@ -1036,6 +1039,33 @@
                 idolArr['def'][4]['voice_path'] = 'https://lodipot.github.io/mika_backup/gallery/voice/8295a8e59942fd8c8024ea05454b4c83.mp4';
             }
             idolArr['dialogue_info'] = [];
+            function click_comment(select){
+                if (select == 0) {
+                    idolArr['dialogue_info']['atk'] = [];
+                    idolArr['dialogue_info']['atk']['is_dialogue'] = 1;
+                    idolArr['dialogue_info']['atk']['idol_1'] = [];
+                    idolArr['dialogue_info']['atk']['idol_1']['img_path_large'] = 'https://lodipot.github.io/mika_backup/gallery/image/quest/f99aa70007b3d201a586252a246488f3.jpg';
+                    idolArr['dialogue_info']['atk']['idol_1']['attribute'] = 'passion';
+                    idolArr['dialogue_info']['atk']['idol_1']['card_comment'] = "ねぇ加蓮､ﾏｽｶﾗ切れちゃったんだけど貸してくれる～?";
+                    idolArr['dialogue_info']['atk']['idol_1']['rarity'] = '6';
+                    idolArr['dialogue_info']['atk']['idol_1']['position'] = '04';
+                    idolArr['dialogue_info']['atk']['idol_1']['dialogue_position'] = '0';
+                    idolArr['dialogue_info']['atk']['idol_2'] = [];
+                    idolArr['dialogue_info']['atk']['idol_2']['img_path_large'] = 'http://sp.pf-img-a.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fcard%2Fquest%2Fbef9093335fbcbe9e92a41d2d68a206d.png%3Fv%3D20190524145609';
+                    idolArr['dialogue_info']['atk']['idol_2']['attribute'] = 'cool';
+                    idolArr['dialogue_info']['atk']['idol_2']['card_comment'] = "はいどｰぞ｡美嘉のﾌﾞﾗﾝﾄﾞと違うと思うけど､いいかな";
+                    idolArr['dialogue_info']['atk']['idol_2']['rarity'] = '1';
+                    idolArr['dialogue_info']['atk']['idol_2']['position'] = '00';
+                    idolArr['dialogue_info']['atk']['idol_2']['dialogue_position'] = '0';
+                    $('#comment_changer').attr('onclick', 'click_comment(1)');
+                    $('#jsAreaMainIdol').load(location.href + " #jsAreaMainIdol");
+                }
+                else if (select == 1) {
+                    idolArr['dialogue_info'] = [];
+                    $('#comment_changer').attr('onclick', 'click_comment(0)');
+                    $('#jsAreaMainIdol').load(location.href + " #jsAreaMainIdol");
+                }
+            }
         </script>
         <script src="https://lodipot.github.io/mika_backup/gallery/js/mypage.min.js"></script>
         <footer>
