@@ -304,24 +304,24 @@
             }
             -->
         </style>
-		<script>
-			function Request(){
-				var requestParam = "";
-				this.getParameter = function(param){
-					var url = unescape(location.href);
-					var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
-					for(var i = 0; i < paramArr.length; i++){
-						var temp = paramArr[i].split("=");
-						if(temp[0].toUpperCase() == param.toUpperCase()){
-							requestParam = paramArr[i].split("=")[1];
-							break;
-						}
-					}
-					return requestParam;
-				};
-			}
-			var request = new Request();
-		</script>
+        <script>
+            function Request(){
+                var requestParam = "";
+                this.getParameter = function(param){
+                    var url = unescape(location.href);
+                    var paramArr = (url.substring(url.indexOf("?")+1, url.length)).split("&");
+                    for(var i = 0; i < paramArr.length; i++){
+                        var temp = paramArr[i].split("=");
+                        if(temp[0].toUpperCase() == param.toUpperCase()){
+                            requestParam = paramArr[i].split("=")[1];
+                            break;
+                        }
+                    }
+                    return requestParam;
+                };
+            }
+            var request = new Request();
+        </script>
         <script type="text/template" id="tab-4-template">
             <div id="contents_tab" class="tab_common-large m-Top4 m-Btm8" style="font-size:11px">
 <a name="tab_1" href="#" class="tab_line_4 tab_text selected" style="font-size:11px;">プロフィール</a>
@@ -766,7 +766,7 @@ kg
                 var idol = {};
                 idol.detail_list = [{
                     "data": {
-					    "card_index": "01",
+                        "card_index": "01",
                         "card_name": "\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "10",
@@ -812,7 +812,11 @@ kg
                         "comments_work_max": "\uff71\uff7c\uff80\uff76\u2605\uff8c\uff9f\uff9b\uff83\uff9e\uff6d\uff70\uff7b\uff70\uff61\u4eca\u65e5\u306e\uff71\uff80\uff7c\u3069\u3046\u3060\u3063\u305f? ",
                         "comments_work_love_up": "\uff71\uff7c\uff80\uff76\u2605\uff8c\uff9f\uff9b\uff83\uff9e\uff6d\uff70\uff7b\uff70\uff61\uff71\uff80\uff7c\u306e\u3053\u3068\uff64\u3061\u3083\u3093\u3068\u898b\u3066\u3066\u3088\u306d\u2605",
                         "comments_live": "\u3088\uff70\u3057\uff64\u3044\u3063\u304f\u3088\uff70\u2605",
-                        "comments_love_max": "\u306d\u3047\uff64\uff71\uff7c\uff80\uff76\u2605\uff8c\uff9f\uff9b\uff83\uff9e\uff6d\uff70\uff7b\uff70\uff61\u5c11\u3057\u306f\uff71\uff80\uff7c\uff64\uff71\uff72\uff84\uff9e\uff99\u3089\u3057\u304f\u306a\u3063\u305f\u304b\u306a? \u3078\u3078\u3078\uff64\u3053\u308c\u304b\u3089\u3082\u3088\u308d\u3057\u304f\u306d\u2605"
+                        "comments_love_max": "\u306d\u3047\uff64\uff71\uff7c\uff80\uff76\u2605\uff8c\uff9f\uff9b\uff83\uff9e\uff6d\uff70\uff7b\uff70\uff61\u5c11\u3057\u306f\uff71\uff80\uff7c\uff64\uff71\uff72\uff84\uff9e\uff99\u3089\u3057\u304f\u306a\u3063\u305f\u304b\u306a? \u3078\u3078\u3078\uff64\u3053\u308c\u304b\u3089\u3082\u3088\u308d\u3057\u304f\u306d\u2605",
+                        "comments_talk_1": "\u7f8e\u5609\uff1a\u306d\u3047\u52a0\u84ee\uff64\uff8f\uff7d\uff76\uff97\u5207\u308c\u3061\u3083\u3063\u305f\u3093\u3060\u3051\u3069\u8cb8\u3057\u3066\u304f\u308c\u308b\uff5e\u003f",
+                        "comments_talk_2": "\u52a0\u84ee\uff1a\u306f\u3044\u3069\uff70\u305e\uff61\u7f8e\u5609\u306e\uff8c\uff9e\uff97\uff9d\uff84\uff9e\u3068\u9055\u3046\u3068\u601d\u3046\u3051\u3069\uff64\u3044\u3044\u304b\u306a",
+                        "comments_talk_3": "\u8389\u5609\uff1a\u306d\u3047\u306d\u3047\uff64\u304a\u306d\uff70\u3061\u3083\u3093\u3068\u4e00\u7dd2\u306e\uff7C\uff70\uff99\u64ae\u308a\u305f\u3044\u306a\u2606",
+                        "comments_talk_4": "\u7f8e\u5609\uff1a\u3075\u305f\u308a\u3060\u3051\u306e\uff7c\uff70\uff99\u64ae\u3063\u3061\u3083\u304a\u3063\u304b\u0021 \u3088\uff70\u3057\u8389\u5609\uff64\u3044\u304f\u3088\uff70\u2605"
                     },
                     "voice": {
                         "comment": "gallery/voice/e4605df74665fa2bd8864ab8205bc62f.mp4",
@@ -844,7 +848,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "02",
+                        "card_index": "02",
                         "card_name": "\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "10",
@@ -922,7 +926,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "03",
+                        "card_index": "03",
                         "card_name": "[\uff77\uff9e\uff6c\uff99\uff8c\uff9e\uff9b\uff6f\uff7b\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "13",
@@ -1000,7 +1004,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "04",
+                        "card_index": "04",
                         "card_name": "[\uff77\uff9e\uff6c\uff99\uff8c\uff9e\uff9b\uff6f\uff7b\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "13",
@@ -1084,7 +1088,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "05",
+                        "card_index": "05",
                         "card_name": "[\uff86\uff6d\uff70\uff73\uff9e\uff6b\uff70\uff78\uff9e]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "3",
                         "cost": "14",
@@ -1162,7 +1166,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "06",
+                        "card_index": "06",
                         "card_name": "[\uff86\uff6d\uff70\uff73\uff9e\uff6b\uff70\uff78\uff9e]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "4",
                         "cost": "14",
@@ -1240,7 +1244,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "07",
+                        "card_index": "07",
                         "card_name": "[\uff76\uff98\uff7d\uff8f\uff77\uff9e\uff6c\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "16",
@@ -1320,7 +1324,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "08",
+                        "card_index": "08",
                         "card_name": "[\uff76\uff98\uff7d\uff8f\uff77\uff9e\uff6c\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "16",
@@ -1400,7 +1404,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "09",
+                        "card_index": "09",
                         "card_name": "[CD\uff83\uff9e\uff8b\uff9e\uff6d\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "8",
@@ -1480,7 +1484,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "10",
+                        "card_index": "10",
                         "card_name": "[CD\uff83\uff9e\uff8b\uff9e\uff6d\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "8",
@@ -1560,7 +1564,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "11",
+                        "card_index": "11",
                         "card_name": "[\uff7c\uff70\uff78\uff9a\uff6f\uff84\u2605\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "17",
@@ -1640,7 +1644,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "12",
+                        "card_index": "12",
                         "card_name": "[\uff7c\uff70\uff78\uff9a\uff6f\uff84\u2605\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "17",
@@ -1720,7 +1724,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "13",
+                        "card_index": "13",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff78\uff98\uff7d\uff8f\uff7d]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "19",
@@ -1800,7 +1804,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "14",
+                        "card_index": "14",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff78\uff98\uff7d\uff8f\uff7d]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "19",
@@ -1880,7 +1884,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "15",
+                        "card_index": "15",
                         "card_name": "[\uff9c\uff9d\uff80\uff9e\uff8c\uff99\uff8f\uff7c\uff9e\uff6f\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "19",
@@ -1960,7 +1964,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "16",
+                        "card_index": "16",
                         "card_name": "[\uff9c\uff9d\uff80\uff9e\uff8c\uff99\uff8f\uff7c\uff9e\uff6f\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "19",
@@ -2040,7 +2044,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "17",
+                        "card_index": "17",
                         "card_name": "[\u590f\u306e\uff95\uff73\uff9c\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "20",
@@ -2120,7 +2124,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "18",
+                        "card_index": "18",
                         "card_name": "[\u590f\u306e\uff95\uff73\uff9c\uff78]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "20",
@@ -2200,7 +2204,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "19",
+                        "card_index": "19",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "14",
@@ -2285,7 +2289,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "20",
+                        "card_index": "20",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "14",
@@ -2376,7 +2380,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "21",
+                        "card_index": "21",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70\uff65S]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "18",
@@ -2461,7 +2465,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "22",
+                        "card_index": "22",
                         "card_name": "[3rd\uff71\uff86\uff8a\uff9e\uff70\uff7b\uff98\uff70\uff65S]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "18",
@@ -2546,7 +2550,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "23",
+                        "card_index": "23",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff7b\uff8f\uff70\uff85\uff72\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "21",
@@ -2626,7 +2630,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "24",
+                        "card_index": "24",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff7b\uff8f\uff70\uff85\uff72\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "21",
@@ -2706,7 +2710,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "25",
+                        "card_index": "25",
                         "card_name": "[G4U\uff01]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "17",
@@ -2786,7 +2790,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "26",
+                        "card_index": "26",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff84\uff9e\uff78\uff80\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "22",
@@ -2866,7 +2870,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "27",
+                        "card_index": "27",
                         "card_name": "[\uff97\uff8c\uff9e\u2605\uff84\uff9e\uff78\uff80\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "22",
@@ -2946,7 +2950,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "28",
+                        "card_index": "28",
                         "card_name": "[\uff95\uff71\u2605\uff73\uff6b\uff70\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "23",
@@ -3026,7 +3030,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "29",
+                        "card_index": "29",
                         "card_name": "[\uff95\uff71\u2605\uff73\uff6b\uff70\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "23",
@@ -3106,7 +3110,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "30",
+                        "card_index": "30",
                         "card_name": "[\u305f\u305f\u3044\u3066\u3054\u8912\u7f8e]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "21",
@@ -3191,7 +3195,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "31",
+                        "card_index": "31",
                         "card_name": "[\uff86\uff71\uff90\uff70\u2605\uff71\uff9d\uff7e\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "24",
@@ -3271,7 +3275,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "32",
+                        "card_index": "32",
                         "card_name": "[\uff86\uff71\uff90\uff70\u2605\uff71\uff9d\uff7e\uff91]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "24",
@@ -3357,7 +3361,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "33",
+                        "card_index": "33",
                         "card_name": "[\u898b\u3064\u3081\u3066\u2605\uff86\uff6d\uff70\uff72\uff94\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "24",
@@ -3437,7 +3441,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "34",
+                        "card_index": "34",
                         "card_name": "[\u898b\u3064\u3081\u3066\u2605\uff86\uff6d\uff70\uff72\uff94\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "24",
@@ -3517,7 +3521,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "35",
+                        "card_index": "35",
                         "card_name": "[\uff7e\uff9d\uff7c\uff6d\uff71\uff99\u2605\uff7b\uff8f\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "25",
@@ -3597,7 +3601,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "36",
+                        "card_index": "36",
                         "card_name": "[\uff7e\uff9d\uff7c\uff6d\uff71\uff99\u2605\uff7b\uff8f\uff70]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "25",
@@ -3677,7 +3681,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "37",
+                        "card_index": "37",
                         "card_name": "[\uff75\uff9d\uff98\uff70\uff9c\uff9d\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "25",
@@ -3757,7 +3761,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "38",
+                        "card_index": "38",
                         "card_name": "[\uff75\uff9d\uff98\uff70\uff9c\uff9d\uff8a\uff70\uff84]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "25",
@@ -3837,7 +3841,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "39",
+                        "card_index": "39",
                         "card_name": "[\uff7c\uff70\uff7b\uff72\uff84\uff9e\u2605\uff8d\uff8c\uff9e\uff9d]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -3917,7 +3921,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "40",
+                        "card_index": "40",
                         "card_name": "[\uff7c\uff70\uff7b\uff72\uff84\uff9e\u2605\uff8d\uff8c\uff9e\uff9d]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4004,7 +4008,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "41",
+                        "card_index": "41",
                         "card_name": "[\uff71\uff80\uff7c\u2605\uff7d\uff80\uff72\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -4084,7 +4088,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "42",
+                        "card_index": "42",
                         "card_name": "[\uff71\uff80\uff7c\u2605\uff7d\uff80\uff72\uff99]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4165,7 +4169,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "43",
+                        "card_index": "43",
                         "card_name": "[\uff89\uff9d\uff7d\uff84\uff6f\uff8c\uff9f\u2605\uff8f\uff72\uff73\uff6a\uff72]\u57ce\u30f6\u5d0e\u7f8e\u5609",
                         "rarity": "5",
                         "cost": "26",
@@ -4245,7 +4249,7 @@ kg
                     "is_max_love": true
                 }, {
                     "data": {
-					    "card_index": "44",
+                        "card_index": "44",
                         "card_name": "[\uff89\uff9d\uff7d\uff84\uff6f\uff8c\uff9f\u2605\uff8f\uff72\uff73\uff6a\uff72]\u57ce\u30f6\u5d0e\u7f8e\u5609+",
                         "rarity": "6",
                         "cost": "26",
@@ -4636,32 +4640,32 @@ kg
                     "l_premium": {
                         "6": "gallery/image/l/sign_p/30fe4887cbc082bf375169d6f83a1ffa.jpg",
                         "7": "gallery/image/l/sign_p/6ccf37a6cfdd206dc34434a1be3d56b8.jpg",
-						"8": "gallery/image/l/sign_p/7af6cc3d2ca1f5d15230f2366280a444.jpg",
-						"9": "gallery/image/l/sign_p/53a89429c64132c4d0058aea4b233fca.jpg",
+                        "8": "gallery/image/l/sign_p/7af6cc3d2ca1f5d15230f2366280a444.jpg",
+                        "9": "gallery/image/l/sign_p/53a89429c64132c4d0058aea4b233fca.jpg",
                         "10": "gallery/image/l/sign_p/f6e5a4e341770463ef088e55921596fa.jpg",
                         "11": "gallery/image/l/sign_p/f9385a42acabcfae3013c79d5466edf4.jpg",
                         "12": "gallery/image/l/sign_p/c34d79efd9030ebf948a18cbf9df7bf3.jpg",
                         "13": "gallery/image/l/sign_p/70ca98bb88391ddbaf3841e5912c7367.jpg",
                         "14": "gallery/image/l/sign_p/4a3abe4cfb93b694333cddf0c8521f64.jpg",
                         "15": "gallery/image/l/sign_p/e204975f21b0e3374a0633d0522f1b19.jpg",
-						"16": "gallery/image/l/sign_p/76c2eb6eac6f3d975264dfaac44157c7.jpg",
+                        "16": "gallery/image/l/sign_p/76c2eb6eac6f3d975264dfaac44157c7.jpg",
                         "17": "gallery/image/l/sign_p/eb38818dc3fd59a5cae7f69a4f743f6c.jpg",
                         "18": "gallery/image/l/sign_p/21886e4c2903ab6da97230b772c6804f.jpg",
                         "19": "gallery/image/l/sign_p/5f0ff7b6385298516aedd9b4e334a018.jpg",
                         "20": "gallery/image/l/sign_p/942ee9cb2a6140de3f7f35122ebe7e00.jpg",
-						"21": "gallery/image/l/sign_p/e6bafa973570753123cd686c18c2b975.jpg",
+                        "21": "gallery/image/l/sign_p/e6bafa973570753123cd686c18c2b975.jpg",
                         "22": "gallery/image/l/sign_p/3ea30b1c14dafc422ae4b4eb46aaa54e.jpg",
                         "23": "gallery/image/l/sign_p/f84e6d3c1d11b46d7efe8e53e1013eb4.jpg",
-						"24": "gallery/image/l/sign_p/8d9c26ea00d4d16b952f129ce7c80034.jpg",
-						"25": "gallery/image/l/sign_p/7523568f90f1dabbcacf633f6f178729.jpg",
+                        "24": "gallery/image/l/sign_p/8d9c26ea00d4d16b952f129ce7c80034.jpg",
+                        "25": "gallery/image/l/sign_p/7523568f90f1dabbcacf633f6f178729.jpg",
                         "26": "gallery/image/l/sign_p/61497838f9a33ff6592fa0e11c4c2c1a.jpg",
                         "27": "gallery/image/l/sign_p/4de072a494475aa83d7ee9eca92de2bb.jpg",
                         "28": "gallery/image/l/sign_p/cd1aaa15207932e56aaa449c14daa578.jpg",
                         "29": "gallery/image/l/sign_p/062f663090a8424fca1a20133b774120.jpg",
-						"30": "gallery/image/l/sign_p/d503c404573adf2e40c77e0d4e06c058.jpg",
+                        "30": "gallery/image/l/sign_p/d503c404573adf2e40c77e0d4e06c058.jpg",
                         "31": "gallery/image/l/sign_p/fb4cc781aad74552c60bf5c8d1d8adb4.jpg",
                         "32": "gallery/image/l/sign_p/bdabbcb884eb70243537ab82b60c6af3.jpg",
-						"33": "gallery/image/l/sign_p/7873c0801760a4290db920b5e1b19db4.jpg",
+                        "33": "gallery/image/l/sign_p/7873c0801760a4290db920b5e1b19db4.jpg",
                         "34": "gallery/image/l/sign_p/e4ed9b9f97f6058a7e16620faa7d750f.jpg",
                         "35": "gallery/image/l/sign_p/9159993bdcb5c6e4eb6914dde0cf1955.jpg",
                         "36": "gallery/image/l/sign_p/25aeb7e9618f9f27c140030cc9b0805b.jpg",
@@ -4678,31 +4682,31 @@ kg
                         "6": "gallery/image/l/sign_pn/30fe4887cbc082bf375169d6f83a1ffa.jpg",
                         "7": "gallery/image/l/sign_pn/6ccf37a6cfdd206dc34434a1be3d56b8.jpg",
                         "8": "gallery/image/l/sign_pn/7af6cc3d2ca1f5d15230f2366280a444.jpg",
-						"9": "gallery/image/l/sign_pn/53a89429c64132c4d0058aea4b233fca.jpg",
-						"10": "gallery/image/l/sign_pn/f6e5a4e341770463ef088e55921596fa.jpg",
+                        "9": "gallery/image/l/sign_pn/53a89429c64132c4d0058aea4b233fca.jpg",
+                        "10": "gallery/image/l/sign_pn/f6e5a4e341770463ef088e55921596fa.jpg",
                         "11": "gallery/image/l/sign_pn/f9385a42acabcfae3013c79d5466edf4.jpg",
                         "12": "gallery/image/l/sign_pn/c34d79efd9030ebf948a18cbf9df7bf3.jpg",
                         "13": "gallery/image/l/sign_pn/70ca98bb88391ddbaf3841e5912c7367.jpg",
                         "14": "gallery/image/l/sign_pn/4a3abe4cfb93b694333cddf0c8521f64.jpg",
                         "15": "gallery/image/l/sign_pn/e204975f21b0e3374a0633d0522f1b19.jpg",
                         "16": "gallery/image/l/sign_pn/76c2eb6eac6f3d975264dfaac44157c7.jpg",
-						"17": "gallery/image/l/sign_pn/eb38818dc3fd59a5cae7f69a4f743f6c.jpg",
+                        "17": "gallery/image/l/sign_pn/eb38818dc3fd59a5cae7f69a4f743f6c.jpg",
                         "18": "gallery/image/l/sign_pn/21886e4c2903ab6da97230b772c6804f.jpg",
                         "19": "gallery/image/l/sign_pn/5f0ff7b6385298516aedd9b4e334a018.jpg",
                         "20": "gallery/image/l/sign_pn/942ee9cb2a6140de3f7f35122ebe7e00.jpg",
-						"21": "gallery/image/l/sign_pn/e6bafa973570753123cd686c18c2b975.jpg",
+                        "21": "gallery/image/l/sign_pn/e6bafa973570753123cd686c18c2b975.jpg",
                         "22": "gallery/image/l/sign_pn/3ea30b1c14dafc422ae4b4eb46aaa54e.jpg",
                         "23": "gallery/image/l/sign_pn/f84e6d3c1d11b46d7efe8e53e1013eb4.jpg",
-						"24": "gallery/image/l/sign_pn/8d9c26ea00d4d16b952f129ce7c80034.jpg",
-						"25": "gallery/image/l/sign_pn/7523568f90f1dabbcacf633f6f178729.jpg",
+                        "24": "gallery/image/l/sign_pn/8d9c26ea00d4d16b952f129ce7c80034.jpg",
+                        "25": "gallery/image/l/sign_pn/7523568f90f1dabbcacf633f6f178729.jpg",
                         "26": "gallery/image/l/sign_pn/61497838f9a33ff6592fa0e11c4c2c1a.jpg",
                         "27": "gallery/image/l/sign_pn/4de072a494475aa83d7ee9eca92de2bb.jpg",
                         "28": "gallery/image/l/sign_pn/cd1aaa15207932e56aaa449c14daa578.jpg",
                         "29": "gallery/image/l/sign_pn/062f663090a8424fca1a20133b774120.jpg",
-						"30": "gallery/image/l/sign_pn/d503c404573adf2e40c77e0d4e06c058.jpg",
+                        "30": "gallery/image/l/sign_pn/d503c404573adf2e40c77e0d4e06c058.jpg",
                         "31": "gallery/image/l/sign_pn/fb4cc781aad74552c60bf5c8d1d8adb4.jpg",
                         "32": "gallery/image/l/sign_pn/bdabbcb884eb70243537ab82b60c6af3.jpg",
-						"33": "gallery/image/l/sign_pn/7873c0801760a4290db920b5e1b19db4.jpg",
+                        "33": "gallery/image/l/sign_pn/7873c0801760a4290db920b5e1b19db4.jpg",
                         "34": "gallery/image/l/sign_pn/e4ed9b9f97f6058a7e16620faa7d750f.jpg",
                         "35": "gallery/image/l/sign_pn/9159993bdcb5c6e4eb6914dde0cf1955.jpg",
                         "36": "gallery/image/l/sign_pn/25aeb7e9618f9f27c140030cc9b0805b.jpg",
@@ -4728,14 +4732,14 @@ kg
                 window.idol = idol;
             })();
             var birthday_flag = false;
-			if (typeof(request.getParameter("selected")) !== "undefined"){
+            if (request.getParameter("selected") !== ""){
                 var select_card_index = Number(request.getParameter("selected")) - 1;
                 var slider_pos = parseInt(select_card_index / 5);
-			}
-			else {
-				var select_card_index = 0;
+            }
+            else {
+                var select_card_index = 0;
                 var slider_pos = 0;
-			}
+            }
             var selected_num = null;
             var url_trade = 'http://sp.pf.mbga.jp/12008305/?guid=ON&amp;url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fauction%2Fsearch_top%2F0%2F__hash_card_id__%3Fl_frm%3DIdol_gallery_idol_detail_1%26rnd%3D329363844';
             var url_album = 'https://lodipot.github.io/mika_backup/album/mika_album/__card_index__.html';
@@ -4814,6 +4818,26 @@ kg
                     "category": "love_max",
                     "type": "love_max",
                     "conditions": "love_max"
+                },
+                "comments_talk_1": {
+                    "category": "work",
+                    "type": "talk",
+                    "conditions": "get_idol"
+                },
+                "comments_talk_2": {
+                    "category": "work",
+                    "type": "talk",
+                    "conditions": "get_idol"
+                },
+                "comments_talk_3": {
+                    "category": "work",
+                    "type": "talk",
+                    "conditions": "get_idol"
+                },
+                "comments_talk_4": {
+                    "category": "work",
+                    "type": "talk",
+                    "conditions": "get_idol"
                 }
             };
             var type_names = {
@@ -4824,7 +4848,8 @@ kg
                 "work_love_up": "\u304a\u4ed5\u4e8b(\u89aa\u611b\u5ea6UP)",
                 "work_max": "\u304a\u4ed5\u4e8b(\u89aa\u611b\u5ea6MAX)",
                 "live": "LIVE\u30d0\u30c8\u30eb",
-                "love_max": "\u89aa\u611b\u5ea6MAX\u6f14\u51fa"
+                "love_max": "\u89aa\u611b\u5ea6MAX\u6f14\u51fa",
+                "talk": "\u639b\u3051\u5408\u3044\u8a71"
             };
             var category_names = {
                 "greeting": "\u3042\u3044\u3055\u3064",
@@ -4842,31 +4867,31 @@ kg
         <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/createjs.min.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3402201_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3412801_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3516302_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3419401_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3419501_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3437501_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3537502_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/3441401_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/3441401_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
-		<script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
+        <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/3449701_sign_effect.js'></script>
         <script src='https://lodipot.github.io/mika_backup/gallery/js/167_sign_effect.js'></script>
@@ -4885,13 +4910,22 @@ kg
         <script src="https://lodipot.github.io/mika_backup/gallery/js/boombox.min.js" type="text/javascript"></script>
         <script src="https://lodipot.github.io/mika_backup/gallery/js/gallery.min.js" type="text/javascript"></script>
         <script src="https://lodipot.github.io/mika_backup/gallery/js/bb_loader.min.js" type="text/javascript"></script>
+        <script>
+            alert($('a[name=tab_2]').class);
+            $('a[name=tab_2]').on("click", function() {
+                alert($('.comment_frame').class);
+                if ($('.comment_frame') !== null || undefined) {
+                    $('.comment_frame').children('.star_passion').attr('class', 'star_cool');
+                }
+            });
+        </script>
         <div class="m-Top8 m-Btm8">
             <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%">
         </div>
         <a id="search_cartoon" href='#' class="btn_normal_line_2 m-Cnt m-Btm12">劇場で検索</a>
-		<a href='https://lodipot.github.io/mika_backup/memorial.html'>
-			<div class="backLink">資料室</div>
-		</a>
+        <a href='https://lodipot.github.io/mika_backup/memorial.html'>
+            <div class="backLink">資料室</div>
+        </a>
         <footer>
             <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
                 <div></div>
@@ -4899,14 +4933,6 @@ kg
             <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
         </footer>
     </div>
-    <script>
-        window._tarminal = {
-            'native_app_flg': false,
-            'android_app_flg': false,
-            'ios_app_flg': false,
-            'shell_app_flg': false
-        };
-    </script>
     <script>
         window._tarminal = {
             'native_app_flg': false,
