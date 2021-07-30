@@ -706,6 +706,7 @@ body#cartoon {
 .theater-content .theater-title_area .theater-latest_title {
     position: absolute;
     top: 25px;
+    left: 55px;
     color: #0056b8;
     width: 208px;
     text-align: center;
