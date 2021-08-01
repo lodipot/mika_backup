@@ -1,0 +1,638 @@
+/* ばー widthとheightは7px → 0px で実質非表示*/
+::-webkit-scrollbar {
+    width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track {
+	background-color:rgba(0,0,0,0.8);
+    border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+	width:0px;
+	height:0px;
+	background:#707070;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background:#505050
+}
+/* END SCROLL BAR */
+
+.mkt_info{
+	display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(../image/info.png);
+    margin-left: 1px;
+}
+
+/* 上部に配置するアイドルプリセットバー関係 */
+#mkt_event_set_preset_area > button{
+	font-size:12px;
+	line-height:14px;
+}
+#mkt_event_set_preset_area > select > option{
+	font-size:13px;
+}
+
+/*▼アイドルプリセット周りの、ボタンON(薄い赤)デザイン 無効だけ float仕込んでいるので、 bothしてる*/
+button.presetselect{
+	color: #301d1d;
+    border:1px solid #666666;
+	border-radius: 2px;
+  	-webkit-border-radius:2px;
+  	-moz-border-radius:2px;
+	background: -moz-linear-gradient(top, #f5d0d0 0%, #f5d0d0 50%, #f0a090 51% , #f0a090 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5d0d0), color-stop(50%,#f5d0d0), color-stop(51%,#f0a090), color-stop(100%,#f0a090));
+	clear:both;
+}
+
+#mkt_idolpreset_btns{
+	display:flex;
+}
+
+#mkt_idolpreset_btns button{
+	color: #301d1d;
+    border:1px solid #666666;
+	border-radius: 2px;
+  	-webkit-border-radius:2px;
+  	-moz-border-radius:2px;
+	clear:both;
+}
+
+/* 新イベントプリセット */
+div.presetchecklist{
+	display:inline-block;
+	font-size:12px;
+	background-color:#222222;
+	color:#a0a0a0;
+	text-align:left;
+	width:50%;
+	height:1.1em;
+	overflow:hidden;
+	cursor:default;
+}
+div.presetchecklist.active{
+	color:#ffffff;
+	background-color:#774444;
+}
+/* 有効無効ボタン */
+button.presetdisable{
+	background-color:#3f3f3f;
+	color:#d0d0d0;
+	border-radius: 3px;
+	margin:2px;
+}
+button.presetdisable.active{
+	background-color:#d01010;
+	color:#ffffff;
+}
+
+/*▼popup.html系 */
+div.sectionarea{
+	border: solid 2px;
+	border-color:#ffB424;
+}
+.sectionblock{
+	background-color:#1d1d1d;
+	border-radius: 5px;
+	line-height:15px;
+	margin:3px 0px;
+	padding:1px 4px;
+}
+#idolpresetselectarea{
+	text-align:center;
+	display:none;
+}
+.presettextarea{
+	width:242px;
+	height:300px;
+	margin-top:5px;
+}
+.sectiontitle{
+	color:#333;
+	text-align:center;
+	padding:5px 2px;
+	margin:0 1px;
+	width:36px;
+	cursor:default;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background:-webkit-gradient(linear, left top, right bottom, from(#9EF3E7),color-stop(1.0, #14B4A3),to(#066));
+}
+.sectiontitleselect{
+	color:#333;
+	text-align:center;
+	padding:5px 2px;
+	margin:0 1px;
+	width:36px;
+	cursor:default;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background:-webkit-gradient(linear, left top, right bottom, from(#ffe39E),color-stop(1.0, #ffB424),to(#066));
+}
+/*イベントプリセット動的生成レイアウト関連 (この親はflex系のcssにしている)*/
+.eventpreset_tab{
+	color:#333;
+	text-align:center;
+	padding:4px 2px;
+	margin:0 1px;
+	cursor:default;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background:-webkit-gradient(linear, left top, right bottom, from(#9EF3E7),color-stop(1.0, #14B4A3),to(#066));
+}
+.eventpreset_tab.active{
+	color:#333;
+	text-align:center;
+	padding:4px 2px;
+	margin:0 1px;
+	cursor:default;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background:-webkit-gradient(linear, left top, right bottom, from(#ffe39E),color-stop(1.0, #ffB424),to(#066));
+}
+
+
+/*プロメントレード3ボタン*/
+
+li.mkt_libtn a:link  {
+	display: block;
+	padding: 10px 1px;
+	margin-left: 2px;
+	text-align: center;
+	width: 40px;
+	text-decoration: none;
+	color: #ffffff;
+	border: 1px solid #dddddd;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #526fe5), color-stop(100%, #0c0e38));
+	border-radius: 6px;
+	box-shadow: inset 0px 0px 5px #000;
+
+}
+
+/* HTML5アニメーションページのmargin乗っ取りヘッダ領域 */
+#mkt_animation_top_info_area{
+	min-height: 100px;
+	max-width:350px;
+	margin:0px auto;
+	background-color: #111111;
+	font-size:14px;
+}
+
+/*Flashスキップボタン*/
+#mkt_flashSkip {
+	text-decoration:none;
+	width:200px;
+	font-size:12px;
+	color:#ffffff;
+	margin:0 1;
+	padding:13px 0;
+	line-height:140%;
+	display:inline-block;
+	background:-moz-linear-gradient(top, #333333 0%, #1d1d1d 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#1d1d1d));
+	border-bottom:1px solid #444444;border-radius: 5px;-webkit-border-radius:5px;-moz-border-radius:5px;
+
+}
+/* レッスンアニメーションスキップボタンで利用(lesson.js) */
+.mkt_animation_skip_btn{
+	text-decoration: none;
+	width: 140px;
+	font-size: 12px;
+	color: #ffffff;
+	margin: 0 5px;
+	padding: 13px 5px;
+	line-height: 140%;
+	display: inline-block;
+	background: -moz-linear-gradient(top, #333333 0%, #1d1d1d 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#1d1d1d));
+	border-bottom: 1px solid #444444;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+/* ▼カスタムメニュー系列 */
+#custom-menu{
+	height:35px;
+}
+div.mkt_custommenu_row {
+	display:-webkit-box;
+	background-color:#303030;
+}
+
+a.mkt_custommenu_link:hover{
+	opacity:0.7;
+}
+a.mkt_custommenu_link{
+	display:block;
+	width:35px;
+	height:17px;
+}
+/* カスタムメニュー女子寮リンク専用 */
+.mkt_custommenu_storage_number{
+	display:inline-block;
+	font-size:20px;
+	border:1px solid #A0A0A0;
+	border-radius:4px;
+	width:25px;
+	height:25px;
+}
+/*▼カスタムメニュー　サブ項目 css */
+.mkt_submenu_column{
+	display: flex;
+}
+
+.mkt_submenu_column > a.row{
+	overflow: hidden;
+	text-decoration:initial;
+	display:table-cell;
+	font-size:11px;
+	line-height:20px;
+	height:20px;
+	color:white;
+	font-weight:normal;
+	text-align:center;
+	cursor:default;
+}
+
+.mkt_submenu_column > a:hover{
+	color:white;
+	background-color:#5a7;
+	border:1px solid #5a7;
+}
+.mkt_submenu_column > a{
+	background-color:#404040;
+	border:1px solid #505050;
+}
+
+
+
+/*	アイドルプリセット(イベント編成ショートカット配置送信ボタン)	*/
+
+div>form[name='select_form']{
+	display:inline-table;
+}
+
+.mkt_idolpreset_event_btn{
+	display:inline-block;
+	width:250px;
+	font-size:13px;
+	font-weight:normal;
+	background-color:#a0E0b0;
+	color:black;
+	border:1px solid #3070FF;
+	border-radius:3px;
+}
+.mkt_idolpreset_event_btn.seted{
+	border:1px solid rgb(22, 141, 82);
+}
+.mkt_idolpreset_event_btn.non_detection{
+	background-color:#a0d0F0;
+}
+.mkt_idolpreset_event_btn.blank_id{
+	border:1px solid rgb(196, 28, 28);
+	background-color:#F0A0A0;
+}
+.mkt_idolpreset_event_btn.wrong_index{
+	border:1px solid #FF7030;
+}
+
+.mkt_idolpreset_event_btn > .set_status{
+	float: left;
+}
+
+/* イベントプリセット・配置済みの子 */
+.mkt_idolpreset_seted_label{
+	background-color:#5599EE;
+	width:50%;
+	display:inline-block;
+	text-align:center;
+	overflow:hidden;
+}
+
+/* LIVEバトル画面の 応援+閉じるボタン */
+.mkt_js_btn_type{
+
+	height: 37px;
+	line-height: 37px;
+	width: auto;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	padding:10px;
+	border: 1px solid #7c7c7c;
+	border-radius: 8px;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, from(rgb(72, 72, 72)), to(rgb(28, 28, 28)));
+}
+
+
+
+/* ▼カードリスト */
+
+/*アイドルステータス総合要素*/
+.mkt_StateExpanded{
+	width:60px;
+	height:94px;
+	background-color:#222222;
+	text-align:center;
+	border-radius:7px;
+	display: inline-grid;
+}
+
+/*スキルレベル★表示*/
+.mkt_idolstatus_skilllv{
+	font-size:11px;
+	line-height:1em;
+	text-align: left;	/*lv12以上左寄せ*/
+	padding:2px 2px;
+	margin-top:2px;
+}
+
+ 
+/* プレミアム判定のエフェクト */
+img.mkt_premium{
+	animation: mkt_premium_effect 3s linear 0s infinite alternate none running;
+	border:1px solid red;
+}
+@keyframes mkt_premium_effect{
+	0%{		border-color:rgba(255,126,126,1);	}
+	17%{		border-color:rgba(255,237,126,1);	}
+	34%{		border-color:rgba(137,255,126,1);	}
+	50%{		border-color:rgba(126,255,239,1);	}
+	67%{		border-color:rgba(126,142,255,1);	}
+	83%{		border-color:rgba(228,126,255,1);	}
+	100%{		border-color:rgba(255,126,126,1);	}
+}
+ 
+/* アイドルカード拡大 */
+.mkt_image_zoom_area{
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	position:fixed;
+	text-align:center;
+	font-weight:normal;
+	background-color:rgba(0, 0, 0, 0.4);
+	z-Index:10000;
+}
+.mkt_image_zoom_change_area{
+	display:table;
+	width:100%;
+	user-select: none;
+}
+.mkt_image_zoom_change_area > * , .mkt_image_zoom_search_area > * {
+	background-color:#444444;
+	padding:4px 2px;
+	display:table-cell;
+	font-size:12px;
+}
+.mkt_image_zoom_change_area > *:hover, .mkt_image_zoom_search_area > *:hover{
+	background-color:#606060;
+	cursor:pointer;
+}
+.mkt_skill_area{
+	font-size:14px;
+}
+.mkt_voice_actor_area{
+	font-size:11px;
+}
+
+.change_noframe{	/*フレーム切り替え*/
+	width:50%;
+}
+.mkt_image_zoom_search_area{
+	display:table;
+	width:100%;
+	user-select: none;
+}
+.mkt_image_zoom_info_area{
+	background-color:#303030;
+}
+
+/* アイドルギャラリーのアクティブアイコン */
+div.idol.mkt_idol_thumb_active{
+	animation: mkt_premium_effect 3s linear 0s infinite alternate none running;
+/*	margin-top:0px;	*/
+}
+/* 各種アイコンのイメージズーム要素 */
+div>div.idol > .mkt_idol_thumb_zoom_btn:hover{
+	background-color:rgba(50,150,200,1);
+}
+div>div.idol.mkt_idol_thumb_active > .mkt_idol_thumb_zoom_btn{
+	background-color:rgba(0,0,0,0.5);
+}
+/* .coverいじり */
+
+div>div.idol > .mkt_idol_thumb_zoom_btn{
+	cursor:pointer;
+	height:15px;
+	background-color:rgba(0,0,0,1);
+	width:54px;
+	border:1px solid black;
+	position:absolute;
+	top:54px;/*-17*/
+	left:-1px;
+}
+/* アイドルギャラリーサムネの位置介入 */
+div.idol.mkt_css_marker{
+	margin-top:0px;/*16*/
+}
+
+/* flashページのTOPに配置する領域
+#mkt_animation_top_area{
+	position:absolute;
+	width:100%;
+	display:block
+}
+ */
+/* ライブバトルアニメーション */
+.mkt_livebattle_menu_btn:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#603333), color-stop(100%,#301d1d));
+}
+.mkt_livebattle_menu_btn{
+	cursor:pointer;
+	text-decoration:none;
+	text-align:center;
+	width:95px;
+	font-size:12px;
+	color:#ffffff;
+	padding:11px 0;
+	display:inline-block;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#1d1d1d));
+	border-bottom:1px solid #444444;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+/* イベントポイントのコピー領域 */
+.mkt_event_point_cpoy_area{
+	-webkit-user-select:none;
+	cursor:pointer;
+	padding:2px;
+}
+.mkt_event_point_cpoy_area:active{
+	background-color:#D00000;
+}
+
+/* イベント：ロワ 色アイコンや特技デティール */
+.skill_panel_type_icon{
+	width:25px;
+	display:inline-block;
+	text-align:center;
+/*	vertical-align: middle;	*/
+}
+.panel_type_color_icon{
+	border-radius:50%;
+	display:inline-flex;
+}
+
+/* ぷちプロフの領域を広げボタンデザイン */
+.mkt_petit_layout_marker_base{
+	position: absolute;
+	color: red;
+	top: 0px;
+	right: 3px;
+	cursor:pointer;
+	user-select:none;
+	display:block;
+	width:20px;
+	height:46px;
+}
+.mkt_petit_layout_up_marker{
+	background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Fbtn-s6a7af53721.png%3F1487720313) no-repeat 0 -46px;
+	background-size: 60px 291px;
+	width: 20px;
+	height: 23px;
+	display:block;
+}
+.mkt_petit_layout_up_marker:active{
+	background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Fbtn-s6a7af53721.png%3F1487720313) no-repeat 0 -138px;
+	background-size: 60px 291px;
+}
+.mkt_petit_layout_down_marker{
+	background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Fbtn-s6a7af53721.png%3F1487720313) no-repeat 0 -161px;
+	background-size: 60px 291px;
+	width: 20px;
+	height: 23px;
+	display:block;
+}
+.mkt_petit_layout_down_marker:active{
+	background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Fbtn-s6a7af53721.png%3F1487720313) no-repeat 0 -115px;
+	background-size: 60px 291px;
+}
+.mkt_petit_power_input_area{
+	display:inline-block;
+}
+.mkt_petit_power_input_area > input{
+	display:inline-block;
+	width:43px;
+}
+
+/*メダル削り boxCount*/
+.mkt_box_count_gauge{
+	width:290px;
+	height:3px;
+	background-color:red;
+	margin:auto;
+}
+
+
+/*▼ボリューム操作用ゲージ*/
+.mkt_audio_controller_ensyutu_panel{
+	position:absolute;
+	bottom:0;
+	z-Index:110;
+	background-color:rgba(50,50,50,1);
+}
+
+.mkt_audio_controller_sbooth_panel{
+	background-color:rgba(50,50,50,1);
+}
+/**/
+
+/*▼プレチャレ @ イベント順位系*/
+#mkt_pc_base_area{
+	padding:10px;
+	border-radius:8px;
+	border:1px solid gray;
+	width:280px;
+	margin:auto;
+}
+#mkt_pc_base_area > textarea{
+	width:95%;
+	margin:auto;
+	display:block;
+	border-radius:4px;
+}
+.mkt_pc_pager_panel{
+	margin:auto;
+	width:250px;
+}
+/*▲プレチャレ @ イベント順位系 ここまで*/
+
+
+/* ▼色アイコンや特技デティール */
+.mkt_skill_area{
+	user-select: none;
+}
+
+
+.skill_panel_type_icon_info{
+	width:30px;
+	padding:0px 2px;
+	display:inline-block;
+	text-align:center;
+}
+.panel_type_color_icon{
+	height:12px;
+	border-radius:50%;
+	display:inline-block;
+}
+	
+	/* 特技スケール(特大とか) */
+	.skill_panel_power_scale>span{
+		border:1px solid #A0A0A0;
+		border-radius:3px;
+		padding:0 2px;
+		margin:0 3px;
+	}
+	/* バックメンバー数 */
+	.skill_panel_member_scale>span{
+		border:1px solid #A0A0A0;
+		border-radius:3px;
+		padding:0 2px;
+		margin:0 2px;
+	}
+	
+	/*検索結果用 攻守表現 */
+	.skill_panel_atk_def_label>span{
+		border:1px solid #D0D0D0;
+		color:#D0D0D0;
+		border-radius:3px;
+		padding:0 1px;
+		margin:0 4px;
+	}
+	.skill_panel_atk_def_label>span.type_balance{
+		border:1px solid #55AA55;
+		color:white;
+		background:linear-gradient(90deg, #FF5555, #66AAFF);
+	}
+	.skill_panel_atk_def_label>span.type_atk{
+		border:1px solid #FF5555;
+		color:black;
+		background-color:#FF7777;
+	}
+	.skill_panel_atk_def_label>span.type_def{
+		border:1px solid #66AAFF;
+		color:black;
+		background-color:#88CCFF;
+	}
+	.skill_panel_debuff_label{
+		border:1px solid #66AAFF;
+		color:black;
+		margin: 0 4px;
+		border-radius:3px;
+		background-color:#88CCFF;
+	}
+/* ▲色アイコンや特技デティール */
