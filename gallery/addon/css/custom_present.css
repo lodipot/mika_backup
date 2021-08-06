@@ -1,0 +1,24 @@
+/**
+ * 公式 .tab_attr_5 .tab_attr_trainer からほぼコピー
+ */
+div.mkt_tab_attr_trainer {
+    display: block;
+    background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Ftab_attr%2Ftab_5-sec86f7eac3.png%3F1285858800) no-repeat 0 0;
+    -webkit-background-size: 56px 369px;
+    background-size: 56px 369px;
+    width: 56px;
+    height: 36px;
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.mkt_tab_attr_trainer:hover{
+    display: block;
+    background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fcommon%2Ftab_attr%2Ftab_5-sec86f7eac3.png%3F1285858800) no-repeat 0 -222px;
+    -webkit-background-size: 56px 369px;
+    background-size: 56px 369px;
+    width: 56px;
+    height: 36px;
+    position: relative;
+}

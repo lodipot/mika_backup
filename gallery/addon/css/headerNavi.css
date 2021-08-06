@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+textarea{overflow:auto;vertical-align:top}
+table{font-size:13px;font-weight:bold;border-collapse:collapse;border-spacing:0}
+body{font-family:Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "モリサワ 新ゴ R", Droid Sans, "メイリオ", sans-serif;font-size:13px;font-weight:bold;background-color:#1d1d1d;color:#fff;vertical-align:baseline;width:320px;margin:0 auto}
+
+.jsOnBtn{width:320px;height:60px;overflow:hidden;display:-webkit-box;display:-moz-box}
+.jsOnBtn .head_menu_bt_01{
+display: block;
+background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbtn_menu-sac53cd01ad.png) no-repeat 0 -597px;
+-webkit-background-size: 64px 2925px;background-size: 64px 2925px;width: 48px;height: 60px;
+}
+.jsOnBtn .head_menu_bt_02{
+display: block;
+background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbtn_menu-sac53cd01ad.png) no-repeat 0 -1360px;
+-webkit-background-size: 64px 2925px;background-size: 64px 2925px;width: 56px;height: 40px;
+}
+.jsOnBtn .head_menu_bt_03{
+display: block;
+background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbtn_menu-sac53cd01ad.png) no-repeat 0 -1008px;
+-webkit-background-size: 64px 2925px;background-size: 64px 2925px;width: 56px;height: 40px;
+}
+.jsOnBtn .head_menu_bt_04{
+display: block;
+background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbtn_menu-sac53cd01ad.png) no-repeat 0 -1131px;
+-webkit-background-size: 64px 2925px;background-size: 64px 2925px;width: 56px;height: 40px;
+}
+.jsOnBtn .head_menu_bt_05{
+display: block;
+background: url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbtn_menu-sac53cd01ad.png) no-repeat 0 -1049px;
+-webkit-background-size: 64px 2925px;background-size: 64px 2925px;width: 56px;height: 40px;
+}
+.jsOnBtn{width:320px;height:60px;overflow:hidden;display:-webkit-box;display:-moz-box}
+
+.jsOnBtn>li:nth-of-type(1){width:48px;height:60px}
+.jsOnBtn li{width:56px;height:60px}
+.jsOnBtn li a{display:block;width:52px;height:60px;background-size:52px}
+
+
+#headerAcd{cursor:pointer}
+#headerAccordion{width:320px;overflow:hidden;display:none;margin-bottom:0}
+
+/*jtextLimit*/
+
+.area_menu_header_6btn li{float:left;position:relative;z-index:2}.area_menu_header_6btn li:first-child:after,.area_menu_header_6btn li:last-child:after{content:'';display:block;width:48px;height:8px;position:absolute;bottom:0;left:0}
+
+.area_menu_header_6btn h1{
+	color:white;
+	position:absolute;
+	z-index:1;
+	top:40px;left:0;right:0;width:224px;height:16px;font-size:13px;line-height:16px;margin:0 auto;
+	text-align:center;text-shadow:-1px -1px 0px #0090ff,1px -1px 0px #0090ff,1px 1px 0px #0090ff,-1px 1px 0px #0090ff,1px 2px 3px rgba(0,144,255,0.6);
+}
+.area_menu_header_6btn:before{
+	content:'';display:block;
+	background:url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Fsprite%2Fheader_new%2Fbg-sf13a35c89d.png%3F1487720330) no-repeat 0 -17px;
+	-webkit-background-size:276px 132px;background-size:276px 132px;
+	width:276px;height:64px;position:absolute;top:0;left:0;right:0;margin:0 auto;
+	z-index:1;
+}
+
+/*
+.sprite_menu{background:url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Frich%2Fmenu.png%3F1388498619) no-repeat}
+.sprite_menu_02{background:url(http://sp.pf-img-a.mbga.jp/12008305/?url=http%3A%2F%2F125.6.169.35%2Fidolmaster%2Fimage_sp%2Fui%2Frich%2Fmenu_02.png%3F1388498619) no-repeat}
+*/
+/* 以下は独立されたカスタムメニュー用 */
+/* カスタムメニュー ul,li,a*/
+ul.mkt_custommenu {
+	list-style:none;
+	display:-webkit-box;
+	height:3４;
+}
+/* li */
+li.mkt_custommenu {
+	margin:0.5px;
+	list-style:none;
+}
+/* リンク領域 */
+a.mkt_custommenu {
+	display:block;
+	width:34px;
+	height:20px;
+}

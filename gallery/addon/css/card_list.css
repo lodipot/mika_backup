@@ -1,0 +1,20 @@
+﻿/*リーダーElm下部*/
+header + section{
+	margin:0 auto 0px;
+}
+
+section.t-Cnt > img + br{
+	display:none;
+}
+
+/*属性ボタンの不透明度*/
+div.m-Btm5 > a > img[width='80']{
+	opacity:0.4;
+}
+
+
+
+/* 点星画像と改行 */
+body#card_storage > #top > header > img , body#card_storage > #top > header > br{
+	display:none;
+}

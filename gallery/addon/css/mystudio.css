@@ -1,0 +1,78 @@
+/*▼mystudioのイベントポイント回復ゲージ用*/
+#mkt_timerinfo_Gauge{
+
+	display: block;
+	height: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff3bc), to(#b94e00));
+}
+
+/*情報総合*/
+#mkt_infomation{
+	position:relative;
+	text-align:center;
+	height:auto;
+	padding:0 0 5px 0;
+}
+#mkt_liveArea{
+	position:absolute;
+	left:0px;
+}
+
+/*イベントバナーの直下数ピクセル調整*/
+.bannerArea2{
+	margin-bottom:7px;
+}
+
+/* イベントBP系 */
+#point_time_state{
+	font-size:12px;
+	font-weight:normal;
+	line-height:13px;
+}
+/* リアルタイム更新 */
+#mkt_timerinfo_stamina{
+	display:inline-block;
+	color:black;
+	width:115px;
+	text-align:right;
+	font-size:11px;
+	line-height:11px;
+}
+#mkt_timerinfo_attack{
+	display:inline-block;
+	color:black;
+	width:115px;
+	text-align:left;
+	font-size:11px;
+	line-height:11px;
+	padding-left:10px;
+}
+
+
+/* イベントバナーの隙間と、文字のnormal化 */
+.bannerArea2{
+	font-weight:normal;
+	margin-bottom:3px;
+}
+
+/* 攻コスト,スタミナ文字 */
+#live_value , #stamina_value{
+/*	color: rgb(255, 255, 255);
+	font-size: 14px; 
+	text-align:center;*/
+}
+
+/* メッセージエリア */
+#mkt_messageArea{
+	padding:0 5px;
+	margin-bottom:2px;
+	float:center;
+	width:auto;
+	height:auto;
+	font-size:8pt;
+	color:#eeffff;
+	background-color:#701D1D;
+}
+#mkt_messageArea > a{
+	color:#eeffff;
+}
