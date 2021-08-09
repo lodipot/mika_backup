@@ -70,6 +70,209 @@
 </head>
 
 <body id="idol_gallery" class="idol_detail">
+    <div id="mask" style="position:absolute; left:0; top:0; z-index:9000; background-color:#000; opacity: 0.80; display:none;"></div>
+    <div id="addon_layer" style="position:absolute; left:0; top:0; z-index:9000; display:none;">
+        <div id="btnzone" style="font-size:0; background-color:#505050;">
+            <button type="button" class="btn_img_change" id="xs_img_changer" onclick="">xs</button>
+            <button type="button" class="btn_img_change" id="ls_img_changer" onclick="">ls</button>
+            <button type="button" class="btn_img_change" id="frame_changer" onclick="">Frame</button>
+            <button type="button" class="btn_img_change" id="sign_changer" onclick="">Sign</button>
+            <button type="button" class="btn_img_change" id="premium_changer" onclick="">Premium</button>
+        </div>
+        <div id="cardviewer" style="margin:0 auto;">
+            <img id="cardviewer_img" src="#">
+        </div>
+    </div>
+    <script>
+        function wrapMask(){
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+            var btnWidth = maskWidth * 0.20;
+            var btnzoneHeight = maskWidth * 0.04;
+            var cardHeight = maskWidth * 1.25;
+            var layerHeight = btnzoneHeight + cardHeight;
+            $("#mask").css({"width":maskWidth, "height":maskHeight});
+            $("#mask").fadeIn(200);
+            $("#addon_layer").css({"width":maskWidth, "height":layerHeight});
+            $("#btnzone").css({"width":maskWidth, "height":btnzoneHeight});
+            $(".btn_img_change").css({"width":btnWidth, "height":btnzoneHeight});
+            $("#cardviewer_img").css({"width":maskWidth, "height":cardHeight});
+            $("#addon_layer").fadeIn(200);
+        }
+        
+        $("#cardviewer").click(function() {
+            $("#mask").hide();
+            $("#addon_layer").hide();
+        });
+        $("#mask").click(function() {
+            $(this).hide();
+            $("#addon_layer").hide();
+        });
+        
+        function addon(num) {
+            if (num == 0) {
+                $(".view_btn").removeClass("concealed");
+                $(".icon_navi").addClass("addon");
+                $(".idolList").attr("class","idolList h-78 m-Btm-6");
+                $("li.h-60").attr("class","h-78");
+                $("#addon_btn").attr("onclick", "addon(1)");
+            }
+            else if (num == 1) {
+                $(".view_btn").addClass("concealed");
+                $(".icon_navi").removeClass("addon");
+                $(".idolList").attr("class","idolList h-60");
+                $("li.h-78").attr("class","h-60");
+                $("#addon_btn").attr("onclick", "addon(0)");
+            }
+        }
+        
+        var base_url = "https://lodipot.github.io/mika_backup/gallery/image/";
+        
+        function card_popup(hash) {
+            localStorage.setItem("frame", "1");
+            localStorage.setItem("sign", "0");
+            localStorage.setItem("premium", "0");
+            
+            var img_l_bn = base_url + "l/sign_bn/" + hash + ".jpg";
+            var img_rare = base_url + "l/rare/" + hash + ".jpg";
+            var rare_list = ['73eea87bdec62f29de318e50e84f021d', '61a1dfc4c713b5d5a094a19923bacc08', 'c407e2e483b9ff36689e486dfbd847e4', '4f4bc793b515a5c802b9ab7e0a9198e8', 'd6fdc4c2a992ea8b249d6015d1186e6c', '7fe0b25036ad4318f240e85827e4ba96'];
+            
+            if (rare_list.indexOf(hash) == -1){
+                var xs_img_changer = "xs_img_changer('" + hash + "')";
+                var ls_img_changer = "ls_img_changer('" + hash + "')";
+                var frame_changer = "frame_changer('" + hash + "')";
+                var sign_changer = "sign_changer('" + hash + "')";
+                var premium_changer = "premium_changer('" + hash + "')";
+                $("#cardviewer_img").attr("src", img_l_bn);
+                $("#xs_img_changer").attr("onclick", xs_img_changer);
+                $("#ls_img_changer").attr("onclick", ls_img_changer);
+                $("#frame_changer").attr("onclick", frame_changer);
+                $("#sign_changer").attr("onclick", sign_changer);
+                $("#premium_changer").attr("onclick", premium_changer);
+            }
+            else {
+                var xs_img_changer = "xs_img_changer('" + hash + "')";
+                var ls_img_changer = "ls_img_changer('" + hash + "')";
+                var rare_img_changer = "rare_img_changer('" + hash + "')";
+                $("#cardviewer_img").attr("src", img_rare);
+                $("#xs_img_changer").attr("onclick", xs_img_changer);
+                $("#ls_img_changer").attr("onclick", ls_img_changer);
+                $("#frame_changer").attr("onclick", rare_img_changer);
+                $("#sign_changer").attr("onclick", rare_img_changer);
+                $("#premium_changer").attr("onclick", rare_img_changer);
+            }
+            setTimeout(function(){wrapMask();}, 100);
+        }
+        
+        var baseWidth = $(window).width();
+        var baseHeight = $(window).height();
+        var lHeight = baseWidth * 1.25;
+        
+        function xs_img_changer(hash){
+            var img_xs = base_url + "xs/xs_" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":baseWidth, "height":baseWidth});
+            $("#cardviewer_img").attr("src", img_xs);
+        }
+        
+        function ls_img_changer(hash){
+            var lsHeight = baseHeight * 0.95;
+            var lsWidth = lsHeight * 0.32;
+            var img_ls = base_url + "ls/" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":lsWidth, "height":lsHeight});
+            $("#cardviewer_img").attr("src", img_ls);
+        }
+        
+        function rare_img_changer(hash){
+            var img_rare = base_url + "l/rare/" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":baseWidth, "height":lHeight});
+            $("#cardviewer_img").attr("src", img_rare);
+        }
+        
+        function frame_changer(hash){
+            var img_l_b = base_url + "l/sign_b/" + hash + ".jpg";
+            var img_l_bn = base_url + "l/sign_bn/" + hash + ".jpg";
+            var img_l_p = base_url + "l/sign_p/" + hash + ".jpg";
+            var img_l_pn = base_url + "l/sign_pn/" + hash + ".jpg";
+            var img_l_nf = base_url + "l/noframe/" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":baseWidth, "height":lHeight});
+            if (localStorage.getItem("frame") == "1"){
+                $("#cardviewer_img").attr("src", img_l_nf);
+                localStorage.setItem("frame", "0");
+                localStorage.setItem("sign", "0");
+            }
+            else if (localStorage.getItem("frame") == "0"){
+                if (localStorage.getItem("sign") == "0"){
+                    if (localStorage.getItem("premium") == "0"){
+                        $("#cardviewer_img").attr("src", img_l_bn);
+                    }
+                    else {
+                        $("#cardviewer_img").attr("src", img_l_pn);
+                    }
+                }
+                else {
+                    if (localStorage.getItem("premium") == "0"){
+                        $("#cardviewer_img").attr("src", img_l_b);
+                    }
+                    else {
+                        $("#cardviewer_img").attr("src", img_l_p);
+                    }
+                }
+                localStorage.setItem("frame", "1");
+            }
+        }
+        
+        function sign_changer(hash){
+            var img_l_b = base_url + "l/sign_b/" + hash + ".jpg";
+            var img_l_bn = base_url + "l/sign_bn/" + hash + ".jpg";
+            var img_l_p = base_url + "l/sign_p/" + hash + ".jpg";
+            var img_l_pn = base_url + "l/sign_pn/" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":baseWidth, "height":lHeight});
+            if (localStorage.getItem("sign") == "1"){
+                if (localStorage.getItem("premium") == "0"){
+                    $("#cardviewer_img").attr("src", img_l_bn);
+                }
+                else {
+                    $("#cardviewer_img").attr("src", img_l_pn);
+                }
+                localStorage.setItem("sign", "0");
+            }
+            else if (localStorage.getItem("sign") == "0"){
+                if (localStorage.getItem("premium") == "0"){
+                    $("#cardviewer_img").attr("src", img_l_b);
+                }
+                else {
+                    $("#cardviewer_img").attr("src", img_l_p);
+                }
+                localStorage.setItem("sign", "1");
+            }
+        }
+        
+        function premium_changer(hash) {
+            var img_l_b = base_url + "l/sign_b/" + hash + ".jpg";
+            var img_l_bn = base_url + "l/sign_bn/" + hash + ".jpg";
+            var img_l_p = base_url + "l/sign_p/" + hash + ".jpg";
+            var img_l_pn = base_url + "l/sign_pn/" + hash + ".jpg";
+            $("#cardviewer_img").css({"width":baseWidth, "height":lHeight});
+            if (localStorage.getItem("premium") == "1"){
+                if (localStorage.getItem("sign") == "0"){
+                    $("#cardviewer_img").attr("src", img_l_pn);
+                }
+                else {
+                    $("#cardviewer_img").attr("src", img_l_p);
+                }
+                localStorage.setItem("premium", "0");
+            }
+            else if (localStorage.getItem("premium") == "0"){
+                if (localStorage.getItem("sign") == "0"){
+                    $("#cardviewer_img").attr("src", img_l_bn);
+                }
+                else {
+                    $("#cardviewer_img").attr("src", img_l_b);
+                }
+                localStorage.setItem("premium", "1");
+            }
+        }
+    </script>
     <div id="top" class="page_container jsOnBtn">
         <nav class="area_menu_header">
             <div class="area_menu_header_6btn">
@@ -102,153 +305,234 @@
             .idolProfile {
                 margin-bottom: 0;
             }
+            .concealed {
+                display:none;
+            }
+            .h-60 {
+                height:60px;
+            }
+            .h-78 {
+                height:78px;
+            }
+            .m-Btm-6 {
+                margin-bottom:-6px;
+            }
+            .view_btn {
+                width:56px;
+                height:18px;
+                position:relative;
+                top:54px;
+                left:-1px;
+                background-color:black;
+                border:none;
+                color: white;
+                font-weight: bold;
+            }
+            .view_btn:hover {
+                background-color:#666666;
+                cursor:pointer;
+            }
+            .btn_img_change {
+                background-color:#505050;
+                border:none;
+                color: white;
+                font-size:14px;
+            }
+            .btn_img_change:hover {
+                background-color:#757575;
+                cursor:pointer;
+            }
         </style>
         <div id="idol-base-content" class="m-Btm10">
         </div>
-        <div class="idolList" style="height:66px;overflow:hidden;position:relative;top:-5px;">
+        <div class="idolList h-60" style="overflow:hidden;position:relative;top:-5px;">
             <ul class="slides">
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_73eea87bdec62f29de318e50e84f021d.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="0">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('73eea87bdec62f29de318e50e84f021d')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_61a1dfc4c713b5d5a094a19923bacc08.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="1">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('61a1dfc4c713b5d5a094a19923bacc08')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_c407e2e483b9ff36689e486dfbd847e4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="2">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('c407e2e483b9ff36689e486dfbd847e4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_4f4bc793b515a5c802b9ab7e0a9198e8.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="3">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('4f4bc793b515a5c802b9ab7e0a9198e8')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_d6fdc4c2a992ea8b249d6015d1186e6c.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="4">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('d6fdc4c2a992ea8b249d6015d1186e6c')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_7fe0b25036ad4318f240e85827e4ba96.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="5">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('7fe0b25036ad4318f240e85827e4ba96')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_30fe4887cbc082bf375169d6f83a1ffa.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="6">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('30fe4887cbc082bf375169d6f83a1ffa')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_6ccf37a6cfdd206dc34434a1be3d56b8.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="7">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('6ccf37a6cfdd206dc34434a1be3d56b8')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_7af6cc3d2ca1f5d15230f2366280a444.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="8">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('7af6cc3d2ca1f5d15230f2366280a444')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_53a89429c64132c4d0058aea4b233fca.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="9">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('53a89429c64132c4d0058aea4b233fca')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_f6e5a4e341770463ef088e55921596fa.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="10">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('f6e5a4e341770463ef088e55921596fa')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_f9385a42acabcfae3013c79d5466edf4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="11">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('f9385a42acabcfae3013c79d5466edf4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_c34d79efd9030ebf948a18cbf9df7bf3.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="12">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('c34d79efd9030ebf948a18cbf9df7bf3')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_70ca98bb88391ddbaf3841e5912c7367.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="13">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('70ca98bb88391ddbaf3841e5912c7367')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_4a3abe4cfb93b694333cddf0c8521f64.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="14">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('4a3abe4cfb93b694333cddf0c8521f64')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_e204975f21b0e3374a0633d0522f1b19.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="15">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('e204975f21b0e3374a0633d0522f1b19')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_76c2eb6eac6f3d975264dfaac44157c7.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="16">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('76c2eb6eac6f3d975264dfaac44157c7')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_eb38818dc3fd59a5cae7f69a4f743f6c.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="17">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('eb38818dc3fd59a5cae7f69a4f743f6c')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_21886e4c2903ab6da97230b772c6804f.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="18">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('21886e4c2903ab6da97230b772c6804f')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_5f0ff7b6385298516aedd9b4e334a018.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="19">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('5f0ff7b6385298516aedd9b4e334a018')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_942ee9cb2a6140de3f7f35122ebe7e00.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="20">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('942ee9cb2a6140de3f7f35122ebe7e00')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_e6bafa973570753123cd686c18c2b975.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="21">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('e6bafa973570753123cd686c18c2b975')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_3ea30b1c14dafc422ae4b4eb46aaa54e.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="22">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('3ea30b1c14dafc422ae4b4eb46aaa54e')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_f84e6d3c1d11b46d7efe8e53e1013eb4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="23">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('f84e6d3c1d11b46d7efe8e53e1013eb4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_8d9c26ea00d4d16b952f129ce7c80034.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="24">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('8d9c26ea00d4d16b952f129ce7c80034')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_7523568f90f1dabbcacf633f6f178729.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="25">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('7523568f90f1dabbcacf633f6f178729')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_61497838f9a33ff6592fa0e11c4c2c1a.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="26">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('61497838f9a33ff6592fa0e11c4c2c1a')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_4de072a494475aa83d7ee9eca92de2bb.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="27">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('4de072a494475aa83d7ee9eca92de2bb')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_cd1aaa15207932e56aaa449c14daa578.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="28">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('cd1aaa15207932e56aaa449c14daa578')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_062f663090a8424fca1a20133b774120.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="29">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('062f663090a8424fca1a20133b774120')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_d503c404573adf2e40c77e0d4e06c058.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="30">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('d503c404573adf2e40c77e0d4e06c058')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_fb4cc781aad74552c60bf5c8d1d8adb4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="31">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('fb4cc781aad74552c60bf5c8d1d8adb4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_bdabbcb884eb70243537ab82b60c6af3.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="32">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('bdabbcb884eb70243537ab82b60c6af3')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_7873c0801760a4290db920b5e1b19db4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="33">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('7873c0801760a4290db920b5e1b19db4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_e4ed9b9f97f6058a7e16620faa7d750f.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="34">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('e4ed9b9f97f6058a7e16620faa7d750f')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_9159993bdcb5c6e4eb6914dde0cf1955.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="35">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('9159993bdcb5c6e4eb6914dde0cf1955')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_25aeb7e9618f9f27c140030cc9b0805b.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="36">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('25aeb7e9618f9f27c140030cc9b0805b')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_e00c68555765850d1ca786cd3f8a48c4.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="37">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('e00c68555765850d1ca786cd3f8a48c4')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_ca52aa2e1917478c4642deeba2ea7643.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="38">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('ca52aa2e1917478c4642deeba2ea7643')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_ba08a714f973a21c37367f32085ef8d7.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="39">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('ba08a714f973a21c37367f32085ef8d7')">view</button>
                         </div>
                     </div>
                 </li>
-                <li style="width: 318px;padding-left: 2px">
+                <li class="h-60" style="width:318px; padding-left: 2px">
                     <div class="displayBox">
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_6cb558d20f14ddb700065515c862a66e.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="40">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('6cb558d20f14ddb700065515c862a66e')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_4e39cf133c36d00b2255ee0fb9358211.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="41">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('4e39cf133c36d00b2255ee0fb9358211')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_f99aa70007b3d201a586252a246488f3.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="42">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('f99aa70007b3d201a586252a246488f3')">view</button>
                         </div>
                         <div class="idol" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/xs/xs_990d4c7b388f9a05cbb860b1a385a2cc.jpg) no-repeat; background-size:54px 54px;width:54px;height:54px;position:relative;" data-index="43">
+                            <button type="button" class="view_btn concealed" onclick="card_popup('990d4c7b388f9a05cbb860b1a385a2cc')">view</button>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
         <style>
-            ol.icon_navi{
+            ol.icon_navi.addon{
                 cursor:default;
             }
-            ol.icon_navi > li{
+            ol.icon_navi.addon > li{
                 margin:4px;
             }
-            ol.icon_navi > li > a{
+            ol.icon_navi.addon > li > a{
                 padding:2px;
             }
-            ol.icon_navi > li > a:hover{
+            ol.icon_navi.addon > li > a:hover{
                 background:#FF6666;
                 cursor:pointer;
             }
         </style>
-        <ol class="icon_navi" style="position:relative;margin-bottom: -1px;margin-top: -7px;">
+        <ol class="icon_navi" style="position:relative;margin-bottom: -1px;margin-top: 0;">
             <li><a><span style="display:none;">1</span></a></li>
             <li><a><span style="display:none;">2</span></a></li>
             <li><a><span style="display:none;">3</span></a></li>
@@ -4901,7 +5185,10 @@ kg
         <div class="m-Top8 m-Btm8">
             <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%">
         </div>
-        <a id="search_cartoon" href='#' class="btn_normal_line_2 m-Cnt m-Btm12">劇場で検索</a>
+        <div class="area-btn-common _base-width m-Btm8">
+            <a id="search_cartoon" href='#' class="btn_normal_line_2 m-Btm12">劇場で検索</a>
+            <a id="addon_btn" href='#' onclick="addon(0)" class="btn_normal_line_2 m-Btm12">Addon</a>
+        </div>
         <a href='https://lodipot.github.io/mika_backup/memorial.html'>
             <div class="backLink">資料室</div>
         </a>
