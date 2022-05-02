@@ -125,6 +125,14 @@
             <section class="t-Cnt">
                 <div id="top_menu" class="tab_common-middle m-Top10"><a class='tab_line_2_1 tab_text' href='#' style="font-size:14px;">城ヶ崎美嘉</a><a class='tab_line_2_2 tab_text' href='#' style="font-size:14px;">的場梨沙</a></div><br>
                 <div class="side_a_area area_tab">
+                    <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_102116.jpg" width="100%"><br>
+                    <div class="m-Top8 m-Btm8 gray title concealed 102116">- 現在の肩書です -</div>
+                    <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="102116">
+                        <label class="btn_decision_line_2 m-Btm8 m-Top8 m-Cnt title concealed 102116">
+                            <input type="submit" value="この肩書に変更する" style="font-size:12px">
+                        </label>
+                    </form>
+                    <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
                     <img src="https://lodipot.github.io/mika_backup/gallery/image/title/title_charge_101995.jpg" width="100%"><br>
                     <div class="m-Top8 m-Btm8 gray title concealed 101995">- 現在の肩書です -</div>
                     <form name="change_title" action='https://lodipot.github.io/mika_backup/title.html' method="GET"><input type="hidden" name="title" value="101995">
@@ -389,13 +397,13 @@
         }
         var request = new Request();
 
-        const title_num_arr_mika = ["5035", "100195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995"];
+        const title_num_arr_mika = ["5035", "100195", "100200", "100271", "100344", "100442", "100534", "100535", "100742", "100913", "100919", "101114", "101149", "101224", "101335", "101464", "101579", "101658", "101846", "101995", "102116"];
         const title_num_arr_risa = ["100320", "100402", "100774", "100866", "101057", "101171", "101474", "101718", "101914"];
         if (request.getParameter('title') !== "" && request.getParameter('title') !== null && request.getParameter('title') !== undefined){
             localStorage.setItem('title_number', request.getParameter('title'));
         }
         else if (localStorage.getItem('title_number') === "" || localStorage.getItem('title_number') === null || localStorage.getItem('title_number') === undefined){
-            localStorage.setItem('title_number', '101995');
+            localStorage.setItem('title_number', '102116');
         };
         var title_num = localStorage.getItem('title_number');
         
