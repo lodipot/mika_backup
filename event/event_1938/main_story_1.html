@@ -272,6 +272,12 @@
                 });
             </script>
         </form>
+        <a id="memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938.html'>
+            <div class="backLink">イベントメモリー詳細へ</div>
+        </a>
+        <a id="non_memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938/event_1938_main.html'>
+            <div class="backLink">イベントメインへ</div>
+        </a>
         <script>
             if (request.getParameter("effect") !== "" && request.getParameter("effect") !== "memory"){
                 var current_effect = ".effect_" + request.getParameter("effect");
@@ -291,11 +297,12 @@
                 $(".reqp_memory:eq(3)").attr("href", $(".reqp_memory:eq(3)").attr("href") + "&from=memory");
                 $("#memory_input").attr("name", "from");
                 $("#memory_input").attr("value", "memory");
+                $("#non_memory_back").remove();
+            }
+            else {
+                $("#memory_back").remove();
             }
         </script>
-        <a href='http://mobamas.net/idolmaster/memory/detail/1938/0?l_frm=Memory_event_story_inline_detail_1&rnd=359684771'>
-            <div class="backLink">イベントメモリー詳細へ</div>
-        </a>
         <footer>
             <div class="line_idolmaster"></div><a href="#top" id="toPageTop" class="mypage_under">
                 <div></div>
