@@ -33,7 +33,7 @@
                     page_next = 1;
                 }
                 else if (request.getParameter("last") == 1){
-                    page_next = 4;
+                    page_next = 5;
                 }
                 else{
                     page_next = Number(request.getParameter("target_page_num"));
@@ -50,6 +50,9 @@
                 }
                 else if (page_next == 4) {
                     event_num = 746;
+                }
+                else if (page_next == 5) {
+                    event_num = 1938;
                 }
                 n_page = base_address + event_num + ".html";
                 

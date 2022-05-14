@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="ja" xml:lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta name="format-detection" content="telephone=no">
+    <title>アイドルマスター シンデレラガールズ</title>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/new_mypage_common.css" media="all">
+    <link rel="apple-touch-icon-precomposed" href="https://lodipot.github.io/mika_backup/gallery/image/honda_motherfucker.png">
+    <script type="text/javascript">
+        if (window.localStorage) {
+            var displaySet = localStorage.getItem('DisplayPositionSet');
+            if (displaySet == 1) {
+                if (navigator.userAgent.indexOf('Android') > 0) {
+                    document.write('<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">');
+                    document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                } else {
+                    document.write('<meta name="viewport" content="width=320, user-scalable=no">');
+                }
+                window.addEventListener('resize', function() {
+                    if (navigator.userAgent.indexOf('Android') > 0) document.getElementsByTagName('html')[0].style.zoom = document.documentElement.clientWidth / 320;
+                });
+            } else {
+                document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no">');
+        }
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/jquery-2.2.2.min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/underscore-min.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/require.js"></script>
+    <script>
+        requirejs.config({
+            paths: {
+                easeljs: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.8.2.min.js",
+                easeljs_0_7_1: "https://lodipot.github.io/mika_backup/gallery/js/easeljs-0.7.1.min.js", //スプライトを読むためのバージョン
+                tweenjs: "https://lodipot.github.io/mika_backup/gallery/js/tweenjs-0.6.2.min.js",
+                movieclipjs: "https://lodipot.github.io/mika_backup/gallery/js/movieclip-0.7.1.min.js",
+                createjs: "https://lodipot.github.io/mika_backup/gallery/js/createjs-2015.11.26.min.js",
+            }
+        })
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common.js"></script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/common_new.js"></script>
+    <script>
+        $(function() {
+            window.$ibox = $('.ibox').ibox();
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            if (typeof newrelic === 'object' && typeof newrelic.setPageViewName === 'function') {
+                newrelic.setPageViewName('/idolmaster/index.php/idol_gallery/idol_detail/990d4c7b388f9a05cbb860b1a385a2cc');
+            }
+        });
+    </script>
+    <script type='text/javascript'>
+        var se_flg = 0,
+            bgm_flg = 0,
+            chrome_app_flg = 0,
+            chrome_app_extension_id = 'dnacabmnfmejgfffmcehejcmiciinpej';
+    </script>
+    <script type='text/javascript' src='https://lodipot.github.io/mika_backup/gallery/js/app_sound.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/base.css" />
+</head>
+
+<body id="memory" class="detail">
+    <div id="top" class="page_container jsOnBtn">
+        <nav class="area_menu_header">
+            <div class="area_menu_header_6btn">
+                <h1 id="JtextLimit">イベントメモリー</h1>
+                <ul>
+                    <li><a class="head_menu_01" href="https://lodipot.github.io/mika_backup/my_page.html">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_02" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_03" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_04" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_05" href="javascript:location.reload();">
+                            <div></div>
+                        </a></li>
+                    <li><a class="head_menu_06 se_000" href="#" id="headerAcd">
+                            <div></div>
+                        </a></li>
+                </ul>
+            </div>
+        </nav>
+        <input id="delay" type="hidden" value="0">
+        <style type="text/css">
+            .comments {
+                min-height: 115px;
+                text-align: left;
+                color: #1d1d1d;
+                padding: 25px 20px 10px;
+                position: relative;
+                top: -50px;
+            }
+
+            .comments.cute {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/cute_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .comments.cool {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/cool_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .comments.passion {
+                background: url('https://lodipot.github.io/mika_backup/gallery/image/event/passion_comment.png') center top no-repeat;
+                background-size: 300px;
+            }
+
+            .icon_navi {
+                width: auto;
+                margin: 0 13px;
+                padding: 8px 0;
+                background: -webkit-gradient(radial, 50% 50%, 50, 50% 50%, 130, from(#222), to(#333));
+                -webkit-border-radius: 6px;
+            }
+
+            .cover {
+                height: 370px;
+            }
+
+            .exBox {
+                width: 320px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            a.inline {
+                width: 300px;
+                height: 70px;
+                color: #1d1d1d;
+                display: block;
+                margin: 0 auto 10px;
+            }
+
+            .exArea {
+                width: 260px;
+                margin: 10px auto 0;
+                padding: 0;
+                border: 2px solid #b4d5f4;
+                background: #1d1d1d;
+                z-index: 10;
+                color: #ffffff;
+                line-height: 140%;
+                -webkit-border-radius: 8px;
+            }
+
+            .exArea h3 {
+                background: #17285c;
+                -webkit-border-top-left-radius: 8px;
+                -webkit-border-top-right-radius: 8px;
+                padding: 10px 0;
+            }
+
+            .check_close_btn {
+                top: -10px;
+                width: 37px;
+                height: 37px;
+                right: 20px;
+                display: block;
+            }
+
+            .m-12px {
+                margin-top: -12px;
+            }
+
+            .appear_idol_area .appear_idol_bg {
+                position: relative;
+                width: 320px;
+            }
+
+            .appear_idol_area .appear_idol_chara {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                z-index: 1;
+                width: 320px;
+            }
+
+            .appear_idol_area .appear_idol_title_area {
+                position: absolute;
+                top: 4px;
+                left: 0px;
+                z-index: 2;
+                width: 320px;
+                height: 36px;
+            }
+
+            .appear_idol_area .appear_idol_title_bg {
+                position: relative;
+                background-image: url('https://lodipot.github.io/mika_backup/gallery/image/event/appear_idol_title_bg.png');
+                background-size: 320px;
+                background-repeat: no-repeat;
+                display: table-cell;
+                height: inherit;
+                vertical-align: middle;
+                color: transparent;
+                padding-left: 34px;
+                -webkit-mask-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+            }
+
+            .appear_idol_area .appear_idol_title_text {
+                position: relative;
+                top: 2px;
+                display: table-cell;
+                height: inherit;
+                vertical-align: middle;
+                color: #1d1d1d;
+                padding-left: 34px;
+                text-shadow: 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff, 0px 0px 3px #ffffff;
+            }
+
+            .appear_idol_area .appear_idol_title_text._line_2 {
+                top: -1px;
+                font-size: 12px;
+            }
+        </style>
+        <header style="margin:0 0 5px;">
+            <h1 style="margin:0 0 10px;">
+                <img src='https://lodipot.github.io/mika_backup/gallery/image/event/banner_event_1938.jpg' width="100%" alt="綺羅公演 ギャルはいつでもオシャリスト★" class="m-12px">
+            </h1>
+            <div class="titleH2" style="margin:0 auto; padding:5px; line-height:110%;">
+                <span class="blue">開催期間</span><br>2022/03/31 ～ 2022/04/09
+            </div>
+        </header>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%"><br>
+        <section class="naviArea">
+            <img src="https://lodipot.github.io/mika_backup/gallery/image/event/tujo_m2.png" width="90">
+            <div class="Wrap">
+                <div class="fukiRight">今回のLIVEツアーカーニバルはギャルがオシャレを競う学園が舞台です! 学園を救うために智絵里ちゃんと共に奮闘する主人公を演じた美嘉ちゃんには注目ですよ♪<br></div>
+            </div>
+        </section>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm10"><br>
+        <h2 class="title_img_blue" style="margin:0;">
+            <div>登場アイドル</div>
+        </h2>
+        <section class="iSlider">
+            <div class="underline"></div>
+            <div class="medal_idol">
+                <style>
+                    .cover {
+                        height: inherit;
+                    }
+                </style>
+                <div class="medal_slide" style="height:369px;">
+                    <ul class="slides" style="display:none;">
+                        <li class="appear_idol_area" style="width:320px;margin:0; position:relative;">
+                            <h3 class="slideTitle">
+                                <div class="name">[Luv of Vertex★]城ヶ崎美嘉+</div>
+                                <div class="icon">
+                                    <div class="type att_3"></div>
+                                    <div class="rarity r_6"></div>
+                                </div>
+                            </h3>
+                            <div style="position:relative;">
+                                <div style="height:300px;overflow:hidden;position:relative;" onclick="location.href='https://lodipot.github.io/mika_backup/event/event_1938/event_1938_main.html';">
+                                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/bg_area_xl_1.jpg' class="appear_idol_bg" style="width:320px;height:335px;">
+                                    <img src='https://lodipot.github.io/mika_backup/gallery/image/quest/c115f5fc4696f449ca762ed062f59976.jpg' class="appear_idol_chara">
+                                </div>
+                                <div class="appear_idol_title_area""><div class=" appear_idol_title_bg" style="">綺羅公演 ギャルはいつでもオシャリスト★</div>
+                            </div>
+                            <div class="appear_idol_title_area">
+                                <div class="appear_idol_title_text ">綺羅公演 ギャルはいつでもオシャリスト★</div>
+                            </div>
+                            <div class="comments passion" style="z-index:2;top:-48px;">
+                                <div>
+                                    <p class="l-Hgt120">覚えといて! ｵｼｬﾚは心を繋ぐ!</p>
+                                </div>
+                            </div>
+                </div>
+                </li>
+                </ul>
+            </div>
+    </div>
+    </section>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/islider.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('.medal_slide').iSlider({
+            slideshowSpeed: 5000,
+            navi: ".icon_navi",
+            selected: "icon_selected",
+            touch: true,
+            loop: true
+        });
+    </script>
+    <section class="t-Cnt m-Btm0">
+        <img src="https://lodipot.github.io/mika_backup/gallery/css/image/new_mypage_common/line_hanyo_ten.jpg" width="100%" class="m-Btm10"><br>
+        <p class="m-Btm10">
+            <a href='https://lodipot.github.io/mika_backup/theater/1591.html' class="jsOnDesignBtn">
+                <img src='https://lodipot.github.io/mika_backup/gallery/image/event/event_1938_theater_1591.jpg' style="width:150px; height:40px;">
+            </a>
+        </p>
+        <div class="area-btn-common _base-width m-Btm8">
+            <a href='#intro_box' class="btn_normal_line_2 ibox">あらすじ</a>
+            <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event_1938/opening.html'>
+                <span style="font-size: 12px;">イベントOP演出を見る</span>
+            </a>
+        </div>
+        <div class="area-btn-common _base-width m-Btm8">
+            <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event_1938/opening_2.html'>
+                <span style="font-size: 12px;">後半開始演出を見る</span>
+            </a>
+            <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event_1938/ending_html'>
+                <span style="font-size: 12px;">イベントED演出を見る</span>
+            </a>
+        </div>
+        <div class="area-btn-common _base-width m-Btm8">
+            <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event_1938/login_1.html'>
+                <span style="font-size: 12px;">ステージ1ログイン演出</span>
+            </a>
+            <a class="btn_normal_line_2 " href='https://lodipot.github.io/mika_backup/gallery/event_1938/login_8_html'>
+                <span style="font-size: 12px;">ステージ8ログイン演出</span>
+            </a>
+        </div>
+        <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_top.jpg) center top no-repeat;background-size:326px;width:304px;height:44px; line-height:47px; margin:0 auto;">
+            登場アイドル一覧<br>
+        </div>
+        <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_line.jpg) center top repeat-y;background-size:326px;width:304px;text-align:center;margin:0 auto;">
+            <ul style="width:220px; margin:0 auto; padding: 10px 0 0; overflow:hidden; text-align:left;" class="displayBox">
+                <li style="padding:5px 3px 5px 0px;">
+                    <a href="https://lodipot.github.io/mika_backup/mika_gallery.html?selected=46" class="jsOnDesignBtn">
+                        <img src='https://lodipot.github.io/mika_backup/gallery/image/xs/xs_c115f5fc4696f449ca762ed062f59976.jpg' style='width:50px; height:50px;'>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/epi_frame_prof_bottom.jpg) center top no-repeat;background-size:326px; width:304px; height:19px; margin:0 auto 10px;"></div>
+    </section>
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/memory.css" media="all">
+    <link rel="stylesheet" type="text/css" href="https://lodipot.github.io/mika_backup/gallery/css/event_carnival.css" media="all">
+    <div id="story_collection_tab" class="tab_common-large m-Top8 m-Btm8">
+        <a class="tab_line_2 tab_text selected" href='#'>イベントストーリー</a>
+        <a class="tab_line_2 tab_text" href='#'>ユニットコレクション</a>
+    </div>
+    <section class="t-Cnt area_story_collection_tab">
+        <div id="story_collection_tab_sub" class="tab_common-middle">
+            <a href='#' class="tab_line_2_1 tab_text selected">前半</a>
+            <a href='#' class="tab_line_2_2 tab_text">後半</a>
+        </div>
+        <div class="area_tab t-Cnt">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_1?from=memory' class="js_btn_stage story_base story_st1 jsOnDesignBtn" data-id="1" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_1.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>酉ノ宮学園・1</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_101.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_2?from=memory' class="js_btn_stage story_base story_st2 jsOnDesignBtn" data-id="2" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_1.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>酉ノ宮学園・2</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_201.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_3?from=memory' class="js_btn_stage story_base story_st3 jsOnDesignBtn" data-id="3" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_2.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>オシャレな街</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_301.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_4?from=memory' class="js_btn_stage story_base story_st4 jsOnDesignBtn" data-id="4" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_2.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>酉ノ宮学園・3</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_401.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+        </div>
+        <div class="area_tab t-Cnt">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_5?from=memory' class="js_btn_stage story_base story_st5 jsOnDesignBtn" data-id="5" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_3.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>サイン会場</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_601.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_6?from=memory' class="js_btn_stage story_base story_st6 jsOnDesignBtn" data-id="6" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_3.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>酉ノ宮学園・4</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_501.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_7?from=memory' class="js_btn_stage story_base story_st7 jsOnDesignBtn" data-id="7" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_4.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>ランウェイフィールド</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_701.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event_1938/main_story_8?from=memory' class="js_btn_stage story_base story_st8 jsOnDesignBtn" data-id="8" style="background:url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_button_base_4.jpg);background-size:280px;width:280px;height:44px;">
+                <div class="event_story_title">
+                    <p>酉ノ宮学園・5</p>
+                </div>
+                <div class="event_story_chara ">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/top_stage_chara_801.png'>
+                </div>
+                <div class="story_stage_title"></div>
+            </a>
+        </div>
+    </section>
+    <section class="area_story_collection_tab  m-Btm8">
+        <div class="selectArea type_02  m-Btm8">
+            <form action="#" name="area_select_form" method="post">
+                <div class="area-btn-common _base-width">
+                    <select name="js_area_switch" id="js_area_switch" class="search_pulldown_1_5" style="font-size:12px;">
+                        <option value="1">酉ノ宮学園・1</option>
+                        <option value="2">酉ノ宮学園・2</option>
+                        <option value="3">ランウェイフィールド・1</option>
+                        <option value="4">ランウェイフィールド・2</option>
+                    </select>
+                    <a id="jsAreaSwitchBtn" class="btn_decision_sub_line_3">
+                        表示する
+                    </a>
+                </div>
+            </form>
+        </div>
+        <h2 id="area_title_1" class="title_img_blue" style="margin:0;">
+            <div>酉ノ宮学園・1</div>
+        </h2>
+        <h2 id="area_title_2" class="title_img_blue" style="margin:0;display:none">
+            <div>酉ノ宮学園・2</div>
+        </h2>
+        <h2 id="area_title_3" class="title_img_blue" style="margin:0;display:none">
+            <div>ランウェイフィールド・1</div>
+        </h2>
+        <h2 id="area_title_4" class="title_img_blue" style="margin:0;display:none">
+            <div>ランウェイフィールド・2</div>
+        </h2>
+        <div id="area_tab_1" class="t-Cnt">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_1_1.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>目指せ! ギャルワンスポンサー獲得!</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938010.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_1_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>学園の人気ギャルたち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938020.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_1_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>酉ノ宮ギャルワン応援団</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938030.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_2_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>オシャリスト、お買い物中♪</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938040.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_2_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>学園購買部[Beauty]</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938050.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_3_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>校内工事中☆</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938060.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_1_3_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>酉ノ宮OGたち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938070.png'>
+                </div>
+                <div class="event_story_side"></div>
+                <div class="event_story_clear"></div>
+            </a>
+        </div>
+        <div id="area_tab_2" class="t-Cnt" style="display:none">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_1_1.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>オシャレ、討論中!</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938110.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_1_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>ギャルの卵たち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938120.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_1_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>チエリのクラスメイトたち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938130.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_2_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>酉ノ宮体育会</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938140.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_2_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>キラリン☆ファンクラブ</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938150.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_3_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>クイーンを狙う者たち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938160.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_3_3_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>伝説のファッションモデル・チナミ</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938170.png'>
+                </div>
+                <div class="event_story_side"></div>
+                <div class="event_story_clear"></div>
+            </a>
+        </div>
+        <div id="area_tab_3" class="t-Cnt" style="display:none">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_1_1.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>酉ノ宮衣装同好会</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938210.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_1_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>只今ランウェイ制作中!</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938220.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_1_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>盛りアゲ☆ポップギャル</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938230.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_2_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>ギャルワンヘアスタイリスト</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938240.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_2_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>酉ノ宮ギャルワンチアガールズ</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938250.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_3_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>影のコーディアン＆パートナー</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938260.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_5_3_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>伝説のファッションモデル・サリナ</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938270.png'>
+                </div>
+                <div class="event_story_side"></div>
+                <div class="event_story_clear"></div>
+            </a>
+        </div>
+        <div id="area_tab_4" class="t-Cnt" style="display:none">
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_1_1.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>オシャレ研究会</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938310.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_1_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>テスト勉強中の生徒</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938320.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_1_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>他校の生徒たち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938330.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_2_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>オシャレな見物人</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938340.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_2_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>謎のギャル三人衆</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938350.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_3_2.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>コーディアンたち</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938360.png'>
+                </div>
+                <div class="event_story_clear"></div>
+            </a>
+            <a href='https://lodipot.github.io/mika_backup/gallery/event/event_1938/unit_story_7_3_3.html?from=memory' class="unit_collection jsOnDesignBtn" style="">
+                <div class="event_story_title">
+                    <p>ギャルワン・レジェンズ</p>
+                </div>
+                <div class="event_story_chara">
+                    <img src='https://lodipot.github.io/mika_backup/gallery/image/event/1938370.png'>
+                </div>
+                <div class="event_story_side"></div>
+                <div class="event_story_clear"></div>
+            </a>
+        </div>
+    </section>
+    <script type="text/javascript">
+        $(function() {
+            $('#jsAreaSwitchBtn').on('click', function() {
+                $("[id^='area_tab_']").hide();
+                $("[id^='area_title_']").hide();
+                $('#area_tab_' + $('#js_area_switch').val()).show();
+                $('#area_title_' + $('#js_area_switch').val()).show();
+                return false;
+            }).trigger("click");
+        });
+    </script>
+    <script src="https://lodipot.github.io/mika_backup/gallery/js/ilibrary.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $('#story_collection_tab_sub').tab_switch({
+            contents: ".area_tab",
+            start: 1 + 0
+        });
+        $('#story_collection_tab').tab_switch({
+            tabs: "[class^='tab_line_']",
+            contents: ".area_story_collection_tab",
+            start: 0
+        });
+    </script>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm8"><br>
+        <form method="GET" action='https://lodipot.github.io/mika_backup/event/event.html' style="margin:0">
+            <div class="pager_area" style="height:74px;">
+                <div class="pager_submit_area">
+                    <input type="number" name="target_page_num" id="jsPageNumber" pattern="\d*" value="">
+                    ページに
+                    <label class="btn_normal_line_4 _disabled m-Cnt m-Btm8" id="jsMovePagerLabel" for="jsMovePagerBtn" style="display:inline-block;vertical-align:middle;margin-left:5px;margin-bottom:3px;">
+                        <input id="jsMovePagerBtn" type="submit" value="移動" style="width:inherit;height:inherit;line-height:inherit;margin:0;">
+                    </label>
+                </div>
+                <div class="pager_panel_area">
+                    <input type="submit" name="first" class="btn_pager_first jsNotDisabled jsOnDesignBtn" value="1">
+                    <input type="submit" name="prev" class="btn_pager_back jsNotDisabled jsOnDesignBtn" value="1">
+                    <div class="btn_pager_next _disabled"></div>
+                    <div class="btn_pager_last _disabled"></div>
+                    5 / 5
+                </div>
+            </div>
+            <input type="hidden" name="page_now" value="6">
+            <script>
+                $('#jsPageNumber').focus(function() {
+                    $('#jsMovePagerLabel').removeClass("_disabled");
+                });
+            </script>
+        </form>
+        <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm8"><br>
+        <a href='https://lodipot.github.io/mika_backup/my_page.html'>
+            <div class="backLink">マイスタジオ</div>
+        </a>
+    <style>
+        .outline_area {
+            background: url(https://lodipot.github.io/mika_backup/gallery/image/event/bg_story.jpg)no-repeat;
+            background-size: 360px;
+            font-size: 11px;
+            text-shadow: 0.05rem 0.05rem 1px #000;
+            margin: auto;
+            padding: 8px 0;
+            line-height: 140%;
+            background-position: center
+        }
+    </style>
+    <div class="area-popup_common _hd_blue _bd_black ibox_content" id="intro_box">
+        <a href="#" class="btn-ibox-close icon_close ibox_close jsOnDesignBtn">
+            <div></div>
+        </a>
+        <div class="area-popup_wrap">
+            <h3 class="area-popup_header">
+                <div class="area-popup_title">
+                    <span style="line-height:150%;font-size:13px">あらすじ</span>
+                </div>
+            </h3>
+            <div class="t-Cnt">
+                <div class="outline_area">
+                    この世界では<br />オシャレなギャルこそが正義である！<br /><br />学園内にはびこる悪しき風習を断つため、<br />少女は、異世界からやってきた相棒とともに<br />イケイケになって立ち上がる！<br /><br />オシャレを指南するのは、<br />ティーンのカリスマなあのアイドル！<br /><br />幸せを運ぶ心優しきアイドルは、ギャルになって大奮闘！？<br /><br />個性派ぞろいのアイドルたちが、<br />それぞれの願いを懸けて激突する――！
+                </div>
+            </div>
+            <div class="area-popup_bg_image"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $('form').bind('submit', function() {
+                var $submit = $("input[type=submit], input[type=reset]");
+                for (var i = 0; i < $submit.length; i++) {
+                    if ($submit.eq(i).val() != '' && !$submit.eq(i).hasClass('jsNotDisabled')) {
+                        $submit.eq(i).val('送信中');
+                        $submit.eq(i).prop('disabled', true);
+                        var prev = $submit.eq(i).prev();
+                        if (prev.hasClass('btn_text')) {
+                            prev.text('送信中');
+                            if ($submit.eq(i).parent()[0].tagName == 'LABEL') {
+                                $submit.eq(i).parent().removeClass('_line_2');
+                            }
+                        }
+                    } else if (!$submit.eq(i).hasClass('jsNotDisabled')) {
+                        $submit.eq(i).prop('disabled', true);
+                    }
+                    if ($submit.eq(i).parent()[0].tagName == 'LABEL') {
+                        $submit.eq(i).parent().css({
+                            "opacity": "0.5"
+                        });
+                    }
+                }
+                $(".livebutton input[type='submit']").val('').css({
+                    "opacity": "0.5"
+                }).prop('disabled', true);
+                var $imagesub = $("input[type='image']");
+                $imagesub.prop('disabled', true);
+                for (var i = 0; i < $imagesub.length; i++) {
+                    if (!$imagesub.eq(i).attr('class')) {
+                        $imagesub.eq(i).css({
+                            "opacity": "0.5"
+                        });
+                        continue;
+                    }
+                    if ($imagesub.eq(i).attr('class').indexOf('noop') == -1) {
+                        $imagesub.eq(i).css({
+                            "opacity": "0.5"
+                        });
+                    } else {
+                        $imagesub.eq(i).css({
+                            "opacity": "1"
+                        });
+                    }
+                }
+                setTimeout(function() {
+                    $submit.prop('disabled', false).parent().css({
+                        "opacity": "1"
+                    });
+                    $imagesub.prop('disabled', false).css({
+                        "opacity": "1"
+                    });
+                    $(".livebutton input[type='submit']").css({
+                        "opacity": "1"
+                    });
+                }, 2500);
+            });
+            $(".submit a").click(function() {
+                $(this).click(function() {
+                    return false;
+                })
+                $(".submit").find("img").css({
+                    "opacity": "0.5"
+                });
+                setTimeout(function() {
+                    $(this).click(function() {
+                        return true;
+                    })
+                    $(".submit").find("img").css({
+                        "opacity": "1"
+                    });
+                }, 2500);
+            });
+            $('body').on("click", '.stop-repeat-link', function(e) {
+                var self = $('.stop-repeat-link');
+                self.css({
+                    'pointer-events': 'none',
+                    'opacity': 0.6
+                });
+                setTimeout(function() {
+                    self.css({
+                        'pointer-events': 'auto',
+                        'opacity': 1
+                    });
+                }, 2500);
+            });
+        });
+    </script>
+    <footer>
+        <div class="line_idolmaster"></div>
+        <a href="#top" id="toPageTop" class="mypage_under">
+            <div></div>
+        </a>
+        <div class="t-Cnt">(C)窪岡俊之 (C)2011 BNEI</div>
+    </footer>
+    </div>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+    <script>
+        window._tarminal = {
+            'native_app_flg': false,
+            'android_app_flg': false,
+            'ios_app_flg': false,
+            'shell_app_flg': false
+        };
+    </script>
+</body>
+
+</html>
