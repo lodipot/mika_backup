@@ -245,8 +245,8 @@
                 </div>
             </div>
         </div>
-        <a id="memory_back" class="btn_normal_line_2 _line_2 m-Cnt m-Top10 m-Btm8" href='https://lodipot.github.io/mika_backup/event/event_1938/main_story_1_f.html?from=memory'>ステージクリア<br>演出を見る</a>
-        <a id="non_memory_back" class="btn_normal_line_2 _line_2 m-Cnt m-Top10 m-Btm8" href='https://lodipot.github.io/mika_backup/event/event_1938/main_story_1_f.html'>ステージクリア<br>演出を見る</a>
+        <a class="memory_back btn_normal_line_2 _line_2 m-Cnt m-Top10 m-Btm8" href='https://lodipot.github.io/mika_backup/event/event_1938/main_story_1_f.html?from=memory'>ステージクリア<br>演出を見る</a>
+        <a class="non_memory_back btn_normal_line_2 _line_2 m-Cnt m-Top10 m-Btm8" href='https://lodipot.github.io/mika_backup/event/event_1938/main_story_1_f.html'>ステージクリア<br>演出を見る</a>
         <img src="https://lodipot.github.io/mika_backup/gallery/image/line_star.jpg" width="100%" class="m-Btm8"><br>
         <form method="GET" action='https://lodipot.github.io/mika_backup/event/event_1938/main_story.html' style="margin:0">
             <div class="pager_area" style="height:74px;">
@@ -273,10 +273,10 @@
                 });
             </script>
         </form>
-        <a id="memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938.html'>
+        <a class="memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938.html'>
             <div class="backLink">イベントメモリー詳細へ</div>
         </a>
-        <a id="non_memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938/event_1938_main.html'>
+        <a class="non_memory_back" href='https://lodipot.github.io/mika_backup/event/event_1938/event_1938_main.html'>
             <div class="backLink">イベントメインへ</div>
         </a>
         <script>
@@ -298,12 +298,10 @@
                 $(".reqp_memory:eq(3)").attr("href", $(".reqp_memory:eq(3)").attr("href") + "&from=memory");
                 $("#memory_input").attr("name", "from");
                 $("#memory_input").attr("value", "memory");
-                $("#non_memory_back").remove();
-                $("#non_memory_back").remove();
+                $(".non_memory_back").remove();
             }
             else {
-                $("#memory_back").remove();
-                $("#memory_back").remove();
+                $(".memory_back").remove();
             }
         </script>
         <footer>
